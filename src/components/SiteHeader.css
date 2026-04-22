@@ -24,6 +24,11 @@
   gap: 8px;
 }
 
+.logo-image {
+  height: 32px;
+  width: auto;
+}
+
 .menu {
   display: flex;
   align-items: center;
