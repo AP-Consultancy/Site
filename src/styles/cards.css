@@ -8,7 +8,10 @@
 .site-footer,
 .process-board,
 .board-item {
-  border: 1px solid rgba(220, 20, 60, 0.25);
-  border-radius: var(--radius-md);
-  background: linear-gradient(160deg, rgba(20, 20, 20, 0.9) 0%, rgba(10, 10, 10, 0.85) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-lg);
+  background: var(--panel);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }

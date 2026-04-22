@@ -1,16 +1,18 @@
 import "./App.css";
-import AboutSection from "./components/AboutSection";
-import CaseStudiesSection from "./components/CaseStudiesSection";
-import CtaSection from "./components/CtaSection";
-import HeroSection from "./components/HeroSection";
-import IndustriesSection from "./components/IndustriesSection";
-import LiveWallpaper from "./components/LiveWallpaper";
-import ProcessSection from "./components/ProcessSection";
-import ServicesSection from "./components/ServicesSection";
-import SiteFooter from "./components/SiteFooter";
-import SiteHeader from "./components/SiteHeader";
-import StatsSection from "./components/StatsSection";
-import WhyChooseSection from "./components/WhyChooseSection";
+import {
+  AboutSection,
+  CaseStudiesSection,
+  CtaSection,
+  HeroSection,
+  IndustriesSection,
+  LiveWallpaper,
+  ProcessSection,
+  ServicesSection,
+  SiteFooter,
+  SiteHeader,
+  StatsSection,
+  WhyChooseSection,
+} from "./components";
 import {
   caseStudies,
   industryCards,

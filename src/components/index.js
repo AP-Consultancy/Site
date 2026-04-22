@@ -1,0 +1,13 @@
+export { default as AboutSection } from "./AboutSection";
+export { default as CaseStudiesSection } from "./CaseStudiesSection";
+export { default as CtaSection } from "./CtaSection";
+export { default as HeroSection } from "./HeroSection";
+export { default as IndustriesSection } from "./IndustriesSection";
+export { default as LiveWallpaper } from "./LiveWallpaper";
+export { default as ProcessSection } from "./ProcessSection";
+export { default as SectionHeading } from "./SectionHeading";
+export { default as ServicesSection } from "./ServicesSection";
+export { default as SiteFooter } from "./SiteFooter";
+export { default as SiteHeader } from "./SiteHeader";
+export { default as StatsSection } from "./StatsSection";
+export { default as WhyChooseSection } from "./WhyChooseSection";

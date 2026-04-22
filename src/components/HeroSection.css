@@ -12,69 +12,94 @@
 
 .hero {
   text-align: center;
-  padding: clamp(72px, 11vw, 138px) 0 14px;
+  padding: clamp(140px, 13vw, 176px) 0 26px;
   animation: fade-up 0.78s ease both;
   position: relative;
   isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  background: #111111;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 4px 14px 4px 4px;
+  margin-bottom: 22px;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.badge-highlight {
+  background: #cc0000;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+.badge-text {
+  color: #cccccc;
 }
 
 .hero::before {
   content: "";
   position: absolute;
   left: 50%;
-  top: 33%;
-  width: clamp(320px, 50vw, 700px);
+  top: 52%;
+  transform: translate(-50%, -50%);
+  width: clamp(360px, 50vw, 650px);
   aspect-ratio: 1;
   border-radius: 50%;
-  background:
-    radial-gradient(circle at 50% 50%, rgba(255, 0, 0, 0.34) 0%, rgba(177, 16, 38, 0.18) 32%, rgba(0, 0, 0, 0) 64%),
-    conic-gradient(from 0deg, rgba(255, 30, 55, 0.05), rgba(255, 30, 55, 0.34), rgba(102, 9, 24, 0.14), rgba(255, 30, 55, 0.06));
-  filter: blur(14px);
+  background: radial-gradient(circle at 50% 50%, rgba(204, 0, 0, 0.22) 0%, rgba(204, 0, 0, 0.07) 42%, transparent 72%);
+  filter: blur(34px);
   z-index: -1;
   pointer-events: none;
-  animation: halo-breathe 7.5s ease-in-out infinite, galaxy-rotate 24s linear infinite;
+  animation: halo-breathe 8s ease-in-out infinite;
 }
 
 .hero::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 38%;
-  width: clamp(240px, 39vw, 560px);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: radial-gradient(circle at 52% 50%, rgba(255, 0, 0, 0.18) 0%, rgba(255, 0, 0, 0.09) 35%, rgba(0, 0, 0, 0) 66%);
-  filter: blur(28px);
-  z-index: -1;
-  pointer-events: none;
-  animation: halo-drift 9s ease-in-out infinite;
+  display: none;
 }
 
 .hero h1 {
-  margin: 16px auto 0;
-  max-width: 13ch;
-  font-size: clamp(2.2rem, 6vw, 5.2rem);
-  line-height: 0.99;
+  margin: 0 auto;
+  max-width: 15.5ch;
+  font-size: clamp(2.75rem, 6vw, 4.85rem);
+  line-height: 1.04;
   text-wrap: balance;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
 .hero h1 span {
   color: #ff0000;
+  display: block;
 }
 
 .lead {
-  margin: 20px auto 0;
-  max-width: 62ch;
-  color: var(--text-dim);
-  line-height: 1.6;
+  margin: 14px auto 0;
+  max-width: 52ch;
+  color: #bbbbbb;
+  line-height: 1.44;
+  font-size: 1.02rem;
+  font-weight: 400;
 }
 
 .hero-actions {
-  margin-top: 28px;
+  margin-top: 22px;
   display: flex;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
   flex-wrap: wrap;
+}
+
+.hero-actions .button {
+  min-width: 148px;
 }
 
 .supporting-text {
