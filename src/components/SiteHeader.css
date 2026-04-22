@@ -2,13 +2,14 @@
   width: 100%;
   margin: 0 auto;
   padding: 12px 36px 10px;
-  position: absolute;
+  position: sticky;
   top: 0;
   z-index: 20;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: transparent;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
@@ -41,4 +42,3 @@
 .menu a:hover,
 .footer-links a:hover {
   color: #ff0000;
-}

@@ -42,3 +42,4 @@ Desktop.ini
 # Build outputs
 build/
 .cache/
+.bun/

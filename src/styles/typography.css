@@ -5,14 +5,16 @@
   color: #ef1d26;
   font-size: 0.7rem;
   font-weight: 600;
+  text-align: center;
 }
 
 .section-lead {
   margin-top: 12px;
   max-width: 66ch;
   color: var(--text-dim);
-  line-height: 1.5;
+  line-height: 1.45;
   font-size: 0.95rem;
+  text-align: center;
 }
 
 h2 {
@@ -22,10 +24,17 @@ h2 {
   max-width: 20ch;
   text-wrap: balance;
   font-weight: 700;
+  text-align: center;
 }
 
 h3 {
   margin: 0;
+  text-align: center;
+}
+
+p {
+  margin: 0;
+  text-align: center;
 }
 
 p {
