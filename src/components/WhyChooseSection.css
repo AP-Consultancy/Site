@@ -1,0 +1,32 @@
+.why-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.why-card {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.why-card p {
+  color: #b0b0b0;
+  line-height: 1.58;
+}
+
+.why-card h3 {
+  font-size: 1.08rem;
+  color: #ffffff;
+}
+
+.why-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid rgba(220, 20, 60, 0.35);
+  background:
+    radial-gradient(circle at 35% 35%, #ff6b6b 0%, #dc143c 30%, transparent 56%),
+    linear-gradient(140deg, #1a1a1a 0%, #0d0d0d 100%);
+}

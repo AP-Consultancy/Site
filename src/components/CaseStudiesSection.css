@@ -1,0 +1,50 @@
+.case-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.case-card {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.case-card p {
+  color: #b0b0b0;
+  line-height: 1.58;
+}
+
+.impact-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #dbe9ee;
+}
+
+.case-card ul {
+  list-style: none;
+  margin: 2px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 9px;
+}
+
+.case-card li {
+  font-size: 0.95rem;
+  color: #ddeef3;
+  padding-left: 20px;
+  position: relative;
+}
+
+.case-card li::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #dc143c 0%, #ff0000 100%);
+  position: absolute;
+  left: 0;
+  top: 0.47em;
+}

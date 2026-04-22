@@ -1,0 +1,33 @@
+.cta-panel {
+  padding: clamp(24px, 5vw, 50px);
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 22px;
+}
+
+.cta-panel h2 {
+  margin: 0;
+  max-width: 24ch;
+}
+
+.cta-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.newsletter-input {
+  min-width: 250px;
+  border-radius: 999px;
+  border: 1px solid rgba(220, 20, 60, 0.35);
+  background: rgba(20, 20, 20, 0.6);
+  color: var(--text);
+  padding: 11px 14px;
+}
+
+.newsletter-input::placeholder {
+  color: #888888;
+}

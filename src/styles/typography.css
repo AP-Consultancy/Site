@@ -1,0 +1,31 @@
+.eyebrow {
+  margin: 0;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: #dc143c;
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.section-lead {
+  margin-top: 12px;
+  max-width: 66ch;
+  color: var(--text-dim);
+  line-height: 1.62;
+}
+
+h2 {
+  margin: 14px 0 0;
+  font-size: clamp(1.8rem, 4.2vw, 3rem);
+  line-height: 1.13;
+  max-width: 20ch;
+  text-wrap: balance;
+}
+
+h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}

@@ -1,0 +1,21 @@
+.site-shell {
+  min-height: 100vh;
+  color: var(--text);
+  background: #000000;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.site-shell > *:not(.live-wallpaper) {
+  position: relative;
+  z-index: 1;
+}
+
+main {
+  width: min(var(--max-width), calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.section-block {
+  margin-top: clamp(62px, 8vw, 108px);
+}
