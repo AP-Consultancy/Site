@@ -6,6 +6,7 @@ export { default as IndustriesSection } from "./IndustriesSection";
 export { default as LiveWallpaper } from "./LiveWallpaper";
 export { default as ProcessSection } from "./ProcessSection";
 export { default as SectionHeading } from "./SectionHeading";
+export { default as ServicesModal } from "./ServicesModal";
 export { default as ServicesSection } from "./ServicesSection";
 export { default as SiteFooter } from "./SiteFooter";
 export { default as SiteHeader } from "./SiteHeader";

@@ -1,7 +1,7 @@
 import "./SiteHeader.css";
 import { NavLink, Link } from "react-router-dom";
 
-export default function SiteHeader({ servicesHref }) {
+export default function SiteHeader({ onServicesClick }) {
   return (
     <header className="top-nav">
       <NavLink to="/" className="brand">
@@ -11,7 +11,7 @@ export default function SiteHeader({ servicesHref }) {
         <NavLink to="/" end>
           Home
         </NavLink>
-        <a href={servicesHref}>Services</a>
+        <button type="button" onClick={onServicesClick}>Services</button>
         <NavLink to="/blog">Blog</NavLink>
         <NavLink to="/contact">Contact</NavLink>
       </nav>

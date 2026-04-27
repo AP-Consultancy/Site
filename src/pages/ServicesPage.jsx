@@ -16,10 +16,10 @@ import {
   whyChoose,
 } from "../data/siteContent";
 
-export default function ServicesPage() {
+export default function ServicesPage({ onServicesClick }) {
   return (
     <>
-      <HeroSection />
+      <HeroSection onServicesClick={onServicesClick} />
       <ServicesSection services={services} />
       <ProcessSection processSteps={processSteps} processBoard={processBoard} />
       <CaseStudiesSection caseStudies={caseStudies} />

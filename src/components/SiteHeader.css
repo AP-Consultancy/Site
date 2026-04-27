@@ -36,6 +36,7 @@
 }
 
 .menu a,
+.menu button,
 .footer-links a {
   color: #ffffff;
   text-decoration: none;
@@ -45,12 +46,21 @@
 }
 
 .menu a:hover,
+.menu button:hover,
 .footer-links a:hover {
   color: #ff0000;
 }
 
 .menu a.active {
   color: #ff0000;
+}
+
+.menu button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0;
 }
 
 @media (max-width: 768px) {
