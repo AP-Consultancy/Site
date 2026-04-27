@@ -1,23 +1,24 @@
 .case-grid {
   display: grid;
-  gap: 16px;
+  gap: 14px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .case-card {
-  padding: 22px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
 }
 
 .case-card p {
   color: #b0b0b0;
-  line-height: 1.58;
+  line-height: var(--body-line-height);
+  font-size: var(--body-size);
 }
 
 .impact-label {
-  font-size: 0.8rem;
+  font-size: var(--impact-label-size);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: #dbe9ee;
@@ -32,7 +33,7 @@
 }
 
 .case-card li {
-  font-size: 0.95rem;
+  font-size: var(--case-list-size);
   color: #ddeef3;
   padding-left: 20px;
   position: relative;

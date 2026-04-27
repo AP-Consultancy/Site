@@ -13,7 +13,7 @@ export default function CaseStudiesSection({ caseStudies }) {
           <article className="case-card" key={study.title}>
             <h3>{study.title}</h3>
             <p>{study.detail}</p>
-            <p className="impact-label">Impact:</p>
+            <p className="impact-label">Impact :</p>
             <ul>
               {study.impact.map((impactItem) => (
                 <li key={impactItem}>{impactItem}</li>

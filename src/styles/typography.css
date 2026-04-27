@@ -3,38 +3,30 @@
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: #ef1d26;
-  font-size: 0.7rem;
+  font-size: var(--eyebrow-size);
   font-weight: 600;
-  text-align: center;
 }
 
 .section-lead {
   margin-top: 12px;
-  max-width: 66ch;
+  max-width: 60ch;
   color: var(--text-dim);
-  line-height: 1.45;
-  font-size: 0.95rem;
-  text-align: center;
+  line-height: 1.5;
+  font-size: var(--section-lead-size);
 }
 
 h2 {
   margin: 12px 0 0;
-  font-size: clamp(2rem, 4.5vw, 3.2rem);
-  line-height: 1.1;
-  max-width: 20ch;
+  font-size: var(--h2-size);
+  line-height: var(--h2-line-height);
+  max-width: 22ch;
   text-wrap: balance;
   font-weight: 700;
-  text-align: center;
 }
 
 h3 {
   margin: 0;
-  text-align: center;
-}
-
-p {
-  margin: 0;
-  text-align: center;
+  font-size: var(--h3-size);
 }
 
 p {

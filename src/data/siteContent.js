@@ -1,7 +1,7 @@
 export const trustStats = [
   {
     value: "500+ Projects",
-    label: "Companies have streamlined their workflows with our AI solutions.",
+    label: "Companies have streamlined their workflows with Xtract’s AI solutions.",
   },
   {
     value: "50+ Developers",
@@ -9,7 +9,7 @@ export const trustStats = [
   },
   {
     value: "98% Satisfaction",
-    label: "Most clients see improved efficiency within the first three months.",
+    label: "Clients see improved efficiency within the first three months of usage.",
   },
 ];
 
@@ -42,21 +42,21 @@ export const services = [
 
 export const processSteps = [
   {
-    title: "Automate Repetitive Tasks",
+    title: "Join An Exploration Call",
     description:
-      "We connect over a discovery call to understand your goals, timeline, budget, and the technical skills needed.",
+      "Let's connect over a discovery call to understand your business, goals, and technical requirements. We'll discuss timelines, team structure, technologies, budget, and the skill sets needed—so we can tailor the best approach for your project.",
     chips: ["Internal Task Bots", "100+ Automations", "AI Assistance"],
   },
   {
-    title: "Define Solution & Build Team",
+    title: "Define Solution & Build the Right Team",
     description:
-      "Based on your requirements, we propose the ideal solution and team structure, then align on deliverables and success metrics.",
+      "Based on your requirements, we'll propose the ideal tech solution and team structure. Within a few days, we finalize the engagement model, onboard your team, and align on deliverables and success metrics.",
     chips: ["Solutions", "Scaling", "Performance Tracking"],
   },
   {
     title: "Kickoff & Track Performance",
     description:
-      "Our team starts immediately with agile sprints, regular updates, and real-time feedback to keep delivery smooth.",
+      "Once the plan is approved, our team gets to work immediately. We'll deliver in agile sprints, track progress with regular updates, and adapt to feedback in real time—ensuring smooth execution and measurable results.",
     chips: ["Schedule", "Budget", "Portfolio"],
   },
 ];
@@ -68,69 +68,69 @@ export const industryCards = [
   },
   {
     title: "EdTech",
-    description: "E-learning platforms, LMS dashboards, and virtual classrooms.",
+    description: "E-learning platforms, LMS, and virtual classrooms.",
   },
   {
     title: "Retail",
-    description: "E-commerce portals, POS systems, and inventory tools.",
+    description: "We build efficient commerce solutions, including e-commerce portals, POS systems, and inventory tools.",
   },
   {
     title: "FinTech",
-    description: "Digital wallets, payment gateways, and lending automation.",
+    description: "Digital wallets, payment gateways, loan management apps.",
   },
   {
-    title: "Restaurant",
-    description: "Ordering apps, reservation systems, and loyalty platforms.",
+    title: "Restaurent",
+    description: "Online ordering apps, reservation systems, loyalty programs.",
   },
   {
     title: "Real Estate",
-    description: "Property listing platforms and immersive virtual tour applications.",
+    description: "We build modern real estate solutions, including property listing platforms and immersive virtual tour applications.",
   },
 ];
 
 export const caseStudies = [
   {
-    title: "AI-driven forecasting cut inventory waste by 40%",
+    title: "AI-driven forecasting cut inventory waste by 40% for TrailForge",
     detail:
-      "TrailForge faced stock issues and production inefficiencies. Our forecasting system optimized inventory and planning.",
+      "TrailForge, a suitcase brand, faced stock issues and inefficiencies. Our AI forecasting optimized inventory and production cycles, helping them save costs and deliver faster.",
     impact: [
-      "40% less inventory waste",
-      "35% faster production",
-      "20% more accurate forecasting",
-      "25% faster fulfillment",
+      "40% Less Inventory Waste",
+      "35% Faster Production",
+      "20% More Accurate Forecasting",
+      "25% Faster Fulfillment",
     ],
   },
   {
-    title: "Custom workflows reduced error rate by 80%",
+    title: "Custom workflows reduced error rate by 80% in daily operations",
     detail:
-      "A healthcare logistics client eliminated recurring data errors and delays through validation systems and live tracking.",
+      "At Acuity Analytics, we helped a healthcare logistics client eliminate frequent data errors and delays by implementing validation systems and real-time tracking—improving accuracy and speed across their supply chain.",
     impact: [
-      "80% error reduction",
-      "90% data log accuracy",
-      "30% faster delivery",
-      "60+ hours saved monthly",
+      "80% Error reduction",
+      "90% Accuracy in Data Logs",
+      "30% Faster Delivery",
+      "60+ Hours Saved",
     ],
   },
   {
-    title: "AI integration helped close 3x more deals",
+    title: "AI integration helped ScaleByte close 3x more deals in less time",
     detail:
-      "ScaleByte automated outreach, lead scoring, and CRM updates to accelerate responses and deal closure.",
+      "ScaleByte’s sales team struggled with follow-up delays. Our AI sales assistant automated outreach, lead scoring, and CRM updates—resulting in faster responses and more closed deals.",
     impact: [
-      "3x more deals",
-      "40% faster responses",
-      "95% lead accuracy",
-      "CRM fully synced",
+      "3x More Deals",
+      "40% Faster Responses",
+      "95% Lead Accuracy",
+      "CRM Fully Synced",
     ],
   },
   {
-    title: "50% operations automated in 2 months",
+    title: "Automating 50% of operations saved 20% in costs in 2 months",
     detail:
-      "FinSolve automated repetitive operations and integrated siloed systems to reduce overhead quickly.",
+      "FinSolve, a financial services firm, was overloaded with repetitive tasks. By automating workflows and integrating data systems, they streamlined operations and significantly reduced overhead.",
     impact: [
-      "50% operations automated",
-      "20% cost reduction",
-      "70+ hours saved per month",
-      "2x faster client onboarding",
+      "50% Operations Automated",
+      "20% Cost Reduction",
+      "70+ Hours Saved/Month",
+      "2x Faster Client Onboarding",
     ],
   },
 ];
@@ -138,22 +138,22 @@ export const caseStudies = [
 export const whyChoose = [
   {
     title: "Scalable Solutions",
-    description: "Scalable solutions designed around your exact business goals.",
+    description: "Scalable solutions designed for your business goals.",
   },
   {
     title: "Industry Expertise",
-    description: "Proven delivery experience across six high-growth industries.",
+    description: "Proven experience across Entire six key industries.",
   },
   {
     title: "Fast Delivery",
-    description: "Rapid cycles with transparent execution and continuous improvement.",
+    description: "Rapid development cycles with continuous deployment.",
   },
 ];
 
 export const processBoard = [
-  { title: "Budget planning", status: "Due on 2nd July" },
-  { title: "Team skills", status: "2 days ago" },
-  { title: "Business goals", status: "Cancelled by user" },
-  { title: "Tech stack", status: "70% prepared" },
-  { title: "Project scope", status: "Sent to selected clients" },
+  { title: "Budget planning", status: "Data_Driven, Strategic" },
+  { title: "Team skills", status: "Balancing Strength" },
+  { title: "Business goals", status: "Targeted delivery" },
+  { title: "Tech stack", status: "Interoperable" },
+  { title: "Project scope", status: "Defined, feasible" },
 ];

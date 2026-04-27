@@ -6,8 +6,8 @@ export default function ProcessSection({ processSteps, processBoard }) {
     <section id="process" className="section-block">
       <SectionHeading
         eyebrow="Our Process"
-        title="Join An Exploration Call"
-        lead="We make working with us easy and effective, from the first call to launch and beyond."
+        title="We make working with us easy and effective."
+        lead="From the very first call to project launch and beyond, our process is built to deliver clarity, speed, and results."
       />
       <div className="process-layout">
         <div className="timeline">

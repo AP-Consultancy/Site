@@ -6,8 +6,8 @@ export default function ServicesSection({ services }) {
     <section id="services" className="section-block">
       <SectionHeading
         eyebrow="Services"
-        title="Industries We Serve"
-        lead="We bring domain-specific expertise and innovative solutions to transform businesses across diverse sectors."
+        title="Services"
+        lead="We provide end-to-end IT services to build, scale, and automate modern businesses."
       />
       <div className="service-grid">
         {services.map((service) => (

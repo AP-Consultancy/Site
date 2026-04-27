@@ -1,6 +1,6 @@
 import "./HeroSection.css";
 
-export default function HeroSection() {
+export default function HeroSection({ servicesHref = "http://127.0.0.1:5174/#services" }) {
   return (
     <section id="home" className="hero section-block">
       <div className="hero-badge">
@@ -8,7 +8,8 @@ export default function HeroSection() {
         <span className="badge-text">Your Trusted IT Partner</span>
       </div>
       <h1>
-        Your Trusted IT Partner for <span>Business Growth</span>
+        Engineered for scale. Trusted by millions of
+        <span>Growing Enterprises.</span>
       </h1>
       <p className="lead">
         Driving digital transformation with advanced IT solutions and expert
@@ -16,8 +17,11 @@ export default function HeroSection() {
       </p>
       <div className="hero-actions">
         <button className="button">Get in touch ↗</button>
-        <button className="button button-ghost">View services</button>
+        <a className="button button-ghost" href={servicesHref}>
+          View services
+        </a>
       </div>
+      <p className="supporting-text">Over 50+ business trust us</p>
     </section>
   );
 }

@@ -1,17 +1,20 @@
 import "./CtaSection.css";
+import { Link } from "react-router-dom";
 
 export default function CtaSection() {
   return (
     <section id="contact" className="section-block cta-panel">
       <div>
-        <p className="eyebrow">Get Started Tody</p>
-        <h2>Contact Us For A Free Consultation And Shape Your Future</h2>
+        <p className="eyebrow">Get Started Today</p>
+        <h2>Contact us for a free consultation and let's shape the future of your business together.</h2>
         <p className="section-lead">
-          Join our newsletter and get practical product and AI growth updates.
+          Join our newsletter.
         </p>
       </div>
       <div className="cta-actions">
-        <button className="button">Book a free call</button>
+        <Link className="button" to="/contact">
+          Contact Us
+        </Link>
         <input
           className="newsletter-input"
           type="email"

@@ -3,38 +3,47 @@
     opacity: 0;
     transform: translateY(22px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
+@keyframes halo-breathe {
+  0%, 100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 0.7; transform: translate(-50%, -50%) scale(1.08); }
+}
+
 .hero {
   text-align: center;
-  padding: clamp(100px, 10vw, 140px) 0 20px;
-  animation: fade-up 0.78s ease both;
+  padding: 0 var(--hero-padding-x) var(--hero-padding-bottom);
+  padding-top: var(--hero-padding-top);
+  animation: fade-up 0.7s ease both;
   position: relative;
   isolation: isolate;
+
+  /* CENTER VERTICALLY */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .hero-badge {
   display: inline-flex;
   align-items: center;
-  background: #111111;
+  background: #121212;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 4px 14px 4px 4px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  padding: 5px 14px 5px 5px;
   margin-bottom: 22px;
   font-size: 0.82rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .badge-highlight {
-  background: #cc0000;
+  background: linear-gradient(180deg, #ef1d26 0%, #c9131b 100%);
   color: white;
   padding: 4px 10px;
   border-radius: 999px;
@@ -68,30 +77,30 @@
 
 .hero h1 {
   margin: 0 auto;
-  max-width: 15.5ch;
-  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
-  line-height: 1.04;
+  max-width: 16.5ch;
+  font-size: var(--hero-title-size);
+  line-height: var(--hero-title-line-height);
   text-wrap: balance;
   font-weight: 800;
   letter-spacing: -0.02em;
 }
 
 .hero h1 span {
-  color: #ff0000;
+  color: #ef1d26;
   display: block;
 }
 
 .lead {
-  margin: 12px auto 0;
+  margin: 16px auto 0;
   max-width: 52ch;
-  color: #bbbbbb;
-  line-height: 1.44;
-  font-size: 0.95rem;
-  font-weight: 400;
+  color: #c4c4c4;
+  line-height: var(--hero-lead-line-height);
+  font-size: var(--hero-lead-size);
+  font-weight: 500;
 }
 
 .hero-actions {
-  margin-top: 18px;
+  margin-top: 24px;
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -103,7 +112,7 @@
 }
 
 .supporting-text {
-  margin-top: 24px;
-  color: #e0e0e0;
-  font-size: 0.92rem;
+  margin-top: 30px;
+  color: #e6e6e6;
+  font-size: 0.94rem;
 }

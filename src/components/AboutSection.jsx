@@ -6,8 +6,8 @@ export default function AboutSection() {
     <section className="section-block about-block" id="about">
       <SectionHeading
         eyebrow="Who We Are"
-        title="Xtract Is A Team Focused On Practical AI Automation"
-        lead="We help businesses streamline workflows, boost efficiency, and scale with AI-driven solutions that produce measurable outcomes."
+        title="Xtract is a team of innovators dedicated to making AI automation simple and effective."
+        lead="We help businesses streamline workflows, boost efficiency, and scale with smart, AI-driven solutions."
       />
     </section>
   );

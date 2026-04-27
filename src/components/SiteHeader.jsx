@@ -1,18 +1,23 @@
 import "./SiteHeader.css";
+import { NavLink, Link } from "react-router-dom";
 
-export default function SiteHeader() {
+export default function SiteHeader({ servicesHref }) {
   return (
     <header className="top-nav">
-      <a className="brand" href="#home">
+      <NavLink to="/" className="brand">
         <img src="/logo.png" alt="Logo" className="logo-image" />
-      </a>
+      </NavLink>
       <nav className="menu" aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact">Contact</a>
+        <NavLink to="/" end>
+          Home
+        </NavLink>
+        <a href={servicesHref}>Services</a>
+        <NavLink to="/blog">Blog</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
       </nav>
-      <button className="button button-small" style={{borderRadius: '8px'}}>Book a call</button>
+      <Link className="button button-small" to="/contact" style={{ borderRadius: "8px" }}>
+        Book a call
+      </Link>
     </header>
   );
 }

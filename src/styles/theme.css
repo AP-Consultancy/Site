@@ -1,17 +1,40 @@
 :root {
   --bg: #000000;
   --bg-2: #050505;
-  --bg-3: #030303;
-  --panel: rgba(14, 14, 14, 0.85);
+  --bg-3: #090909;
+  --panel: rgba(12, 12, 12, 0.9);
   --panel-strong: rgba(10, 10, 10, 0.98);
   --text: #ffffff;
-  --text-dim: #a0a0a0;
-  --accent: #ff0000;
+  --text-dim: #adadad;
+  --accent: #ef1d26;
   --accent-2: #ef1d26;
-  --line: rgba(239, 29, 38, 0.2);
-  --radius-lg: 16px;
+  --line: rgba(239, 29, 38, 0.28);
+  --radius-lg: 18px;
   --radius-md: 12px;
-  --max-width: 1200px;
+  --max-width: 1240px;
+  --section-gap: clamp(52px, 7vw, 104px);
+  --hero-padding-x: 20px;
+  --hero-padding-top: 84px;
+  --hero-padding-bottom: 20px;
+  --hero-title-size: clamp(2.2rem, 4.4vw, 4rem);
+  --hero-title-line-height: 1.02;
+  --hero-lead-size: 1rem;
+  --hero-lead-line-height: 1.5;
+  --eyebrow-size: 0.68rem;
+  --section-lead-size: 1rem;
+  --h2-size: clamp(2rem, 3.8vw, 3.2rem);
+  --h2-line-height: 1.1;
+  --h3-size: 1.04rem;
+  --body-size: 0.95rem;
+  --body-line-height: 1.56;
+  --impact-label-size: 0.8rem;
+  --case-list-size: 0.9rem;
+  --process-chip-size: 0.75rem;
+  --board-title-size: 0.78rem;
+  --board-item-title-size: 0.88rem;
+  --board-item-body-size: 0.74rem;
+  --footer-body-size: 0.92rem;
+  --footer-label-size: 0.8rem;
 }
 
 * {

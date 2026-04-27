@@ -17,5 +17,10 @@ main {
 }
 
 .section-block {
-  margin-top: clamp(62px, 8vw, 108px);
+  margin-top: var(--section-gap);
+}
+
+/* ADD THIS — hero should not get the margin-top */
+.hero.section-block {
+  margin-top: 0;
 }

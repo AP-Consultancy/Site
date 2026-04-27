@@ -5,9 +5,9 @@ export default function IndustriesSection({ industryCards }) {
   return (
     <section className="section-block">
       <SectionHeading
-        eyebrow="Benefits"
+        eyebrow="Industries We Serve"
         title="Industries We Serve"
-        lead="Discover how AI automation enhances efficiency, reduces costs, and drives business growth."
+        lead="Discover how AI automation enhances efficiency, reduces costs, and drives business growth with smarter, faster processes."
       />
       <div className="industry-grid">
         {industryCards.map((industry) => (

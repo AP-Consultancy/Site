@@ -1,23 +1,26 @@
 .button {
   border: none;
-  border-radius: 10px;
-  padding: 12px 20px;
+  border-radius: 999px;
+  padding: 12px 22px;
   font: inherit;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.92rem;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
   cursor: pointer;
   color: #ffffff;
-  background: #cc0000;
-  transition: all 0.2s ease;
+  background: linear-gradient(180deg, #ef1d26 0%, #c9131b 100%);
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
+  text-decoration: none;
 }
 
 .button:hover {
-  background: #ff0000;
+  background: linear-gradient(180deg, #ff2b34 0%, #d7161f 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(239, 29, 38, 0.25);
 }
 
 .button-small {
@@ -28,7 +31,7 @@
 .button-ghost {
   border: 1px solid rgba(255, 255, 255, 0.15);
   color: #ffffff;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.04);
   box-shadow: none;
 }
 

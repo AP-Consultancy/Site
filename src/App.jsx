@@ -1,44 +1,36 @@
 import "./App.css";
-import {
-  AboutSection,
-  CaseStudiesSection,
-  CtaSection,
-  HeroSection,
-  IndustriesSection,
-  LiveWallpaper,
-  ProcessSection,
-  ServicesSection,
-  SiteFooter,
-  SiteHeader,
-  StatsSection,
-  WhyChooseSection,
-} from "./components";
-import {
-  caseStudies,
-  industryCards,
-  processBoard,
-  processSteps,
-  services,
-  trustStats,
-  whyChoose,
-} from "./data/siteContent";
+import { useEffect } from "react";
+import { Navigate, Route, Routes } from "react-router-dom";
+import { LiveWallpaper, SiteFooter, SiteHeader } from "./components";
+import HomePage from "./pages/HomePage";
+import BlogPage from "./pages/BlogPage";
+import ContactPage from "./pages/ContactPage";
+import NotFoundPage from "./pages/NotFoundPage";
+
+const servicesUiUrl = "http://127.0.0.1:5174/#services";
+
+function ExternalRedirect({ to }) {
+  useEffect(() => {
+    window.location.replace(to);
+  }, [to]);
+
+  return null;
+}
 
 export default function App() {
   return (
     <div className="site-shell">
       <LiveWallpaper />
-      <SiteHeader />
-
+      <SiteHeader servicesHref={servicesUiUrl} />
       <main>
-        <HeroSection />
-        <AboutSection />
-        <StatsSection trustStats={trustStats} />
-        <ServicesSection services={services} />
-        <ProcessSection processSteps={processSteps} processBoard={processBoard} />
-        <CaseStudiesSection caseStudies={caseStudies} />
-        <IndustriesSection industryCards={industryCards} />
-        <WhyChooseSection whyChoose={whyChoose} />
-        <CtaSection />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/services" element={<ExternalRedirect to={servicesUiUrl} />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/404" element={<NotFoundPage />} />
+          <Route path="*" element={<Navigate to="/404" replace />} />
+        </Routes>
       </main>
       <SiteFooter />
     </div>

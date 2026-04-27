@@ -1,16 +1,16 @@
 .top-nav {
   width: 100%;
   margin: 0 auto;
-  padding: 12px 36px 10px;
-  position: sticky;
+  padding: 14px 32px 12px;
+  position: fixed;
   top: 0;
-  z-index: 20;
+  z-index: 40;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(0, 0, 0, 0.9);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(8, 8, 8, 0.86);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .brand {
@@ -39,11 +39,40 @@
 .footer-links a {
   color: #ffffff;
   text-decoration: none;
-  font-size: 0.94rem;
-  font-weight: 500;
+  font-size: 0.93rem;
+  font-weight: 600;
   transition: color 0.22s ease, opacity 0.22s ease;
 }
 
 .menu a:hover,
 .footer-links a:hover {
   color: #ff0000;
+}
+
+.menu a.active {
+  color: #ff0000;
+}
+
+@media (max-width: 768px) {
+  .top-nav {
+    padding: 10px 14px;
+    gap: 10px;
+  }
+
+  .menu {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+
+  .menu::-webkit-scrollbar {
+    display: none;
+  }
+
+  .button-small {
+    padding: 8px 12px;
+    font-size: 0.82rem;
+  }
+}
