@@ -19,10 +19,10 @@ import {
   whyChoose,
 } from "../data/siteContent";
 
-export default function HomePage({ onServicesClick }) {
+export default function HomePage() {
   return (
     <>
-      <HeroSection onServicesClick={onServicesClick} />
+      <HeroSection />
       <AboutSection />
       <StatsSection trustStats={trustStats} />
       <ServicesSection services={services} />

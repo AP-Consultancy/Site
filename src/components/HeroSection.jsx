@@ -1,6 +1,6 @@
 import "./HeroSection.css";
 
-export default function HeroSection({ onServicesClick }) {
+export default function HeroSection() {
   return (
     <section id="home" className="hero section-block">
       <div className="hero-badge">
@@ -17,9 +17,9 @@ export default function HeroSection({ onServicesClick }) {
       </p>
       <div className="hero-actions">
         <button className="button">Get in touch -&gt;</button>
-        <button className="button button-ghost" onClick={onServicesClick}>
+        <a className="button button-ghost" href="/services" target="_blank" rel="noreferrer">
           View services
-        </button>
+        </a>
       </div>
       <p className="supporting-text">Over 50+ business trust us</p>
     </section>
