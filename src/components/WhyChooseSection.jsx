@@ -6,7 +6,7 @@ export default function WhyChooseSection({ whyChoose }) {
     <section className="section-block">
       <SectionHeading
         eyebrow="Why Choose Us?"
-        title="Why Choose Arentis?"
+        title="Why Choose AP Consultancy?"
         lead="We combine cutting-edge technology with proven methodologies to deliver exceptional results."
       />
       <div className="why-grid">

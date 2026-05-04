@@ -1,26 +1,42 @@
 .site-shell {
   min-height: 100vh;
   color: var(--text);
-  background: #000000;
+  background: #000;
   position: relative;
   overflow-x: hidden;
 }
 
-.site-shell > *:not(.live-wallpaper) {
+/* keep content above wallpaper */
+.page-content {
   position: relative;
   z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
+/* center everything inside main */
 main {
+  flex: 1; /* pushes footer down */
+
   width: min(var(--max-width), calc(100% - 32px));
   margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* horizontal center */
+  justify-content: center; /* vertical center (optional) */
+
+  text-align: center; /* text center globally */
 }
 
+/* sections spacing */
 .section-block {
   margin-top: var(--section-gap);
 }
 
-/* ADD THIS — hero should not get the margin-top */
+/* hero exception */
 .hero.section-block {
   margin-top: 0;
 }

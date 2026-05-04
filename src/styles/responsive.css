@@ -6,7 +6,11 @@
   }
 
   .top-nav {
-    padding: 10px 24px 8px;
+   position: sticky;
+  top: 0;
+  z-index: 1000; /* IMPORTANT */
+  background: rgba(0, 0, 0, 0.8); /* optional for visibility */
+  backdrop-filter: blur(10px); /* optional glass effect */
   }
 
   .brand {

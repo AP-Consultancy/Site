@@ -1,10 +1,11 @@
 import { CaseStudiesSection } from "../components";
 import { caseStudies } from "../data/siteContent";
+import "./BlogPage.css";
 
 export default function BlogPage() {
   return (
     <>
-      <section className="section-block">
+      <section className="blog-intro-section">
         <p className="eyebrow">Blog</p>
         <h2>Insights on AI automation, software delivery, and growth.</h2>
         <p className="section-lead">

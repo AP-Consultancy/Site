@@ -3,8 +3,19 @@ import "./HeroSection.css";
 export default function HeroSection() {
   return (
     <section id="home" className="hero section-block">
+      <video 
+        className="hero-video" 
+        autoPlay 
+        muted 
+        loop 
+        playsInline
+      >
+        <source src="/videos/hero-background.mp4" type="video/mp4" />
+        <source src="/videos/hero-background.webm" type="video/webm" />
+      </video>
+      <div className="hero-overlay" />
       <div className="hero-badge">
-        <span className="badge-highlight">Arentis</span>
+        <span className="badge-highlight">AP Consultancy</span>
         <span className="badge-text">Your Trusted IT Partner</span>
       </div>
       <h1>

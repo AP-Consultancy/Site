@@ -1,0 +1,22 @@
+.blog-intro-section {
+  text-align: center;
+  max-width: 100%;
+  padding: 60px 20px;
+}
+
+.blog-intro-section p {
+  margin: 0.5rem auto;
+  max-width: 800px;
+}
+
+.blog-intro-section h2 {
+  margin-bottom: 1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blog-intro-section .eyebrow {
+  display: block;
+  margin-bottom: 1rem;
+}

@@ -3,4 +3,7 @@
   text-align: center;
   display: grid;
   gap: 10px;
+  width: 100%;
+  max-width: 100%;
+  justify-items: center;
 }

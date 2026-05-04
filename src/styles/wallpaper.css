@@ -237,6 +237,7 @@ main::before {
 }
 
 .site-shell > *:not(.live-wallpaper) {
-  position: relative;
-  z-index: 1;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* higher than wallpaper */
 }

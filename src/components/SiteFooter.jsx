@@ -5,7 +5,7 @@ export default function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="footer-brand-block">
-        <h3>Arentis</h3>
+        <h3>AP Consultancy</h3>
         <p>Your Trusted IT Partner</p>
       </div>
       <div className="footer-links-block">
