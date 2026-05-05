@@ -36,7 +36,7 @@ import siteLogo from "../assets/ap-white.png"
           <NavLink to="/" end>
             Home
           </NavLink>
-          <a href="/services" target="_blank" rel="noreferrer">Services</a>
+          <NavLink to="/services">Services</NavLink>
           <Link to="/about" className={active === "about" ? "active" : ""}>About Us</Link>
           <NavLink to="/blog">Blog</NavLink>
           <NavLink to="/contact">Contact</NavLink>

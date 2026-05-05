@@ -20,6 +20,10 @@
   --hero-title-line-height: 1.02;
   --hero-lead-size: 1rem;
   --hero-lead-line-height: 1.5;
+  --page-heading-size: clamp(2.4rem, 5vw, 4rem);
+  --page-heading-line-height: 1.1;
+  --page-subheading-size: clamp(1.5rem, 3.5vw, 2.5rem);
+  --page-subheading-line-height: 1.2;
   --eyebrow-size: 0.68rem;
   --section-lead-size: 1rem;
   --h2-size: clamp(2rem, 3.8vw, 3.2rem);

@@ -15,13 +15,15 @@ export default function CtaSection() {
         <Link className="button" to="/contact">
           Contact Us
         </Link>
-        <input
-          className="newsletter-input"
-          type="email"
-          placeholder="Enter email for newsletter"
-          aria-label="Newsletter email"
-        />
-        <button className="button button-ghost">Subscribe</button>
+        <div className="newsletter-group">
+          <input
+            className="newsletter-input"
+            type="email"
+            placeholder="Enter email for newsletter"
+            aria-label="Newsletter email"
+          />
+          <button className="button button-ghost">Subscribe</button>
+        </div>
       </div>
     </section>
   );

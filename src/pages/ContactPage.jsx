@@ -50,17 +50,21 @@ export default function ContactPage() {
 
   return (
     <div className="contact-page">
-      <header className="contact-hero framer-hero">
-        <div className="hero-eyebrow">24/7</div>
-        <div className="hero-heading">
-          <h1>Any Questions Rising? We are</h1>
-          <h1 className="line-2">are Ready to Help.</h1>
-          <p className="hero-sub">
-            Whether you have a question, need assistance, or want to start a new
-            project, our team is here to help.
-          </p>
-        </div>
-      </header>
+      <div className="contact-page-wrapper">
+        <div className="contact-dot-grid"></div>
+        <div className="contact-glow"></div>
+        <header className="contact-hero framer-hero">
+          <div className="hero-eyebrow">24/7</div>
+          <div className="hero-heading">
+            <h1>Any Questions Rising? We are</h1>
+            <h1 className="line-2">are Ready to Help.</h1>
+            <p className="hero-sub">
+              Whether you have a question, need assistance, or want to start a new
+              project, our team is here to help.
+            </p>
+          </div>
+        </header>
+      </div>
 
       <section className="contact-main">
         <section className="contact-form-section">

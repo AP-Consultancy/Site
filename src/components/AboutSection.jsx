@@ -1,10 +1,12 @@
 import "./AboutSection.css";
 import SectionHeading from "./SectionHeading";
-import logo from "../assets/ap-logo.svg";
+import logo from "../assets/ap-white.png";
 
 export default function AboutSection() {
   return (
     <section className="about-root" id="about">
+      <div className="about-dot-grid"></div>
+      <div className="about-glow"></div>
       <header className="about-hero">
         <img src={logo} alt="AP Consultancy" className="about-logo" />
         <button className="pill">About Us</button>
@@ -28,44 +30,46 @@ export default function AboutSection() {
         </div>
       </div>
 
-      <section className="what-we-do">
-        <div className="section-intro">
-          <button className="pill">Our Work</button>
-          <h2>What We Do</h2>
-          <p className="lead">
-            We blend creativity, strategy, and technology to deliver custom solutions tailored to each
-            client's unique needs. Whether you're building a product from scratch, automating a workflow,
-            or enhancing customer engagement, our team ensures every project is aligned with your vision and
-            business objectives.
-          </p>
-        </div>
-
-        <div className="cards-row">
-          <div className="card red">
-            <h3>⚡ Our Mission</h3>
-            <p>To empower businesses by delivering innovative, efficient, and scalable digital solutions.</p>
+      <div className="sections-wrapper">
+        <section className="what-we-do">
+          <div className="section-intro">
+            <button className="pill">Our Work</button>
+            <h2>What We Do</h2>
+            <p className="lead">
+              We blend creativity, strategy, and technology to deliver custom solutions tailored to each
+              client's unique needs. Whether you're building a product from scratch, automating a workflow,
+              or enhancing customer engagement, our team ensures every project is aligned with your vision and
+              business objectives.
+            </p>
           </div>
-          <div className="card">
-            <h3>📊 Our Vision</h3>
-            <p>To be recognized as a trusted global technology partner known for excellence, integrity, and client success.</p>
+
+          <div className="cards-row">
+            <div className="card red">
+              <h3>⚡ Our Mission</h3>
+              <p>To empower businesses by delivering innovative, efficient, and scalable digital solutions.</p>
+            </div>
+            <div className="card">
+              <h3>📊 Our Vision</h3>
+              <p>To be recognized as a trusted global technology partner known for excellence, integrity, and client success.</p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="values">
-        <div className="section-intro small">
-          <button className="pill">Our Values</button>
-          <h2>The Values Behind AP Consultancy</h2>
-          <p className="lead">Our values shape everything we do. From innovation to integrity, we build solutions that empower businesses and drive real impact.</p>
-        </div>
+        <section className="values">
+          <div className="section-intro small">
+            <button className="pill">Our Values</button>
+            <h2>The Values Behind AP Consultancy</h2>
+            <p className="lead">Our values shape everything we do. From innovation to integrity, we build solutions that empower businesses and drive real impact.</p>
+          </div>
 
-        <div className="values-row">
-          <div className="value-card">Innovation<p>We challenge the norm to build smarter, faster, and better solutions.</p></div>
-          <div className="value-card">Collaboration<p>We believe in growing together with our clients, building trust and shared success.</p></div>
-          <div className="value-card">Excellence<p>We hold ourselves to the highest standards in everything we do.</p></div>
-          <div className="value-card">Integrity<p>We act with absolute honesty and transparency in every interaction.</p></div>
-        </div>
-      </section>
+          <div className="values-row">
+            <div className="value-card">Innovation<p>We challenge the norm to build smarter, faster, and better solutions.</p></div>
+            <div className="value-card">Collaboration<p>We believe in growing together with our clients, building trust and shared success.</p></div>
+            <div className="value-card">Excellence<p>We hold ourselves to the highest standards in everything we do.</p></div>
+
+          </div>
+        </section>
+      </div>
 
       <section className="about-cta">
         <div className="cta-box">

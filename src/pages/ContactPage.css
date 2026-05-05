@@ -1,8 +1,38 @@
 .contact-page {
   width: 100%;
+  background: #000000;
+}
+
+.contact-page-wrapper {
+  position: relative;
+  background: #070708;
+  overflow: hidden;
+  padding: 80px 0;
+}
+
+.contact-dot-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.25;
+  background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.14) 1px, transparent 1px);
+  background-size: 18px 18px;
+  pointer-events: none;
+}
+
+.contact-glow {
+  position: absolute;
+  left: 50%;
+  top: -20rem;
+  width: min(48rem, 120vw);
+  aspect-ratio: 1;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 60, 60, 0.45) 0%, rgba(255, 60, 60, 0.12) 35%, rgba(0, 0, 0, 0) 70%);
+  pointer-events: none;
 }
 
 .contact-hero {
+  position: relative;
   text-align: center;
   margin-bottom: 60px;
   padding: 60px 20px;
@@ -17,8 +47,8 @@
 }
 
 .hero-heading h1 {
-  font-size: 48px;
-  line-height: 1.2;
+  font-size: var(--page-heading-size);
+  line-height: var(--page-heading-line-height);
   margin: 0;
   color: #fff;
 }
