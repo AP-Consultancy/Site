@@ -58,7 +58,7 @@ export default function ContactPage() {
             "Thank you for choosing AP Consultancy. We have received your request and our team will review it shortly. You can expect a response from us soon.",
         };
 
-        await Promise.all([
+        const [adminResult, userResult] = await Promise.allSettled([
           emailjs.send(emailJsServiceId, emailJsAdminTemplateId, adminParams, {
             publicKey: emailJsPublicKey,
           }),
@@ -66,6 +66,22 @@ export default function ContactPage() {
             publicKey: emailJsPublicKey,
           }),
         ]);
+
+        const failed = [];
+        if (adminResult.status === "rejected") failed.push("query email to AP Consultancy");
+        if (userResult.status === "rejected") failed.push("acknowledgement email to user");
+
+        if (failed.length) {
+          const errorDetails = [
+            adminResult.status === "rejected" ? adminResult.reason : null,
+            userResult.status === "rejected" ? userResult.reason : null,
+          ]
+            .filter(Boolean)
+            .map((e) => (e?.text ? `${e.text}` : e?.message ? `${e.message}` : String(e)))
+            .join(" | ");
+
+          throw new Error(`Failed to send ${failed.join(" and ")}.${errorDetails ? ` Details: ${errorDetails}` : ""}`);
+        }
       } else if (endpoint && !endpoint.includes("YOUR_FORM_ID")) {
         if (endpoint.includes("formspree.io")) {
           const formData = new FormData();
@@ -79,13 +95,16 @@ export default function ContactPage() {
           });
         }
       } else {
-        await new Promise((r) => setTimeout(r, 700));
+        throw new Error(
+          "Email service is not configured in this running app. Restart dev server after updating .env.local."
+        );
       }
       setStatus("success");
       form.reset();
-    } catch {
+    } catch (err) {
+      console.error("Contact form submission failed:", err);
       setStatus("error");
-      setError("Failed to send message. Please try again.");
+      setError(err?.message || "Failed to send message. Please verify EmailJS template settings and try again.");
     }
   }
 
