@@ -35,8 +35,3 @@ main {
 .section-block {
   margin-top: var(--section-gap);
 }
-
-/* hero exception */
-.hero.section-block {
-  margin-top: 0;
-}

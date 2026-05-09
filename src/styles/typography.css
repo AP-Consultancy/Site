@@ -4,7 +4,7 @@
   text-transform: uppercase;
   color: #ef1d26;
   font-size: var(--eyebrow-size);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .section-lead {
@@ -21,7 +21,7 @@ h2 {
   line-height: var(--h2-line-height);
   max-width: 22ch;
   text-wrap: balance;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 h3 {

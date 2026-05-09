@@ -1,58 +1,66 @@
-  import "./SiteHeader.css";
-  import { NavLink, Link, useLocation } from "react-router-dom";
-  import { useEffect, useState } from "react";
-import siteLogo from "../assets/ap-white.png"
-  export default function SiteHeader() {
-    const [active, setActive] = useState("");
-    const [menuOpen, setMenuOpen] = useState(false);
-    const location = useLocation();
+import { useEffect, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import "./SiteHeader.css";
 
-    useEffect(() => {
-      const checkActive = () => {
-        const aboutEl = document.getElementById("about");
-        if (aboutEl) {
-          const rect = aboutEl.getBoundingClientRect();
-          if (rect.top <= 160 && rect.bottom > 120) {
-            setActive("about");
-            return;
-          }
-        }
-        if (location.pathname === "/about") {
-          setActive("about");
-          return;
-        }
-        setActive("");
-      };
+export default function SiteHeader() {
+  const [menuOpen, setMenuOpen] = useState(false);
 
-      checkActive();
-      window.addEventListener("scroll", checkActive, { passive: true });
-      return () => window.removeEventListener("scroll", checkActive);
-    }, [location]);
+  useEffect(() => {
+    if (!menuOpen) return undefined;
+    const onResize = () => {
+      if (window.innerWidth > 920) setMenuOpen(false);
+    };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, [menuOpen]);
 
-    const closeMenu = () => setMenuOpen(false);
+  const navLinks = [
+    { to: "/", label: "Home" },
+    { to: "/services", label: "Services" },
+    { to: "/about", label: "About Us" },
+    { to: "/blog", label: "Blog" },
+  ];
 
-    return (
-      <header className="top-nav">
-        <NavLink to="/" className="brand" onClick={closeMenu}>
-          <img src={siteLogo} alt="AP Consultancy Logo" className="logo-image" />        
-        </NavLink>
-        <nav className={`menu ${menuOpen ? "open" : ""}`} aria-label="Main navigation">
-          <NavLink to="/" end onClick={closeMenu}>
-            Home
+  return (
+    <header className={`top-nav${menuOpen ? " mobile-open" : ""}`}>
+      <Link to="/" className="brand">
+        <img src="/logos/ap-white.png" alt="AP Consultancy" className="brand-logo" />
+      </Link>
+
+      <button
+        type="button"
+        className="menu-toggle"
+        aria-label={menuOpen ? "Close menu" : "Open menu"}
+        aria-expanded={menuOpen}
+        aria-controls="mobile-nav"
+        onClick={() => setMenuOpen((v) => !v)}
+      >
+        <span />
+        <span />
+        <span />
+      </button>
+
+      <nav className="menu" aria-label="Main navigation">
+        {navLinks.map((link) => (
+          <NavLink key={link.to} to={link.to} end={link.to === "/"}>
+            {link.label}
           </NavLink>
-          <NavLink to="/services" onClick={closeMenu}>Services</NavLink>
-          <Link to="/about" className={active === "about" ? "active" : ""} onClick={closeMenu}>About Us</Link>
-          <NavLink to="/blog" onClick={closeMenu}>Blog</NavLink>
-          <NavLink to="/contact" onClick={closeMenu}>Contact</NavLink>
-        </nav>
-        <Link className="button button-small" to="/contact" style={{ borderRadius: "8px" }} onClick={closeMenu}>
-          Book a call
+        ))}
+      </nav>
+      <Link className="button button-small" to="/contact" style={{ borderRadius: "8px" }}>
+        Contact Us
+      </Link>
+
+      <nav id="mobile-nav" className={`mobile-menu${menuOpen ? " open" : ""}`} aria-label="Mobile navigation">
+        {navLinks.map((link) => (
+          <NavLink key={link.to} to={link.to} end={link.to === "/"} onClick={() => setMenuOpen(false)}>
+            {link.label}
+          </NavLink>
+        ))}
+        <Link className="button mobile-contact-btn" to="/contact" onClick={() => setMenuOpen(false)}>
+          Contact Us
         </Link>
-        <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </header>
-    );
-  }
+      </nav>
+    </header>
+  );
+}

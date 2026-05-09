@@ -3,7 +3,7 @@
   border-radius: 999px;
   padding: 12px 22px;
   font: inherit;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 0.92rem;
   letter-spacing: 0;
   cursor: pointer;
@@ -38,15 +38,4 @@
 .button-ghost:hover {
   background: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.3);
-}
-
-.mini-art {
-  width: 72px;
-  height: 56px;
-  border-radius: 12px;
-  border: 1px solid rgba(220, 20, 60, 0.4);
-  background:
-    radial-gradient(circle at 28% 35%, #ff6b6b 0%, #dc143c 24%, transparent 54%),
-    linear-gradient(140deg, #1a1a1a 0%, #0d0d0d 100%);
-  margin-bottom: 8px;
 }

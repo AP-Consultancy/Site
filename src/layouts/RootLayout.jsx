@@ -1,12 +1,11 @@
 import { Outlet } from "react-router-dom";
-import { LiveWallpaper, SiteFooter, SiteHeader } from "../components";
+import { ScrollToTop, SiteFooter, SiteHeader } from "../components";
 
 export default function RootLayout() {
   return (
     <div className="site-shell">
-      <LiveWallpaper />
-
       <div className="page-content">
+        <ScrollToTop />
         <SiteHeader />
 
         <main>

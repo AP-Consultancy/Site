@@ -1,6 +1,7 @@
 import "./ContactPage.css";
 import { useState } from "react";
-import CtaSection from "../components/CtaSection";
+import { RevealOnScroll } from "../components";
+import emailjs from "@emailjs/browser";
 
 export default function ContactPage() {
   const [status, setStatus] = useState("idle");
@@ -13,8 +14,7 @@ export default function ContactPage() {
     const data = new FormData(form);
     const payload = Object.fromEntries(data.entries());
 
-    // Basic client-side validation
-    if (!payload.first || !payload.last || !payload.email || !payload.message) {
+    if (!payload.first || !payload.last || !payload.email || !payload.phone || !payload.message || !payload.country || !payload.companyType) {
       setError("Please fill the required fields.");
       return;
     }
@@ -22,14 +22,56 @@ export default function ContactPage() {
     try {
       setStatus("loading");
       const endpoint = import.meta.env.VITE_CONTACT_ENDPOINT || "";
-      if (endpoint && !endpoint.includes("YOUR_FORM_ID")) {
-        // If endpoint looks like Formspree, send as form-encoded/formdata
+      const emailJsServiceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || "";
+      const emailJsAdminTemplateId = import.meta.env.VITE_EMAILJS_ADMIN_TEMPLATE_ID || "";
+      const emailJsUserTemplateId = import.meta.env.VITE_EMAILJS_USER_TEMPLATE_ID || "";
+      const emailJsPublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "";
+      const contactReceiverEmail = import.meta.env.VITE_CONTACT_RECEIVER_EMAIL || "";
+
+      if (
+        emailJsServiceId &&
+        emailJsAdminTemplateId &&
+        emailJsUserTemplateId &&
+        emailJsPublicKey &&
+        contactReceiverEmail
+      ) {
+        const fullName = `${payload.first} ${payload.last}`.trim();
+
+        const adminParams = {
+          to_email: contactReceiverEmail,
+          to_name: "AP Consultancy",
+          subject: `New enquiry received | ${fullName || payload.email} | AP Consultancy`,
+          from_name: fullName,
+          from_email: payload.email,
+          phone: payload.phone,
+          country: payload.country,
+          company_type: payload.companyType,
+          message: payload.message,
+        };
+
+        const userParams = {
+          to_email: payload.email,
+          to_name: fullName,
+          from_name: "AP Consultancy",
+          subject: "Thank you for contacting AP Consultancy",
+          acknowledgement:
+            "Thank you for choosing AP Consultancy. We have received your request and our team will review it shortly. You can expect a response from us soon.",
+        };
+
+        await Promise.all([
+          emailjs.send(emailJsServiceId, emailJsAdminTemplateId, adminParams, {
+            publicKey: emailJsPublicKey,
+          }),
+          emailjs.send(emailJsServiceId, emailJsUserTemplateId, userParams, {
+            publicKey: emailJsPublicKey,
+          }),
+        ]);
+      } else if (endpoint && !endpoint.includes("YOUR_FORM_ID")) {
         if (endpoint.includes("formspree.io")) {
           const formData = new FormData();
           Object.entries(payload).forEach(([k, v]) => formData.append(k, v));
           await fetch(endpoint, { method: "POST", body: formData });
         } else {
-          // POST JSON to configured endpoint
           await fetch(endpoint, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -37,112 +79,142 @@ export default function ContactPage() {
           });
         }
       } else {
-        // fallback: simulate submit when no endpoint configured
         await new Promise((r) => setTimeout(r, 700));
       }
       setStatus("success");
       form.reset();
-    } catch (err) {
+    } catch {
       setStatus("error");
       setError("Failed to send message. Please try again.");
     }
   }
 
   return (
-    <div className="contact-page">
-      <div className="contact-page-wrapper">
-        <div className="contact-dot-grid"></div>
-        <div className="contact-glow"></div>
-        <header className="contact-hero framer-hero">
-          <div className="hero-eyebrow">24/7</div>
-          <div className="hero-heading">
-            <h1>Any Questions Rising? We are</h1>
-            <h1 className="line-2">are Ready to Help.</h1>
-            <p className="hero-sub">
-              Whether you have a question, need assistance, or want to start a new
-              project, our team is here to help.
-            </p>
+    <div className="ct-page">
+      <div className="ct-bg-glow ct-bg-glow--left" aria-hidden="true" />
+      <div className="ct-bg-glow ct-bg-glow--right" aria-hidden="true" />
+
+      <RevealOnScroll className="ct-hero">
+        <div className="ct-hero-grid" aria-hidden="true" />
+        <div className="ct-hero-glow" aria-hidden="true" />
+        <div className="ct-hero-inner">
+          <div className="ct-badge">
+            <span className="ct-badge-247">24/7</span>
+            <span className="ct-badge-label">Collaborate With Us</span>
           </div>
-        </header>
-      </div>
+          <h1 className="ct-hero-title">
+            Have Any Doubts? We
+            <br />
+            are Ready to Help.
+          </h1>
+          <p className="ct-hero-lead">
+            Whether you need guidance, support, or a fresh start, our team is ready to assist you.
+          </p>
+        </div>
+      </RevealOnScroll>
 
-      <section className="contact-main">
-        <section className="contact-form-section">
-          <form className="framer-contact-form" onSubmit={handleSubmit}>
-            <div className="two-col">
-              <label htmlFor="first">
-                First name*
-                <input id="first" placeholder="Jane" name="first" required />
-              </label>
-              <label htmlFor="last">
-                Last Name*
-                <input id="last" placeholder="Smith" name="last" required />
-              </label>
-            </div>
-
-            <label htmlFor="email">
-              How can we reach you?*
-              <input id="email" placeholder="jane@framer.com" name="email" type="email" required />
+      <RevealOnScroll className="ct-form-section" delay={80}>
+        <form className="ct-form-panel" onSubmit={handleSubmit}>
+          <div className="ct-form-row ct-form-row--2">
+            <label className="ct-field">
+              First name<span className="ct-req">*</span>
+              <input name="first" autoComplete="given-name" required />
             </label>
-
-            <div className="two-col">
-              <label htmlFor="country">
-                Where Are you from?*
-                <select id="country" name="country" required>
-                  <option value="">Select your country…</option>
-                  <option>Amsterdam</option>
-                  <option>Barcelona</option>
-                  <option>London</option>
-                  <option>New York</option>
-                </select>
-              </label>
-              <label htmlFor="companyType">
-                What's the type of your company?*
-                <select id="companyType" name="companyType" required>
-                  <option value="">Select category</option>
-                  <option>Agency</option>
-                  <option>SAAS</option>
-                  <option>Banking</option>
-                  <option>Business</option>
-                  <option>Other</option>
-                </select>
-              </label>
-            </div>
-
-            <label htmlFor="message">
-              Message*
-              <textarea id="message" placeholder="Type your message..." name="message" rows={6} required />
+            <label className="ct-field">
+              Last Name<span className="ct-req">*</span>
+              <input name="last" autoComplete="family-name" required />
             </label>
-
-            <div className="form-actions framer-actions">
-              <button
-                className="button framer-submit"
-                type="submit"
-                disabled={status === "loading"}
-              >
-                {status === "loading" ? "Sending..." : "Submit Now"}
-              </button>
-            </div>
-
-            {status === "success" && (
-              <div className="submit-success" role="status">Thanks — we received your message.</div>
-            )}
-            {error && <div className="submit-error" role="alert">{error}</div>}
-          </form>
-
-          <div className="trusted-by">
-            <h1 className="trusted-heading">Trusted by Fortune 500 Companies, SMBs and Startups</h1>
-            <div className="logos">
-              <img src="/logos/logo1.svg" alt="partner logo 1" />
-              <img src="/logos/logo2.svg" alt="partner logo 2" />
-              <img src="/logos/logo3.svg" alt="partner logo 3" />
-              <img src="/logos/logo4.svg" alt="partner logo 4" />
-            </div>
           </div>
-        </section>
 
-        <CtaSection />
-      </section>
+          <div className="ct-form-row ct-form-row--2">
+            <label className="ct-field">
+              How can we reach you?<span className="ct-req">*</span>
+              <input name="email" type="email" autoComplete="email" required />
+            </label>
+            <label className="ct-field">
+              Phone number<span className="ct-req">*</span>
+              <input name="phone" type="tel" autoComplete="tel" required />
+            </label>
+          </div>
+
+          <div className="ct-form-row ct-form-row--2">
+            <label className="ct-field">
+              Where Are you from?<span className="ct-req">*</span>
+              <select name="country" required defaultValue="">
+                <option value="" disabled>
+                  Select your country…
+                </option>
+                <option value="us">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="in">India</option>
+                <option value="de">Germany</option>
+                <option value="fr">France</option>
+                <option value="ae">United Arab Emirates</option>
+                <option value="other">Other</option>
+              </select>
+            </label>
+            <label className="ct-field">
+              What&apos;s the type of your company?<span className="ct-req">*</span>
+              <select name="companyType" required defaultValue="">
+                <option value="" disabled>
+                  Select category
+                </option>
+                <option value="agency">Agency</option>
+                <option value="saas">SAAS</option>
+                <option value="banking">Banking</option>
+                <option value="business">Business</option>
+                <option value="other">Other</option>
+              </select>
+            </label>
+          </div>
+
+          <label className="ct-field">
+            Message<span className="ct-req">*</span>
+            <textarea name="message" rows={6} placeholder="Type your message..." required />
+          </label>
+
+          <div className="ct-form-actions">
+            <button className="button ct-submit" type="submit" disabled={status === "loading"}>
+              {status === "loading" ? "Sending..." : "Submit Now"}
+            </button>
+          </div>
+
+          {status === "success" && (
+            <div className="ct-feedback ct-feedback--ok" role="status">
+              Thanks — we received your message.
+            </div>
+          )}
+          {error && (
+            <div className="ct-feedback ct-feedback--err" role="alert">
+              {error}
+            </div>
+          )}
+        </form>
+      </RevealOnScroll>
+
+      <RevealOnScroll className="ct-trusted" delay={60}>
+        <h2 className="ct-trusted-title">Trusted by Fortune 500 Companies, SMBs and Startups</h2>
+        <div className="ct-trusted-grid">
+          <div className="ct-trusted-cell">
+            <img className="ct-trusted-logo ct-trusted-logo--acuity" src="/logos/Acuity_Analytics_idwIL6acVL_1 2.png" alt="Acuity Analytics" loading="lazy" />
+          </div>
+          <div className="ct-trusted-cell">
+            <img className="ct-trusted-logo ct-trusted-logo--agility" src="/logos/surface1.png" alt="Agility Insights" loading="lazy" />
+          </div>
+          <div className="ct-trusted-cell">
+            <img className="ct-trusted-logo ct-trusted-logo--hdfc" src="/logos/hdfc-bank-logo 1.png" alt="HDFC Bank" loading="lazy" />
+          </div>
+          <div className="ct-trusted-cell">
+            <img className="ct-trusted-logo ct-trusted-logo--rocket" src="/logos/Rocket-Learning_New-Logo-2-Picsart-BackgroundRemover-Picsart-AiImageEnhancer 2.png" alt="Rocket Learning" loading="lazy" />
+          </div>
+          <div className="ct-trusted-cell">
+            <img className="ct-trusted-logo ct-trusted-logo--salesforce" src="/logos/Screenshot 2026-04-17 234303-Picsart-BackgroundRemover.png" alt="Salesforce" loading="lazy" />
+          </div>
+          <div className="ct-trusted-cell">
+            <img className="ct-trusted-logo ct-trusted-logo--tailored" src="/logos/tailoreed-logo 1.png" alt="Tailored Brands" loading="lazy" />
+          </div>
+        </div>
+      </RevealOnScroll>
     </div>
   );
 }
