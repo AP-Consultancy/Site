@@ -180,10 +180,10 @@
 
 @keyframes ab-marquee-ltr {
   0% {
-    transform: translateX(-45%);
+    transform: translate3d(-50%, 0, 0);
   }
   100% {
-    transform: translateX(0%);
+    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -219,6 +219,7 @@
   height: auto;
   object-fit: contain;
   display: block;
+  min-height: 40px;
 }
 
 .ab-section-intro {

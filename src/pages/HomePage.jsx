@@ -140,40 +140,12 @@ function LoopingVideo({ src, className }) {
       }
     };
 
-    let lastTime = -1;
-    let stagnantTicks = 0;
-    const watchdogId = window.setInterval(() => {
-      if (document.visibilityState !== "visible") return;
-
-      if (video.paused || video.ended) {
-        if (video.ended) video.currentTime = 0;
-        tryPlay();
-        return;
-      }
-
-      const now = video.currentTime;
-      if (now === lastTime) stagnantTicks += 1;
-      else {
-        stagnantTicks = 0;
-        lastTime = now;
-      }
-
-      if (stagnantTicks >= 2) {
-        if (video.duration && Number.isFinite(video.duration)) {
-          video.currentTime = Math.min(video.currentTime + 0.01, Math.max(video.duration - 0.05, 0));
-        }
-        tryPlay();
-        stagnantTicks = 0;
-      }
-    }, 2500);
-
     tryPlay();
     onLoadedMetadata();
     video.addEventListener("loadedmetadata", onLoadedMetadata);
     video.addEventListener("canplay", tryPlay);
     video.addEventListener("ended", tryPlay);
     video.addEventListener("stalled", tryPlay);
-    video.addEventListener("suspend", tryPlay);
     video.addEventListener("waiting", tryPlay);
     video.addEventListener("pause", recover);
     document.addEventListener("visibilitychange", recover);
@@ -181,12 +153,10 @@ function LoopingVideo({ src, className }) {
     window.addEventListener("pageshow", recover);
 
     return () => {
-      window.clearInterval(watchdogId);
       video.removeEventListener("loadedmetadata", onLoadedMetadata);
       video.removeEventListener("canplay", tryPlay);
       video.removeEventListener("ended", tryPlay);
       video.removeEventListener("stalled", tryPlay);
-      video.removeEventListener("suspend", tryPlay);
       video.removeEventListener("waiting", tryPlay);
       video.removeEventListener("pause", recover);
       document.removeEventListener("visibilitychange", recover);
@@ -272,41 +242,10 @@ export default function HomePage() {
       }
     };
 
-    // Some browsers pause or stall background videos silently; this watchdog nudges playback back.
-    let lastTime = -1;
-    let stagnantTicks = 0;
-    const watchdogId = window.setInterval(() => {
-      if (document.visibilityState !== "visible") return;
-
-      if (video.paused || video.ended) {
-        if (video.ended) video.currentTime = 0;
-        tryPlay();
-        return;
-      }
-
-      const now = video.currentTime;
-      if (now === lastTime) {
-        stagnantTicks += 1;
-      } else {
-        stagnantTicks = 0;
-        lastTime = now;
-      }
-
-      if (stagnantTicks >= 2) {
-        // Nudge off a decoded frame stall and retry playback.
-        if (video.duration && Number.isFinite(video.duration)) {
-          video.currentTime = Math.min(video.currentTime + 0.01, Math.max(video.duration - 0.05, 0));
-        }
-        tryPlay();
-        stagnantTicks = 0;
-      }
-    }, 2500);
-
     tryPlay();
     video.addEventListener("canplay", tryPlay);
     video.addEventListener("ended", tryPlay);
     video.addEventListener("stalled", tryPlay);
-    video.addEventListener("suspend", tryPlay);
     video.addEventListener("waiting", tryPlay);
     video.addEventListener("pause", resumeIfVisible);
     document.addEventListener("visibilitychange", resumeIfVisible);
@@ -314,11 +253,9 @@ export default function HomePage() {
     window.addEventListener("pageshow", resumeIfVisible);
 
     return () => {
-      window.clearInterval(watchdogId);
       video.removeEventListener("canplay", tryPlay);
       video.removeEventListener("ended", tryPlay);
       video.removeEventListener("stalled", tryPlay);
-      video.removeEventListener("suspend", tryPlay);
       video.removeEventListener("waiting", tryPlay);
       video.removeEventListener("pause", resumeIfVisible);
       document.removeEventListener("visibilitychange", resumeIfVisible);
@@ -378,7 +315,7 @@ export default function HomePage() {
           <div className="hx-logo-track">
             {[...clientLogos, ...clientLogos].map((logo, idx) => (
               <div className="hx-logo-item" key={`${logo.src}-${idx}`}>
-                <img src={logo.src} alt={logo.alt} loading="lazy" />
+                <img src={logo.src} alt={logo.alt} loading="eager" decoding="async" />
               </div>
             ))}
           </div>

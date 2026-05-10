@@ -215,12 +215,13 @@
   opacity: 0.85;
 }
 
+/* Track is two identical halves; -50% ↔ 0 lines up at loop (was -45%, which jumps each cycle) */
 @keyframes marquee-left-to-right {
   0% {
-    transform: translateX(-45%);
+    transform: translate3d(-50%, 0, 0);
   }
   100% {
-    transform: translateX(0%);
+    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -255,6 +256,8 @@
   height: auto;
   object-fit: contain;
   display: block;
+  /* Marquee row width must be stable before images load, or the loop point shifts */
+  min-height: 40px;
 }
 
 .hx-about,

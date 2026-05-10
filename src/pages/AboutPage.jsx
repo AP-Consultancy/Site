@@ -133,7 +133,7 @@ export default function AboutPage() {
           <div className="ab-logo-track">
             {[...clientLogos, ...clientLogos].map((logo, i) => (
               <div className="ab-logo-item" key={`${logo.src}-${i}`}>
-                <img src={logo.src} alt={logo.alt} loading="lazy" />
+                <img src={logo.src} alt={logo.alt} loading="eager" decoding="async" />
               </div>
             ))}
           </div>
