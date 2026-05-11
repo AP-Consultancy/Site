@@ -799,6 +799,13 @@
     grid-template-columns: 1fr;
   }
 
+  .sv-services-grid .sv-service-card-wrap:last-child:nth-child(odd) {
+    grid-column: auto;
+    width: 100%;
+    max-width: 100%;
+    justify-self: stretch;
+  }
+
   .sv-hero {
     min-height: auto;
     padding-bottom: 40px;

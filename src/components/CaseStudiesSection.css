@@ -52,3 +52,26 @@
   left: 0;
   top: 0.47em;
 }
+
+@media (max-width: 900px) {
+  .case-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 0 14px;
+  }
+
+  .case-card {
+    padding: 16px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  .case-grid {
+    padding: 0 10px;
+  }
+
+  .case-card {
+    padding: 14px;
+  }
+}
