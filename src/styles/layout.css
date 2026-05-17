@@ -35,3 +35,14 @@ main {
 .section-block {
   margin-top: var(--section-gap);
 }
+
+/* Portfolio pages use full-width layout (styled-components) */
+main:has(.portfolio-route) {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  align-items: stretch;
+  justify-content: flex-start;
+  text-align: initial;
+}

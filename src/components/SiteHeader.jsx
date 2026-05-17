@@ -18,6 +18,7 @@ export default function SiteHeader() {
     { to: "/", label: "Home" },
     { to: "/services", label: "Services" },
     { to: "/about", label: "About Us" },
+    { to: "/portfolio", label: "Portfolio" },
     { to: "/blog", label: "Blog" },
   ];
 

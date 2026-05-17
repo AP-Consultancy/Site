@@ -7,16 +7,16 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "test:contact": "node scripts/test-contact.mjs",
-    "screenshot:compare": "node scripts/screenshot-compare.mjs",
-    "pixel:diff": "node scripts/pixel-diff.mjs"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "framer-motion": "^12.38.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
-    "react-router-dom": "^7.14.2"
+    "react-icons": "^5.6.0",
+    "react-router-dom": "^7.14.2",
+    "styled-components": "^6.4.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.4",

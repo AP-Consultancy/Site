@@ -127,7 +127,7 @@ export default function AboutPage() {
         </div>
       </RevealOnScroll>
 
-      <RevealOnScroll className="ab-logos" delay={60}>
+      <RevealOnScroll className="ab-logos" delay={0}>
         <p className="ab-logos-caption">Over 50+ business trust us</p>
         <div className="ab-logo-marquee">
           <div className="ab-logo-track">

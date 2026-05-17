@@ -6,7 +6,8 @@ import AboutPage from "./pages/AboutPage";
 import ServicesPage from "./pages/ServicesPage";
 import BlogPage from "./pages/BlogPage";
 import ContactPage from "./pages/ContactPage";
-import NotFoundPage from "./pages/NotFoundPage";
+import PortfolioPage from "./pages/PortfolioPage";
+import PortfolioClientWorkPage from "./pages/PortfolioClientWorkPage";
 
 export default function App() {
   return (
@@ -16,10 +17,11 @@ export default function App() {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/blog" element={<BlogPage />} />
+        <Route path="/portfolio" element={<PortfolioPage />} />
+        <Route path="/portfolio/client-work" element={<PortfolioClientWorkPage />} />
         <Route path="/contact" element={<ContactPage />} />
-        <Route path="/404" element={<NotFoundPage />} />
       </Route>
-      <Route path="*" element={<Navigate to="/404" replace />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 }

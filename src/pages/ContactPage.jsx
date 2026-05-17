@@ -15,6 +15,7 @@ export default function ContactPage() {
     const payload = Object.fromEntries(data.entries());
 
     if (!payload.first || !payload.last || !payload.email || !payload.phone || !payload.message || !payload.country || !payload.companyType) {
+      setStatus("idle");
       setError("Please fill the required fields.");
       return;
     }

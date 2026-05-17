@@ -134,6 +134,7 @@ export default function SiteFooter() {
               <Link to="/">Process</Link>
               <Link to="/#cases">Case studies</Link>
               <Link to="/blog">Blog</Link>
+              <Link to="/portfolio">Portfolio</Link>
               <Link to="/contact">Pricing</Link>
             </div>
           </div>
@@ -143,6 +144,7 @@ export default function SiteFooter() {
               <Link to="/">Home</Link>
               <Link to="/about">About</Link>
               <Link to="/services">Services</Link>
+              <Link to="/portfolio">Portfolio</Link>
               <Link to="/contact">Contact</Link>
             </div>
           </div>

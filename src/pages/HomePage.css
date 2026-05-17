@@ -109,6 +109,12 @@
     transform: none;
     animation: none;
   }
+
+  .hx-logo-track {
+    animation: none;
+    transform: none;
+    opacity: 0.85;
+  }
 }
 
 .hx-badge {
@@ -240,10 +246,15 @@
   color: #e2e2e2;
   font-weight: 500;
   opacity: 0.85;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
   animation: marquee-left-to-right 18s linear infinite;
 }
 
 .hx-logo-item {
+  flex: 0 0 auto;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -251,13 +262,11 @@
 
 .hx-logo-item img {
   max-height: 40px;
-  max-width: 170px;
+  max-width: min(200px, 42vw);
   width: auto;
   height: auto;
   object-fit: contain;
   display: block;
-  /* Marquee row width must be stable before images load, or the loop point shifts */
-  min-height: 40px;
 }
 
 .hx-about,

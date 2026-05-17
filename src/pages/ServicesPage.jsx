@@ -10,9 +10,6 @@ const services = [
     description: "Add skilled developers to speed up product delivery.",
     mediaClass: "sv-media-1",
     icon: "code",
-    techStack: "React, Node.js, TypeScript",
-    delivery: "MVP to production, sprint-based releases",
-    hoverPoints: ["API-first architecture", "Sprint releases every 1-2 weeks", "Code quality + test coverage"],
   },
   {
     title: "Mobile App Development",
@@ -20,9 +17,6 @@ const services = [
     description: "Build scalable iOS, Android, or cross-platform apps.",
     mediaClass: "sv-media-2",
     icon: "mobile",
-    techStack: "Flutter, React Native, Kotlin",
-    delivery: "Cross-platform apps with native performance",
-    hoverPoints: ["Cross-platform + native modules", "Store deployment support", "Crash and performance monitoring"],
   },
   {
     title: "DevOps",
@@ -30,9 +24,6 @@ const services = [
     description: "Automate workflows and streamline CI/CD pipelines.",
     mediaClass: "sv-media-3",
     icon: "devops",
-    techStack: "Docker, Kubernetes, GitHub Actions",
-    delivery: "CI/CD automation, cloud deployment, observability",
-    hoverPoints: ["Automated CI/CD pipelines", "Zero-downtime deployments", "Monitoring and alerting setup"],
   },
   {
     title: "IT Consulting",
@@ -40,9 +31,6 @@ const services = [
     description: "Align tech strategy with business goals.",
     mediaClass: "sv-media-4",
     icon: "chart",
-    techStack: "Architecture reviews, roadmap planning",
-    delivery: "Tech audit, scaling plan, execution blueprint",
-    hoverPoints: ["Current-state audit", "Scalable target architecture", "Delivery roadmap with milestones"],
   },
   {
     title: "Database Architecture",
@@ -50,9 +38,6 @@ const services = [
     description: "Create secure, scalable database systems.",
     mediaClass: "sv-media-5",
     icon: "database",
-    techStack: "PostgreSQL, MongoDB, Redis",
-    delivery: "Data modeling, optimization, secure access",
-    hoverPoints: ["Schema and query optimization", "Backup + recovery strategy", "Role-based secure access"],
   },
   {
     title: "Blockchain Development",
@@ -60,9 +45,6 @@ const services = [
     description: "Develop dApps and smart contracts.",
     mediaClass: "sv-media-6",
     icon: "chain",
-    techStack: "Solidity, Web3.js, Hardhat",
-    delivery: "Smart contracts, wallets, dApp integration",
-    hoverPoints: ["Smart contract development", "Security-focused testing", "Wallet and dApp integration"],
   },
   {
     title: "QA Testing",
@@ -70,9 +52,6 @@ const services = [
     description: "Ensure quality with thorough testing.",
     mediaClass: "sv-media-7",
     icon: "qa",
-    techStack: "Cypress, Playwright, Jest",
-    delivery: "Automation suites, regression and performance QA",
-    hoverPoints: ["Automated regression suite", "Manual exploratory testing", "Performance and bug reports"],
   },
   {
     title: "Project Management",
@@ -80,9 +59,6 @@ const services = [
     description: "Manage timelines, budgets, and team coordination.",
     mediaClass: "sv-media-8",
     icon: "megaphone",
-    techStack: "Agile, Jira, Notion",
-    delivery: "Sprint planning, risk tracking, stakeholder updates",
-    hoverPoints: ["Sprint planning and tracking", "Risk and dependency management", "Weekly stakeholder reporting"],
   },
   {
     title: "Maintenance and Support",
@@ -90,9 +66,6 @@ const services = [
     description: "Provide ongoing updates and technical support.",
     mediaClass: "sv-media-9",
     icon: "support",
-    techStack: "Monitoring, patching, incident response",
-    delivery: "24/7 support, maintenance and SLA-backed uptime",
-    hoverPoints: ["24/7 incident response", "Security patches and updates", "SLA-backed uptime support"],
   },
 ];
 

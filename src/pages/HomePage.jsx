@@ -117,7 +117,7 @@ function LoopingVideo({ src, className }) {
     video.muted = true;
     video.defaultMuted = true;
     video.playsInline = true;
-    video.loop = true;
+    video.loop = false;
     video.setAttribute("playsinline", "");
     video.setAttribute("webkit-playsinline", "true");
 
@@ -132,6 +132,15 @@ function LoopingVideo({ src, className }) {
       }
     };
 
+    const onEnded = () => {
+      video.currentTime = 0;
+      tryPlay();
+    };
+
+    const onLoadedDataOnce = () => {
+      tryPlay();
+    };
+
     const onLoadedMetadata = () => {
       const w = video.videoWidth;
       const h = video.videoHeight;
@@ -143,10 +152,8 @@ function LoopingVideo({ src, className }) {
     tryPlay();
     onLoadedMetadata();
     video.addEventListener("loadedmetadata", onLoadedMetadata);
-    video.addEventListener("canplay", tryPlay);
-    video.addEventListener("ended", tryPlay);
-    video.addEventListener("stalled", tryPlay);
-    video.addEventListener("waiting", tryPlay);
+    video.addEventListener("loadeddata", onLoadedDataOnce, { once: true });
+    video.addEventListener("ended", onEnded);
     video.addEventListener("pause", recover);
     document.addEventListener("visibilitychange", recover);
     window.addEventListener("focus", recover);
@@ -154,10 +161,8 @@ function LoopingVideo({ src, className }) {
 
     return () => {
       video.removeEventListener("loadedmetadata", onLoadedMetadata);
-      video.removeEventListener("canplay", tryPlay);
-      video.removeEventListener("ended", tryPlay);
-      video.removeEventListener("stalled", tryPlay);
-      video.removeEventListener("waiting", tryPlay);
+      video.removeEventListener("loadeddata", onLoadedDataOnce);
+      video.removeEventListener("ended", onEnded);
       video.removeEventListener("pause", recover);
       document.removeEventListener("visibilitychange", recover);
       window.removeEventListener("focus", recover);
@@ -167,7 +172,7 @@ function LoopingVideo({ src, className }) {
 
   return (
     <div className={className} style={ratioStyle}>
-      <video ref={videoRef} autoPlay muted loop playsInline preload="auto" aria-hidden="true">
+      <video ref={videoRef} autoPlay muted playsInline preload="auto" aria-hidden="true">
         <source src={src} type="video/mp4" />
       </video>
     </div>
@@ -227,7 +232,7 @@ export default function HomePage() {
     video.muted = true;
     video.defaultMuted = true;
     video.playsInline = true;
-    video.loop = true;
+    video.loop = false;
     video.setAttribute("playsinline", "");
     video.setAttribute("webkit-playsinline", "true");
 
@@ -242,21 +247,26 @@ export default function HomePage() {
       }
     };
 
+    const onEnded = () => {
+      video.currentTime = 0;
+      tryPlay();
+    };
+
+    const onLoadedDataOnce = () => {
+      tryPlay();
+    };
+
     tryPlay();
-    video.addEventListener("canplay", tryPlay);
-    video.addEventListener("ended", tryPlay);
-    video.addEventListener("stalled", tryPlay);
-    video.addEventListener("waiting", tryPlay);
+    video.addEventListener("loadeddata", onLoadedDataOnce, { once: true });
+    video.addEventListener("ended", onEnded);
     video.addEventListener("pause", resumeIfVisible);
     document.addEventListener("visibilitychange", resumeIfVisible);
     window.addEventListener("focus", resumeIfVisible);
     window.addEventListener("pageshow", resumeIfVisible);
 
     return () => {
-      video.removeEventListener("canplay", tryPlay);
-      video.removeEventListener("ended", tryPlay);
-      video.removeEventListener("stalled", tryPlay);
-      video.removeEventListener("waiting", tryPlay);
+      video.removeEventListener("loadeddata", onLoadedDataOnce);
+      video.removeEventListener("ended", onEnded);
       video.removeEventListener("pause", resumeIfVisible);
       document.removeEventListener("visibilitychange", resumeIfVisible);
       window.removeEventListener("focus", resumeIfVisible);
@@ -274,7 +284,6 @@ export default function HomePage() {
           className="hx-hero-video"
           autoPlay
           muted
-          loop
           playsInline
           preload="auto"
           aria-hidden="true"
@@ -309,7 +318,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <RevealOnScroll className="hx-logos" delay={80}>
+      <RevealOnScroll className="hx-logos" delay={0}>
         <p>Over 50+ business trust us</p>
         <div className="hx-logo-marquee">
           <div className="hx-logo-track">
@@ -409,7 +418,7 @@ export default function HomePage() {
         </div>
       </RevealOnScroll>
       <RevealOnScroll className="hx-case-more" delay={140}>
-        <a href="https://portfolio.apconsultancy.in" className="button">View More</a>
+        <Link to="/portfolio" className="button">View More</Link>
       </RevealOnScroll>
 
       <RevealOnScroll className="hx-section-head" delay={120}>

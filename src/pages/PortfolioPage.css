@@ -1,0 +1,30 @@
+/* Portfolio full-bleed inside main site layout */
+.portfolio-route {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  overflow-x: clip;
+  background: #000;
+  -webkit-overflow-scrolling: touch;
+}
+
+.portfolio-route .site-shell main,
+main:has(.portfolio-route) {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  align-items: stretch;
+  justify-content: flex-start;
+  text-align: initial;
+}
+
+@media (max-width: 920px) {
+  .portfolio-route {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
