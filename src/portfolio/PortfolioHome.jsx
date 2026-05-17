@@ -14,7 +14,7 @@ import {
   HeroCollageMotion,
   LogoCard,
 } from "./style";
-import CustomerStoriesSection from "./components/CustomerStoriesSection";
+import { CustomerStoriesSection } from "./components/CustomerStoriesSection";
 import { defaultClientShowcaseData } from "./data/defaultClientShowcaseData";
 import TechStackSection from "./components/TechStackSection";
 import { techData } from "./data/techData";

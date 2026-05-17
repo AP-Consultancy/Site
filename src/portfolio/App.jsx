@@ -17,7 +17,7 @@ import { useState } from "react";
 import { useIsMobile } from "./hooks/useIsMobile";
 import { motion as Motion } from "framer-motion";
 import { HashRouter, Route, Routes } from "react-router-dom";
-import CustomerStoriesSection from "./components/CustomerStoriesSection";
+import { CustomerStoriesSection } from "./components/CustomerStoriesSection";
 import { defaultClientShowcaseData } from "./data/defaultClientShowcaseData";
 import TechStackSection from "./components/TechStackSection";
 import { techData } from "./data/techData";

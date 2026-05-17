@@ -181,3 +181,5 @@ export function CustomerStoriesSection({
     </StoriesSection>
   );
 }
+
+export default CustomerStoriesSection;
