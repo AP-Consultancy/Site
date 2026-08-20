@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap");
 :root{
-  --accent: #ff2929;
-  --accent-dark: #b91313;
-  --muted: #bfbfbf;
-  --bg: #000000;
+  --accent: #2563eb;
+  --accent-dark: #1d4ed8;
+  --muted: #64748b;
+  --bg: #ffffff;
 }
 
 html,
@@ -16,10 +16,12 @@ body,
 }
 
 body {
-  font-family: "Sora", "Segoe UI", sans-serif;
+  font-family: "Inter", "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+  background: #ffffff;
+  color: #0f172a;
 }
 
 * {
@@ -28,21 +30,22 @@ body {
 
 /* Base typographic scale tuned to reference */
 h1 {
-  font-size: 3.5rem; /* ~56px */
-  font-weight: 500;
-  letter-spacing: -0.02em;
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
   margin: 0 0 0.5rem 0;
 }
 
 h2 {
-  font-size: 2.5rem; /* ~40px */
-  font-weight: 400;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 800;
   margin: 0 0 0.5rem 0;
+  letter-spacing: -0.02em;
 }
 
-p { line-height: 1.8; }
+p { line-height: 1.7; }
 
 @media (min-width:1200px){
-  h1{ font-size:5rem; } /* larger desktop headings */
-  h2{ font-size:3.2rem }
+  h1{ font-size: 3.75rem; }
+  h2{ font-size: 2.75rem; }
 }

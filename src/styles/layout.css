@@ -1,9 +1,9 @@
 .site-shell {
   min-height: 100vh;
   color: var(--text);
-  background: #000;
+  background: #ffffff;
   position: relative;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* keep content above wallpaper */
@@ -38,6 +38,72 @@ main {
 
 /* Portfolio pages use full-width layout (styled-components) */
 main:has(.portfolio-route) {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  align-items: stretch;
+  justify-content: flex-start;
+  text-align: initial;
+}
+
+/* Home page: full-bleed light layout */
+main:has(.home-page) {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  align-items: stretch;
+  justify-content: flex-start;
+  text-align: initial;
+}
+
+/* DevResources page: full-bleed light layout */
+main:has(.dev-resources-page) {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  align-items: stretch;
+  justify-content: flex-start;
+  text-align: initial;
+}
+
+/* About page: full-bleed light layout */
+main:has(.about-page) {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  align-items: stretch;
+  justify-content: flex-start;
+  text-align: initial;
+}
+
+/* Careers page: full-bleed light layout */
+main:has(.careers-page) {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  align-items: stretch;
+  justify-content: flex-start;
+  text-align: initial;
+}
+
+/* Services pages: full-bleed light layout */
+main:has(.services-page) {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  align-items: stretch;
+  justify-content: flex-start;
+  text-align: initial;
+}
+
+/* Contact page: full-bleed light layout */
+main:has(.contact-page) {
   width: 100%;
   max-width: none;
   margin: 0;
