@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { developers, featureHighlights, filterOptions } from "../data/devResourcesData";
+import { contactPath } from "../data/siteContact";
 import usePageMeta from "../hooks/usePageMeta";
 import "./DevResourcesPage.css";
 
@@ -211,14 +212,20 @@ export default function DevResourcesPage() {
                       <strong>{dev.engagement}</strong>
                     </div>
                   </div>
-                  <button type="button" className="dr-btn dr-btn--outline">
+                  <Link
+                    to={contactPath("hire", { developer: dev.id, role: dev.title })}
+                    className="dr-btn dr-btn--outline"
+                  >
                     <svg className="dr-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                       <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="1.8" />
                       <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z" stroke="currentColor" strokeWidth="1.8" />
                     </svg>
                     View Full Profile
-                  </button>
-                  <Link to="/contact" className="dr-btn dr-btn--primary">
+                  </Link>
+                  <Link
+                    to={contactPath("hire", { developer: dev.id, role: dev.title })}
+                    className="dr-btn dr-btn--primary"
+                  >
                     <svg className="dr-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                       <path d="M22 3L11 14M22 3l-7 18-4-7-7-4 18-7z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
                     </svg>
@@ -280,7 +287,7 @@ export default function DevResourcesPage() {
                 Our full bench is larger than what&apos;s shown here — many developers are matched directly to
                 requirements rather than listed publicly. Tell us what you need and get a shortlist within 24 hours.
               </p>
-              <Link to="/contact" className="dr-btn dr-btn--cta">
+              <Link to={contactPath("hire")} className="dr-btn dr-btn--cta">
                 Submit Your Requirement <span aria-hidden="true">→</span>
               </Link>
             </div>

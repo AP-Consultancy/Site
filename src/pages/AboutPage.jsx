@@ -7,6 +7,7 @@ import {
   partnerAvatars,
   testimonials,
 } from "../data/aboutPageData";
+import { contactPath } from "../data/siteContact";
 import usePageMeta from "../hooks/usePageMeta";
 import "./AboutPage.css";
 
@@ -203,12 +204,12 @@ export default function AboutPage() {
                 information security and process quality — not just a vendor promising &quot;trusted and
                 reliable&quot; without proof.
               </p>
-              <button type="button" className="au-btn au-btn--outline-light">
+              <Link to={contactPath("vendor")} className="au-btn au-btn--outline-light">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                   <path d="M12 4v10m0 4h.01M7 14l5 5 5-5M7 10l5-5 5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
                 Download Certificate
-              </button>
+              </Link>
             </div>
             <div className="au-iso-badge" aria-hidden="true">
               <div className="au-iso-badge-ring" />

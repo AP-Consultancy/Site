@@ -1,3 +1,5 @@
+import { contactInfoItems, siteContact } from "./siteContact";
+
 export const intentOptions = [
   {
     id: "hire",
@@ -38,11 +40,6 @@ export const roleOptions = [
 ];
 
 export const contactInfo = {
-  title: "AP Consultancy",
-  items: [
-    { type: "location", text: "Ahmedabad, Gujarat, India" },
-    { type: "phone", text: "+91 98765 43210" },
-    { type: "email", text: "hello@apconsultancy.in" },
-    { type: "linkedin", text: "linkedin.com/company/ap-consultancy" },
-  ],
+  title: siteContact.company,
+  items: contactInfoItems(),
 };

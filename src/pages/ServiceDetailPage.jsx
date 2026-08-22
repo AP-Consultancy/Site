@@ -1,5 +1,6 @@
 import { Link, Navigate, useParams } from "react-router-dom";
 import { getServiceBySlug } from "../data/servicesPageData";
+import { contactPath } from "../data/siteContact";
 import usePageMeta from "../hooks/usePageMeta";
 import "./ServicesPage.css";
 
@@ -83,7 +84,7 @@ export default function ServiceDetailPage() {
             <h2>{service.ctaTitle}</h2>
             <p>Get a shortlist within 24 hours.</p>
             <div className="sv-cta-actions">
-              <Link to="/contact" className="sv-btn sv-btn--white">
+              <Link to={contactPath("hire")} className="sv-btn sv-btn--white">
                 Submit Your Requirement <span aria-hidden="true">→</span>
               </Link>
               <Link to="/devresources" className="sv-btn sv-btn--ghost">

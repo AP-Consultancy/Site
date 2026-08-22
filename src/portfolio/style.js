@@ -874,7 +874,7 @@ export const ClientBrandSlot = styled.div`
 
   img {
     display: block;
-    height: 40px;
+    height: clamp(44px, 5vw, 56px);
     width: auto;
   }
 
@@ -891,7 +891,7 @@ export const ClientBrandSlot = styled.div`
       left: max(14px, env(safe-area-inset-left, 0px));
 
       img {
-        height: 34px;
+        height: 40px;
       }
     `}
 `;
@@ -1373,7 +1373,7 @@ export const GlobalStylesFix = styled.div`
     z-index: 10;
 
     img {
-      height: 36px;
+      height: clamp(48px, 6vw, 64px);
       width: auto;
       display: block;
     }

@@ -3,7 +3,7 @@
   background: #ffffff;
   color: #0f172a;
   font-family: "Inter", "Segoe UI", sans-serif;
-  padding-top: 68px;
+  padding-top: var(--site-header-height, 80px);
 }
 
 .wk-container {

@@ -12,7 +12,7 @@ export const serviceCategories = [
       "Shopify, Magento, WooCommerce, headless commerce, and custom storefront builds — developers who understand checkout flows, catalog architecture, and peak-load traffic.",
     image: "/images/software development.webp",
     imageAlt: "Pre-vetted remote eCommerce developer team",
-    accent: "#2563eb",
+    accent: "#2e72ff",
     icon: "cart",
   },
   {
@@ -22,7 +22,7 @@ export const serviceCategories = [
       "CI/CD pipelines, infrastructure-as-code, cloud migration, and security hardening across AWS, Azure, and GCP.",
     image: "/images/devops.png",
     imageAlt: "Pre-vetted DevOps and cloud security engineers",
-    accent: "#7c3aed",
+    accent: "#1b5fd9",
     icon: "cloud",
   },
   {
@@ -32,7 +32,7 @@ export const serviceCategories = [
       "LLM-powered application development, agent orchestration, and RAG pipeline engineering for teams building AI-native products.",
     image: "/images/database architecture.webp",
     imageAlt: "Pre-vetted agentic AI software developers",
-    accent: "#16a34a",
+    accent: "#4d88ff",
     icon: "ai",
   },
   {
@@ -42,7 +42,7 @@ export const serviceCategories = [
       "Manual, automation, performance, and security testing — developers who catch what slips through before it reaches production.",
     image: "/images/QA testing.jpg",
     imageAlt: "Pre-vetted QA and automation testers",
-    accent: "#ea580c",
+    accent: "#2e72ff",
     icon: "qa",
   },
   {
@@ -52,7 +52,7 @@ export const serviceCategories = [
       "iOS, Android, Flutter, React Native, and full-stack web development for consumer and enterprise applications.",
     image: "/images/mobile development.png",
     imageAlt: "Pre-vetted mobile app and web developers",
-    accent: "#db2777",
+    accent: "#7ebfff",
     icon: "mobile",
   },
   {
@@ -62,7 +62,7 @@ export const serviceCategories = [
       "Data science, MLOps, model deployment, and workflow automation to help your team ship AI features faster.",
     image: "/images/it consulting.jpeg",
     imageAlt: "Pre-vetted AI, ML and automation developers",
-    accent: "#c026d3",
+    accent: "#1b5fd9",
     icon: "ml",
   },
 ];

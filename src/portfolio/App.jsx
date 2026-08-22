@@ -65,7 +65,7 @@ const HomePage = () => {
             className="hero-logo"
           >
             <img
-              src={assetUrl("/logo/ap-white.png")}
+              src={assetUrl("/logo/ap-icon-navy.png")}
               alt="Company Logo"
               style={{
                 height: "36px",

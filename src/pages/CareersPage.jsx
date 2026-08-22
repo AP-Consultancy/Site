@@ -1,4 +1,5 @@
 import { engagementTypes, processSteps, whyChooseCards } from "../data/careersPageData";
+import { mailtoLink } from "../data/siteContact";
 import usePageMeta from "../hooks/usePageMeta";
 import "./CareersPage.css";
 
@@ -80,7 +81,13 @@ export default function CareersPage() {
                   </div>
                   <h3>{step.title}</h3>
                   <p>{step.text}</p>
-                  <span className="cr-step-link">{step.link}</span>
+                  <span className="cr-step-link">
+                    {step.num === 1 ? (
+                      <a href="#final-cta">{step.link}</a>
+                    ) : (
+                      step.link
+                    )}
+                  </span>
                 </div>
               </article>
             ))}
@@ -103,7 +110,9 @@ export default function CareersPage() {
                 </div>
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
-                <span className="cr-engage-btn">LEARN MORE</span>
+                <a className="cr-engage-btn" href="#final-cta">
+                  LEARN MORE
+                </a>
               </article>
             ))}
           </div>
@@ -120,7 +129,7 @@ export default function CareersPage() {
             </div>
             <h2>Ready for Better Project Opportunities?</h2>
             <p>Apply to join our talent pool and get matched with meaningful, remote-first work.</p>
-            <a className="cr-btn cr-btn--white" href="mailto:hello@apconsultancy.in?subject=Join%20Talent%20Pool">
+            <a className="cr-btn cr-btn--white" href={mailtoLink({ subject: "Join Talent Pool" })}>
               Apply / Join Our Talent Pool
             </a>
           </div>

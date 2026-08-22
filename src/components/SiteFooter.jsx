@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { serviceCategories } from "../data/servicesPageData";
+import { brandLogos } from "../data/brandAssets";
+import { contactPath, mailtoLink, siteContact } from "../data/siteContact";
 import "./SiteFooter.css";
 
 export default function SiteFooter() {
@@ -8,7 +10,7 @@ export default function SiteFooter() {
       <div className="footer-inner">
         <div className="footer-brand-col">
           <Link to="/" className="footer-brand-link">
-            <img src="/logo/ap.png" alt="AP Consultancy" className="footer-logo" />
+            <img src={brandLogos.full} alt="AP Consultancy" className="footer-logo" />
           </Link>
           <p className="footer-tagline">
             IT staff augmentation — pre-vetted remote developers, shortlist in 24 hours.
@@ -20,7 +22,7 @@ export default function SiteFooter() {
           <div className="footer-links">
             <Link to="/about">About Us</Link>
             <Link to="/portfolio">Case Studies</Link>
-            <Link to="/contact">Partners &amp; Compliance</Link>
+            <Link to={contactPath("vendor")}>Partners &amp; Compliance</Link>
             <Link to="/careers">Careers</Link>
           </div>
         </div>
@@ -39,19 +41,21 @@ export default function SiteFooter() {
         <div className="footer-links-block">
           <p>Get Started</p>
           <div className="footer-links">
-            <Link to="/contact">Submit a Hiring Requirement</Link>
+            <Link to={contactPath("hire")}>Submit a Hiring Requirement</Link>
             <Link to="/careers">Join Our Talent Pool</Link>
-            <Link to="/contact">Request Compliance Pack</Link>
+            <Link to={contactPath("vendor")}>Request Compliance Pack</Link>
           </div>
         </div>
 
         <div className="footer-links-block">
           <p>Contact &amp; Social</p>
           <div className="footer-links">
-            <a href="mailto:hello@apconsultancy.in">hello@apconsultancy.in</a>
-            <a href="tel:+919876543210">+91 98765 43210</a>
-            <span>Ahmedabad, Gujarat, India</span>
-            <a href="https://linkedin.com/company/ap-consultancy" target="_blank" rel="noreferrer">
+            <a href={mailtoLink()}>{siteContact.email}</a>
+            <a href={`tel:${siteContact.phoneTel}`}>{siteContact.phoneDisplay}</a>
+            <a href={siteContact.mapsUrl} target="_blank" rel="noreferrer">
+              {siteContact.address}
+            </a>
+            <a href={siteContact.linkedinUrl} target="_blank" rel="noreferrer">
               LinkedIn
             </a>
           </div>
@@ -61,8 +65,8 @@ export default function SiteFooter() {
       <div className="footer-bottom">
         <p>© AP Consultancy. All rights reserved.</p>
         <div className="footer-legal">
-          <Link to="/contact">Privacy Policy</Link>
-          <Link to="/contact">Terms of Service</Link>
+          <Link to={contactPath("hire")}>Privacy Policy</Link>
+          <Link to={contactPath("hire")}>Terms of Service</Link>
         </div>
       </div>
     </footer>

@@ -3,7 +3,7 @@
   background: #ffffff;
   color: #0f172a;
   font-family: "Inter", "Segoe UI", sans-serif;
-  padding-top: 68px;
+  padding-top: var(--site-header-height, 80px);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -18,7 +18,7 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #6366f1;
+  color: #2e72ff;
 }
 
 .sv-eyebrow::before {
@@ -28,7 +28,7 @@
   height: 7px;
   margin-right: 8px;
   border-radius: 50%;
-  background: #6366f1;
+  background: #2e72ff;
   vertical-align: 1px;
 }
 
@@ -57,7 +57,7 @@
 }
 
 .sv-btn--white {
-  color: #2563eb;
+  color: #2e72ff;
   background: #ffffff;
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
 }
@@ -123,7 +123,7 @@
   backdrop-filter: blur(8px);
   font-size: 0.8125rem;
   font-weight: 700;
-  color: #2563eb;
+  color: #2e72ff;
   box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
 }
 
@@ -191,7 +191,7 @@
   gap: 6px;
   font-size: 0.875rem;
   font-weight: 600;
-  color: #2563eb;
+  color: #2e72ff;
   text-decoration: none;
 }
 
@@ -225,7 +225,7 @@
   padding: clamp(36px, 5vw, 52px);
   text-align: center;
   color: #ffffff;
-  background: linear-gradient(105deg, #0037a5 0%, #2563eb 55%, #6366f1 100%);
+  background: linear-gradient(105deg, #0037a5 0%, #2e72ff 55%, #2e72ff 100%);
   box-shadow: 0 24px 48px rgba(37, 99, 235, 0.28);
 }
 
@@ -367,7 +367,7 @@
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #6366f1;
+  color: #2e72ff;
 }
 
 .sv-block-label--center {
@@ -420,7 +420,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  color: #2563eb;
+  color: #2e72ff;
   font-weight: 700;
 }
 

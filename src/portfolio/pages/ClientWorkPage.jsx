@@ -55,7 +55,7 @@ export default function ClientWorkPage() {
   return (
     <PageShell>
       <ClientBrandSlot>
-        <img src={assetUrl("/logo/ap-white.png")} alt="Company Logo" />
+        <img src={assetUrl("/logo/ap-icon-navy.png")} alt="Company Logo" />
       </ClientBrandSlot>
       <ClientPageHeader>
       <div

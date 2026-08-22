@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import heroBackgroundShadow from "../portfolio/assets/Background+Shadow.png";
+import { contactPath } from "../data/siteContact";
 import usePageMeta from "../hooks/usePageMeta";
 import "./HomePage.css";
 
@@ -8,42 +9,42 @@ const serviceSpecializations = [
     slug: "ecommerce",
     title: "eCommerce",
     text: "Shopify, Magento, headless commerce, custom storefronts",
-    color: "#2563eb",
+    color: "#2e72ff",
     icon: "globe",
   },
   {
     slug: "devops-cloud-security",
     title: "DevOps, Cloud & Security",
     text: "AWS/Azure/GCP, CI/CD, SRE, cloud security",
-    color: "#7c3aed",
+    color: "#1b5fd9",
     icon: "monitor",
   },
   {
     slug: "agentic-ai-software",
     title: "Agentic AI Software",
     text: "LLM app development, agent orchestration, RAG pipelines",
-    color: "#16a34a",
+    color: "#4d88ff",
     icon: "cube",
   },
   {
     slug: "qa-testing",
     title: "QA & Testing",
     text: "Manual, automation, performance, and security testing",
-    color: "#ea580c",
+    color: "#2e72ff",
     icon: "users",
   },
   {
     slug: "mobile-app-web",
     title: "Mobile App & Web",
     text: "iOS, Android, Flutter/React Native, full-stack web",
-    color: "#db2777",
+    color: "#7ebfff",
     icon: "phone",
   },
   {
     slug: "ai-ml-automation",
     title: "AI, ML & Automation",
     text: "Data science, MLOps, workflow automation",
-    color: "#c026d3",
+    color: "#1b5fd9",
     icon: "figma",
   },
 ];
@@ -235,7 +236,7 @@ export default function HomePage() {
               Mobile &amp; Web, ready to start in days, for projects of any length.
             </p>
             <div className="hp-hero-actions">
-              <Link to="/contact" className="hp-btn hp-btn--primary">
+              <Link to={contactPath("hire")} className="hp-btn hp-btn--primary">
                 Hire a Developer <span aria-hidden="true">→</span>
               </Link>
               <Link to="/devresources" className="hp-btn hp-btn--ghost">
@@ -327,7 +328,7 @@ export default function HomePage() {
               No black-box matching, no six-week pipelines. A five-step process engineered to put a
               contributing developer on your team in days.
             </p>
-            <Link to="/contact" className="hp-btn hp-btn--primary hp-btn--pill">
+            <Link to={contactPath("hire")} className="hp-btn hp-btn--primary hp-btn--pill">
               Start Your Hiring Request <span aria-hidden="true">→</span>
             </Link>
             <div className="hp-process-stats">
@@ -545,7 +546,7 @@ export default function HomePage() {
               <h2>Ready to Scale Your Team Without the Hiring Headache?</h2>
               <p>Get a shortlist of pre-vetted developers within 24 hours.</p>
               <div className="hp-hero-actions">
-                <Link to="/contact" className="hp-btn hp-btn--white">
+                <Link to={contactPath("hire")} className="hp-btn hp-btn--white">
                   Hire a Developer <span aria-hidden="true">→</span>
                 </Link>
                 <Link to="/careers" className="hp-btn hp-btn--ghost hp-btn--ghost-on-dark">

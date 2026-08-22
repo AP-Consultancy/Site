@@ -1,9 +1,9 @@
 .home-page {
-  --hp-blue: #2563eb;
-  --hp-blue-bright: #3b82f6;
-  --hp-blue-deep: #1d4ed8;
-  --hp-blue-link: #0066ff;
-  --hp-navy: #0f172a;
+  --hp-blue: #2e72ff;
+  --hp-blue-bright: #4d88ff;
+  --hp-blue-deep: #1b5fd9;
+  --hp-blue-link: #2e72ff;
+  --hp-navy: #0b1f3a;
   --hp-ink: #111827;
   --hp-body: #64748b;
   --hp-body-dark: #475569;
@@ -12,17 +12,17 @@
   --hp-line: #e5e7eb;
   --hp-surface: #f8fafc;
   --hp-surface-2: #f9fafb;
-  --hp-grad-btn: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-  --hp-grad-blue-purple: linear-gradient(90deg, #2563eb 0%, #7c3aed 100%);
-  --hp-grad-banner: linear-gradient(100deg, #1d4ed8 0%, #2563eb 45%, #38bdf8 100%);
-  --hp-grad-start: linear-gradient(105deg, #0037a5 0%, #2563eb 55%, #6366f1 100%);
+  --hp-grad-btn: linear-gradient(135deg, #4d88ff 0%, #2e72ff 55%, #1b5fd9 100%);
+  --hp-grad-blue-purple: linear-gradient(90deg, #2e72ff 0%, #1b5fd9 100%);
+  --hp-grad-banner: linear-gradient(100deg, #1b5fd9 0%, #2e72ff 45%, #7ebfff 100%);
+  --hp-grad-start: linear-gradient(105deg, #0b1f3a 0%, #2e72ff 55%, #1b5fd9 100%);
   --hp-grad-hero: linear-gradient(165deg, #000000 0%, #020617 38%, #050d1f 68%, #000000 100%);
-  --hp-grad-accent-text: linear-gradient(90deg, #60a5fa 0%, #3b82f6 45%, #2563eb 100%);
+  --hp-grad-accent-text: linear-gradient(90deg, #7ebfff 0%, #4d88ff 45%, #2e72ff 100%);
 
   width: 100%;
   background:
-    radial-gradient(ellipse 60% 40% at 0% 20%, rgba(37, 99, 235, 0.04), transparent 55%),
-    radial-gradient(ellipse 50% 35% at 100% 60%, rgba(124, 58, 237, 0.035), transparent 50%),
+    radial-gradient(ellipse 60% 40% at 0% 20%, rgba(46, 114, 255, 0.05), transparent 55%),
+    radial-gradient(ellipse 50% 35% at 100% 60%, rgba(27, 95, 217, 0.04), transparent 50%),
     #ffffff;
   color: var(--hp-navy);
   overflow-x: clip;
@@ -201,8 +201,8 @@
 /* ───────── Hero ───────── */
 .hp-hero {
   position: relative;
-  margin-top: 68px;
-  min-height: calc(100vh - 68px);
+  margin-top: var(--site-header-height, 80px);
+  min-height: calc(100vh - var(--site-header-height, 80px));
   display: flex;
   align-items: center;
   background: #020617;
@@ -631,7 +631,7 @@
 @media (hover: hover) {
   .hp-process-steps li:hover {
     z-index: 1;
-    background: linear-gradient(90deg, #f5f3ff 0%, #eef2ff 100%);
+    background: linear-gradient(90deg, #eef4ff 0%, #e8f1ff 100%);
     border-bottom-color: transparent;
     box-shadow:
       0 12px 36px rgba(99, 102, 241, 0.1),
@@ -640,7 +640,7 @@
 
   .hp-process-steps li:hover .hp-step-num {
     -webkit-text-stroke: 0 transparent;
-    background: linear-gradient(135deg, #6366f1 0%, #7c3aed 55%, #a855f7 100%);
+    background: linear-gradient(135deg, #2e72ff 0%, #1b5fd9 55%, #4d88ff 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -649,7 +649,7 @@
 
 .hp-process-steps li:focus-within {
   z-index: 1;
-  background: linear-gradient(90deg, #f5f3ff 0%, #eef2ff 100%);
+  background: linear-gradient(90deg, #eef4ff 0%, #e8f1ff 100%);
   border-bottom-color: transparent;
   box-shadow:
     0 12px 36px rgba(99, 102, 241, 0.1),
@@ -659,7 +659,7 @@
 
 .hp-process-steps li:focus-within .hp-step-num {
   -webkit-text-stroke: 0 transparent;
-  background: linear-gradient(135deg, #6366f1 0%, #7c3aed 55%, #a855f7 100%);
+  background: linear-gradient(135deg, #2e72ff 0%, #1b5fd9 55%, #4d88ff 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -698,8 +698,8 @@
   display: inline-flex;
   padding: 4px 8px;
   border-radius: 4px;
-  background: #f3e8ff;
-  color: #7c3aed;
+  background: #e8f1ff;
+  color: #2e72ff;
   font-size: 0.6875rem;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -935,7 +935,7 @@
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: #2563eb;
+  background: #2e72ff;
   color: #fff;
   display: grid;
   place-items: center;
@@ -1037,7 +1037,7 @@
   font-size: 5rem;
   line-height: 0.75;
   font-weight: 800;
-  background: linear-gradient(135deg, #3b82f6 0%, #7c3aed 100%);
+  background: linear-gradient(135deg, #4d88ff 0%, #2e72ff 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -1388,7 +1388,7 @@
 
 .hp-tech--blue {
   background: #dbeafe;
-  color: #2563eb;
+  color: #2e72ff;
 }
 
 .hp-tech--orange {

@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { serviceCategories } from "../data/servicesPageData";
+import { brandLogos } from "../data/brandAssets";
+import { contactPath } from "../data/siteContact";
 import "./SiteHeader.css";
 
 export default function SiteHeader() {
@@ -47,7 +49,7 @@ export default function SiteHeader() {
   return (
     <header className={`top-nav${menuOpen ? " mobile-open" : ""}${scrolled ? " is-scrolled" : ""}`}>
       <Link to="/" className="brand" aria-label="AP Consultancy home">
-        <img src="/logo/ap.png" alt="AP Consultancy" className="brand-logo" />
+        <img src={brandLogos.header} alt="AP Consultancy" className="brand-logo" />
       </Link>
 
       <button
@@ -103,7 +105,7 @@ export default function SiteHeader() {
         <NavLink to="/contact">Contact Us</NavLink>
       </nav>
 
-      <Link className="button button-small nav-cta" to="/contact">
+      <Link className="button button-small nav-cta" to={contactPath("hire")}>
         Hire a Developer <span aria-hidden="true">→</span>
       </Link>
 
@@ -135,7 +137,7 @@ export default function SiteHeader() {
         <NavLink to="/contact" onClick={() => setMenuOpen(false)}>
           Contact Us
         </NavLink>
-        <Link className="button mobile-contact-btn" to="/contact" onClick={() => setMenuOpen(false)}>
+        <Link className="button mobile-contact-btn" to={contactPath("hire")} onClick={() => setMenuOpen(false)}>
           Hire a Developer →
         </Link>
       </nav>

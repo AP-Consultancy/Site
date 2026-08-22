@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { serviceCategories, servicesHubMeta } from "../data/servicesPageData";
+import { contactPath } from "../data/siteContact";
 import usePageMeta from "../hooks/usePageMeta";
 import "./ServicesPage.css";
 
@@ -102,7 +103,7 @@ export default function ServicesPage() {
             </div>
             <h2>Not Sure Which Category Fits Your Project?</h2>
             <p>Tell us what you&apos;re building and we&apos;ll route you to the right specialization.</p>
-            <Link to="/contact" className="sv-btn sv-btn--white">
+            <Link to={contactPath("hire")} className="sv-btn sv-btn--white">
               Talk to Us <span aria-hidden="true">→</span>
             </Link>
           </div>

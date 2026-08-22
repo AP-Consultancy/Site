@@ -3,7 +3,7 @@
   background: #ffffff;
   color: #0f172a;
   font-family: "Inter", "Segoe UI", sans-serif;
-  padding-top: 68px;
+  padding-top: var(--site-header-height, 80px);
 }
 
 .au-container {
@@ -17,7 +17,7 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #6366f1;
+  color: #2e72ff;
 }
 
 .au-eyebrow::before {
@@ -27,7 +27,7 @@
   height: 7px;
   margin-right: 8px;
   border-radius: 50%;
-  background: #6366f1;
+  background: #2e72ff;
   vertical-align: 1px;
 }
 
@@ -84,7 +84,7 @@
 
 .au-btn--primary {
   color: #fff;
-  background: linear-gradient(135deg, #2563eb 0%, #38bdf8 100%);
+  background: linear-gradient(135deg, #2e72ff 0%, #38bdf8 100%);
   box-shadow: 0 12px 32px rgba(37, 99, 235, 0.35);
 }
 
@@ -241,11 +241,11 @@
 }
 
 .au-avatar--purple {
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  background: linear-gradient(135deg, #2e72ff, #8b5cf6);
 }
 
 .au-avatar--cyan {
-  background: linear-gradient(135deg, #06b6d4, #2563eb);
+  background: linear-gradient(135deg, #06b6d4, #2e72ff);
 }
 
 .au-tag-row {
@@ -288,7 +288,7 @@
 .au-bars i {
   flex: 1;
   border-radius: 6px 6px 2px 2px;
-  background: linear-gradient(180deg, #38bdf8, #2563eb);
+  background: linear-gradient(180deg, #38bdf8, #2e72ff);
   display: block;
 }
 
@@ -392,7 +392,7 @@
   display: grid;
   place-items: center;
   margin-bottom: 16px;
-  background: linear-gradient(135deg, #2563eb, #38bdf8);
+  background: linear-gradient(135deg, #2e72ff, #38bdf8);
   color: #fff;
 }
 
@@ -469,7 +469,7 @@
   padding: 6px 12px;
   border-radius: 999px;
   background: #eff6ff;
-  color: #2563eb;
+  color: #2e72ff;
   font-size: 0.75rem;
   font-weight: 700;
 }
@@ -630,7 +630,7 @@
   align-items: center;
   gap: 4px;
   margin-bottom: 16px;
-  color: #2563eb;
+  color: #2e72ff;
 }
 
 .au-stars span {
@@ -664,7 +664,7 @@
   flex-shrink: 0;
 }
 
-.au-testimonial-avatar--blue { background: #2563eb; }
+.au-testimonial-avatar--blue { background: #2e72ff; }
 .au-testimonial-avatar--purple { background: #8b5cf6; }
 .au-testimonial-avatar--teal { background: #14b8a6; }
 
@@ -684,7 +684,7 @@
 .au-text-link {
   display: block;
   text-align: center;
-  color: #2563eb;
+  color: #2e72ff;
   font-size: 0.9375rem;
   font-weight: 700;
   text-decoration: none;
@@ -705,7 +705,7 @@
   overflow: hidden;
   padding: clamp(48px, 6vw, 72px) clamp(28px, 4vw, 40px);
   border-radius: 24px;
-  background: linear-gradient(115deg, #1e3a8a 0%, #2563eb 42%, #6366f1 100%);
+  background: linear-gradient(115deg, #1e3a8a 0%, #2e72ff 42%, #2e72ff 100%);
   box-shadow: 0 24px 56px rgba(37, 99, 235, 0.28);
 }
 

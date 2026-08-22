@@ -3,7 +3,7 @@
   background: #f8fafc;
   color: #0f172a;
   font-family: "Inter", "Segoe UI", sans-serif;
-  padding-top: 68px;
+  padding-top: var(--site-header-height, 80px);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -95,8 +95,8 @@
 }
 
 .ct-intent-card.is-selected .ct-intent-radio {
-  border-color: #6366f1;
-  background: radial-gradient(circle at center, #6366f1 0%, #6366f1 38%, #fff 40%);
+  border-color: #2e72ff;
+  background: radial-gradient(circle at center, #2e72ff 0%, #2e72ff 38%, #fff 40%);
 }
 
 .ct-intent-icon {
@@ -107,7 +107,7 @@
   display: grid;
   place-items: center;
   color: #fff;
-  background: linear-gradient(135deg, #2563eb 0%, #38bdf8 100%);
+  background: linear-gradient(135deg, #2e72ff 0%, #38bdf8 100%);
   align-self: start;
 }
 
@@ -238,7 +238,7 @@
   font-size: 0.9375rem;
   font-weight: 600;
   cursor: pointer;
-  background: linear-gradient(90deg, #2563eb 0%, #38bdf8 100%);
+  background: linear-gradient(90deg, #2e72ff 0%, #38bdf8 100%);
   box-shadow: 0 10px 28px rgba(37, 99, 235, 0.3);
 }
 
@@ -330,22 +330,43 @@
   color: #93c5fd;
 }
 
-.ct-map-card {
-  min-height: 180px;
-  padding: 24px;
-  border-radius: 18px;
-  background: #eef2f7;
-  display: grid;
-  place-content: center;
-  justify-items: center;
-  gap: 10px;
-  text-align: center;
+.ct-info-card li a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.ct-map-card p {
-  margin: 0;
-  color: #94a3b8;
-  font-size: 0.875rem;
+.ct-info-card li a:hover {
+  color: #93c5fd;
+  text-decoration: underline;
+}
+
+.ct-map-card {
+  min-height: 180px;
+  padding: 0;
+  border-radius: 18px;
+  background: #eef2f7;
+  overflow: hidden;
+}
+
+.ct-map-card iframe {
+  display: block;
+  width: 100%;
+  height: 180px;
+  border: 0;
+}
+
+.ct-form-note a {
+  color: #2e72ff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.ct-form-note a:hover {
+  text-decoration: underline;
+}
+
+.ct-form-note--inline {
+  margin-top: 18px;
 }
 
 /* ── Talent redirect (no duplicate Careers content) ── */
@@ -356,6 +377,7 @@
   border: 1px solid #e8edf3;
   box-shadow: 0 8px 28px rgba(15, 23, 42, 0.06);
   text-align: center;
+  align-self: start;
 }
 
 .ct-talent-redirect h2 {
@@ -377,7 +399,7 @@
   gap: 8px;
   padding: 12px 22px;
   border-radius: 999px;
-  background: linear-gradient(90deg, #2563eb 0%, #38bdf8 100%);
+  background: linear-gradient(90deg, #2e72ff 0%, #38bdf8 100%);
   color: #fff;
   font-weight: 600;
   text-decoration: none;
@@ -396,7 +418,7 @@
   border-radius: 20px;
   text-align: center;
   color: #fff;
-  background: linear-gradient(105deg, #1e3a8a 0%, #2563eb 45%, #7c3aed 100%);
+  background: linear-gradient(105deg, #1e3a8a 0%, #2e72ff 45%, #7c3aed 100%);
   box-shadow: 0 18px 48px rgba(37, 99, 235, 0.22);
 }
 

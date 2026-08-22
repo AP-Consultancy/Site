@@ -6,10 +6,15 @@
   --panel-strong: #ffffff;
   --text: #0f172a;
   --text-dim: #64748b;
-  --accent: #2563eb;
-  --accent-2: #1d4ed8;
+  --brand-blue: #2e72ff;
+  --brand-blue-light: #7ebfff;
+  --brand-blue-dark: #1b5fd9;
+  --brand-navy: #0b1f3a;
+  --accent: #2e72ff;
+  --accent-2: #1b5fd9;
   --brand-red: #e11d2e;
   --line: #e5e7eb;
+  --site-header-height: 80px;
   --radius-lg: 24px;
   --radius-md: 12px;
   --max-width: 1200px;

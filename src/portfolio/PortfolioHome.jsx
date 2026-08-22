@@ -60,7 +60,7 @@ export default function PortfolioHome({ showHeroLogo = false }) {
         {showHeroLogo ? (
           <div className="hero-logo">
             <img
-              src={assetUrl("/logo/ap-white.png")}
+              src={assetUrl("/logo/ap-icon-navy.png")}
               alt="AP Consultancy"
               style={{ height: "36px", width: "auto" }}
             />
