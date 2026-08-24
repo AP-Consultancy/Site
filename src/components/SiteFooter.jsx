@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { serviceCategories } from "../data/servicesPageData";
 import { brandLogos } from "../data/brandAssets";
 import { contactPath, mailtoLink, siteContact } from "../data/siteContact";
+import SiteSocialLinks from "./SiteSocialLinks";
 import "./SiteFooter.css";
 
 export default function SiteFooter() {
@@ -15,6 +16,7 @@ export default function SiteFooter() {
           <p className="footer-tagline">
             IT staff augmentation — pre-vetted remote developers, shortlist in 24 hours.
           </p>
+          <SiteSocialLinks className="site-social-links--footer" />
         </div>
 
         <div className="footer-links-block">
@@ -54,9 +56,6 @@ export default function SiteFooter() {
             <a href={`tel:${siteContact.phoneTel}`}>{siteContact.phoneDisplay}</a>
             <a href={siteContact.mapsUrl} target="_blank" rel="noreferrer">
               {siteContact.address}
-            </a>
-            <a href={siteContact.linkedinUrl} target="_blank" rel="noreferrer">
-              LinkedIn
             </a>
           </div>
         </div>

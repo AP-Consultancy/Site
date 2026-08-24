@@ -15,7 +15,7 @@ Keep variable names **exactly** as provided — they match `ContactPage.jsx`.
 | Light blue | `#7ebfff` |
 | Dark blue | `#1b5fd9` |
 | Navy | `#0b1f3a` |
-| Contact email | `hello@apconsultancy.in` |
+| Contact email | `apconsultancy36@gmail.com` |
 
 Email headers use a **text-based AP mark** (no images) so they render reliably in EmailJS and all email clients.
 
@@ -135,7 +135,7 @@ Shows the **submitter's name** in your inbox (e.g. "John Doe") so you can spot l
             <tr>
               <td style="padding:14px 28px;background:#f8fafc;border-top:1px solid #e2e8f0;">
                 <p style="margin:0;font-size:11px;color:#64748b;line-height:1.5;">
-                  Automated by AP Consultancy website · <a href="mailto:hello@apconsultancy.in" style="color:#2e72ff;text-decoration:none;">hello@apconsultancy.in</a>
+                  Automated by AP Consultancy website · <a href="mailto:apconsultancy36@gmail.com" style="color:#2e72ff;text-decoration:none;">apconsultancy36@gmail.com</a>
                 </p>
               </td>
             </tr>
@@ -245,7 +245,7 @@ Shows **AP Consultancy** to the visitor (the site sends `from_name` as "AP Consu
                 <p style="margin:18px 0 0;font-size:15px;line-height:1.7;color:#334155;">
                   Best regards,<br />
                   <strong style="color:#0b1f3a;">{{from_name}}</strong><br />
-                  <a href="mailto:hello@apconsultancy.in" style="color:#2e72ff;text-decoration:none;font-weight:600;">hello@apconsultancy.in</a><br />
+                  <a href="mailto:apconsultancy36@gmail.com" style="color:#2e72ff;text-decoration:none;font-weight:600;">apconsultancy36@gmail.com</a><br />
                   <span style="font-size:13px;color:#64748b;">Ahmedabad, Gujarat, India</span>
                 </p>
               </td>
@@ -289,7 +289,7 @@ Also copy these from EmailJS dashboard:
 **Paste to:** project root → `.env.local`
 
 ```env
-VITE_CONTACT_RECEIVER_EMAIL=hello@apconsultancy.in
+VITE_CONTACT_RECEIVER_EMAIL=apconsultancy36@gmail.com
 VITE_EMAILJS_SERVICE_ID=service_5yl29cg
 VITE_EMAILJS_ADMIN_TEMPLATE_ID=template_xxxxx
 VITE_EMAILJS_USER_TEMPLATE_ID=template_xxxxx
@@ -298,7 +298,7 @@ VITE_EMAILJS_PUBLIC_KEY=your_public_key
 
 Replace `template_xxxxx` and `your_public_key` with your real values.
 
-Use `apconsultancy36@gmail.com` for `VITE_CONTACT_RECEIVER_EMAIL` if that is where you want leads delivered.
+Use `apconsultancy36@gmail.com` for `VITE_CONTACT_RECEIVER_EMAIL` (form lead delivery inbox).
 
 ---
 

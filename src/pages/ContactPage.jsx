@@ -3,6 +3,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import { contactInfo, engagementOptions, intentOptions, roleOptions } from "../data/contactPageData";
 import { mailtoLink, siteContact } from "../data/siteContact";
+import SiteSocialLinks from "../components/SiteSocialLinks";
 import usePageMeta from "../hooks/usePageMeta";
 import "./ContactPage.css";
 
@@ -92,6 +93,7 @@ function ContactSidebar() {
             </li>
           ))}
         </ul>
+        <SiteSocialLinks className="site-social-links--contact" />
       </div>
       <div className="ct-map-card">
         <iframe
