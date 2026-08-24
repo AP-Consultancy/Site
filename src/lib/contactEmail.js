@@ -15,19 +15,34 @@ function isPlaceholder(value) {
 }
 
 export function getContactEmailConfig() {
-  const serviceId = (import.meta.env.VITE_EMAILJS_SERVICE_ID || "").trim();
+  // Prefer VITE_AP_* (from .env.production) over legacy VITE_EMAILJS_* dashboard vars.
+  const serviceId = (
+    import.meta.env.VITE_AP_EMAILJS_SERVICE_ID ||
+    import.meta.env.VITE_EMAILJS_SERVICE_ID ||
+    ""
+  ).trim();
   const contactUsTemplateId = (
+    import.meta.env.VITE_AP_EMAILJS_CONTACT_US_TEMPLATE_ID ||
     import.meta.env.VITE_EMAILJS_CONTACT_US_TEMPLATE_ID ||
     import.meta.env.VITE_EMAILJS_ADMIN_TEMPLATE_ID ||
     ""
   ).trim();
   const autoReplyTemplateId = (
+    import.meta.env.VITE_AP_EMAILJS_AUTO_REPLY_TEMPLATE_ID ||
     import.meta.env.VITE_EMAILJS_AUTO_REPLY_TEMPLATE_ID ||
     import.meta.env.VITE_EMAILJS_USER_TEMPLATE_ID ||
     ""
   ).trim();
-  const publicKey = (import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "").trim();
-  const receiverEmail = (import.meta.env.VITE_CONTACT_RECEIVER_EMAIL || siteContact.email).trim();
+  const publicKey = (
+    import.meta.env.VITE_AP_EMAILJS_PUBLIC_KEY ||
+    import.meta.env.VITE_EMAILJS_PUBLIC_KEY ||
+    ""
+  ).trim();
+  const receiverEmail = (
+    import.meta.env.VITE_AP_CONTACT_RECEIVER_EMAIL ||
+    import.meta.env.VITE_CONTACT_RECEIVER_EMAIL ||
+    siteContact.email
+  ).trim();
   const formspreeEndpoint = (import.meta.env.VITE_CONTACT_ENDPOINT || "").trim();
 
   const emailJsReady =
