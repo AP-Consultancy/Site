@@ -1,0 +1,47 @@
+{
+  "name": "AP Consultancy Design Tokens",
+  "description": "Extracted from src/styles/theme.css and src/data/brandAssets.js for Figma variable import via figma-generate-library.",
+  "colors": {
+    "background/primary": { "value": "#ffffff", "type": "color" },
+    "background/secondary": { "value": "#f7f8fa", "type": "color" },
+    "background/tertiary": { "value": "#f1f3f7", "type": "color" },
+    "surface/panel": { "value": "#ffffff", "type": "color" },
+    "text/primary": { "value": "#0f172a", "type": "color" },
+    "text/muted": { "value": "#64748b", "type": "color" },
+    "brand/blue": { "value": "#2e72ff", "type": "color" },
+    "brand/blue-light": { "value": "#7ebfff", "type": "color" },
+    "brand/blue-dark": { "value": "#1b5fd9", "type": "color" },
+    "brand/navy": { "value": "#0b1f3a", "type": "color" },
+    "brand/red": { "value": "#e11d2e", "type": "color" },
+    "border/line": { "value": "#e5e7eb", "type": "color" }
+  },
+  "spacing": {
+    "header/height": { "value": 80, "type": "number", "unit": "px" },
+    "layout/max-width": { "value": 1200, "type": "number", "unit": "px" },
+    "section/gap-min": { "value": 52, "type": "number", "unit": "px" },
+    "section/gap-max": { "value": 104, "type": "number", "unit": "px" }
+  },
+  "radius": {
+    "lg": { "value": 24, "type": "number", "unit": "px" },
+    "md": { "value": 12, "type": "number", "unit": "px" }
+  },
+  "typography": {
+    "page-heading/size": { "value": "clamp(2.4rem, 5vw, 4rem)", "type": "string" },
+    "page-heading/line-height": { "value": 1.1, "type": "number" },
+    "h2/size": { "value": "clamp(2rem, 3.8vw, 3.2rem)", "type": "string" },
+    "h2/line-height": { "value": 1.1, "type": "number" },
+    "h3/size": { "value": "1.04rem", "type": "string" },
+    "body/size": { "value": "0.95rem", "type": "string" },
+    "body/line-height": { "value": 1.56, "type": "number" },
+    "eyebrow/size": { "value": "0.68rem", "type": "string" },
+    "section-lead/size": { "value": "1rem", "type": "string" }
+  },
+  "serviceAccents": {
+    "ecommerce": { "value": "#2e72ff", "type": "color" },
+    "devops-cloud-security": { "value": "#1b5fd9", "type": "color" },
+    "agentic-ai-software": { "value": "#4d88ff", "type": "color" },
+    "qa-testing": { "value": "#2e72ff", "type": "color" },
+    "mobile-app-web": { "value": "#7ebfff", "type": "color" },
+    "ai-ml-automation": { "value": "#1b5fd9", "type": "color" }
+  }
+}

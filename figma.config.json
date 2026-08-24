@@ -1,0 +1,12 @@
+{
+  "codeConnect": {
+    "parser": "react",
+    "include": ["src/**/*.figma.tsx"],
+    "exclude": ["node_modules/**", "dist/**"]
+  },
+  "source": {
+    "fileKey": "OkPCABRidbIOxKiPuWiozO",
+    "manifest": "design/figma.source.json",
+    "tokens": "design/figma-tokens.json"
+  }
+}

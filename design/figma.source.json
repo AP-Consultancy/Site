@@ -1,0 +1,21 @@
+{
+  "name": "AP Consultancy — exp",
+  "fileKey": "OkPCABRidbIOxKiPuWiozO",
+  "fileName": "exp",
+  "designUrl": "https://www.figma.com/design/OkPCABRidbIOxKiPuWiozO/exp",
+  "prototypeUrl": "https://www.figma.com/proto/OkPCABRidbIOxKiPuWiozO/exp",
+  "pages": {
+    "home": {
+      "nodeId": "236:13083",
+      "url": "https://www.figma.com/design/OkPCABRidbIOxKiPuWiozO/exp?node-id=236-13083"
+    }
+  },
+  "integrationNotes": {
+    "preserveContent": true,
+    "preserveServicePages": true,
+    "importFromFigma": ["components", "images", "animations"],
+    "codeConnectGlob": "src/**/*.figma.tsx",
+    "designTokens": "design/figma-tokens.json",
+    "siteMap": "design/site-map.mermaid"
+  }
+}

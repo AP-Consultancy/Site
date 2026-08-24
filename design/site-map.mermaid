@@ -1,0 +1,19 @@
+flowchart TB
+  subgraph layout["RootLayout"]
+    Header["SiteHeader"]
+    Footer["SiteFooter"]
+    Outlet["Page outlet"]
+  end
+
+  Outlet --> Home["/ — HomePage"]
+  Outlet --> DevResources["/devresources — DevResourcesPage"]
+  Outlet --> Services["/services — ServicesPage"]
+  Outlet --> ServiceDetail["/services/:slug — ServiceDetailPage"]
+  Outlet --> About["/about — AboutPage"]
+  Outlet --> Portfolio["/portfolio — PortfolioPage"]
+  Outlet --> ClientWork["/portfolio/client-work — PortfolioClientWorkPage"]
+  Outlet --> Contact["/contact — ContactPage"]
+  Outlet --> Careers["/careers — CareersPage"]
+  Outlet --> Blog["/blog — BlogPage"]
+
+  Services --> ServiceDetail
