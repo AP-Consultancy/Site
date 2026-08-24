@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import emailjs from "@emailjs/browser";
 import { contactInfo, engagementOptions, intentOptions, roleOptions } from "../data/contactPageData";
+import { sendContactEmails } from "../lib/contactEmail";
 import { mailtoLink, siteContact } from "../data/siteContact";
 import SiteSocialLinks from "../components/SiteSocialLinks";
 import usePageMeta from "../hooks/usePageMeta";
@@ -178,92 +178,7 @@ export default function ContactPage() {
 
     try {
       setStatus("loading");
-      const emailJsServiceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || "";
-      const emailJsAdminTemplateId = import.meta.env.VITE_EMAILJS_ADMIN_TEMPLATE_ID || "";
-      const emailJsUserTemplateId = import.meta.env.VITE_EMAILJS_USER_TEMPLATE_ID || "";
-      const emailJsPublicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "";
-      const contactReceiverEmail = import.meta.env.VITE_CONTACT_RECEIVER_EMAIL || siteContact.email;
-      const endpoint = import.meta.env.VITE_CONTACT_ENDPOINT || "";
-
-      const emailJsReady =
-        emailJsServiceId &&
-        emailJsAdminTemplateId &&
-        emailJsUserTemplateId &&
-        emailJsPublicKey &&
-        contactReceiverEmail &&
-        !emailJsServiceId.includes("your_") &&
-        !emailJsAdminTemplateId.includes("your_") &&
-        !emailJsUserTemplateId.includes("your_") &&
-        !emailJsPublicKey.includes("your_");
-
-      if (emailJsReady) {
-        const isVendor = formIntent === "vendor";
-        const adminParams = isVendor
-          ? {
-              to_email: contactReceiverEmail,
-              to_name: siteContact.company,
-              subject: `Compliance pack request | ${payload.company} | ${payload.name}`,
-              from_name: payload.name,
-              name: payload.name,
-              from_email: payload.email,
-              email: payload.email,
-              phone: payload.phone || "Not provided",
-              country: payload.company,
-              company_type: "Vendor / compliance",
-              message: payload.message,
-            }
-          : {
-              to_email: contactReceiverEmail,
-              to_name: siteContact.company,
-              subject: `Hiring requirement | ${payload.company} | ${payload.name}`,
-              from_name: payload.name,
-              name: payload.name,
-              from_email: payload.email,
-              email: payload.email,
-              phone: payload.phone || "Not provided",
-              country: payload.company,
-              company_type: payload.engagementType,
-              message: [`Role / Skill: ${payload.role}`, developerRef ? `Developer ref: ${developerRef}` : "", "", payload.projectDetails]
-                .filter(Boolean)
-                .join("\n"),
-            };
-
-        const userParams = {
-          to_email: payload.email,
-          email: payload.email,
-          to_name: payload.name,
-          name: payload.name,
-          from_name: siteContact.company,
-          subject: isVendor ? "We received your compliance pack request" : "We received your hiring requirement",
-          acknowledgement: isVendor
-            ? "Thank you for contacting AP Consultancy. We have received your compliance pack request and will follow up shortly with the requested documentation."
-            : "Thank you for contacting AP Consultancy. We have received your requirement and will get back to you within 24 hours with next steps or an initial shortlist.",
-        };
-
-        emailjs.init({ publicKey: emailJsPublicKey });
-
-        await emailjs.send(emailJsServiceId, emailJsAdminTemplateId, adminParams, { publicKey: emailJsPublicKey });
-        try {
-          await emailjs.send(emailJsServiceId, emailJsUserTemplateId, userParams, { publicKey: emailJsPublicKey });
-        } catch (userErr) {
-          console.error("Acknowledgement email failed:", userErr);
-          throw new Error(
-            "Your request was sent to our team, but the confirmation email failed. Check Auto-Reply template → To Email is {{to_email}} or {{email}}."
-          );
-        }
-      } else if (endpoint && !endpoint.includes("YOUR_FORM_ID")) {
-        const formData = new FormData();
-        formData.append("intent", formIntent);
-        Object.entries(payload).forEach(([key, value]) => formData.append(key, value));
-        if (developerRef) formData.append("developer", developerRef);
-        const res = await fetch(endpoint, { method: "POST", body: formData, headers: { Accept: "application/json" } });
-        if (!res.ok) throw new Error("Form submission failed. Check your Formspree endpoint.");
-      } else {
-        throw new Error(
-          `Email is not configured yet. Add EmailJS keys or a Formspree URL in .env.local, then restart npm run dev — or email us directly at ${siteContact.email}.`
-        );
-      }
-
+      await sendContactEmails({ payload, formIntent, developerRef });
       setStatus("success");
       form.reset();
     } catch (err) {

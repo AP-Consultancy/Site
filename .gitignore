@@ -43,3 +43,4 @@ Desktop.ini
 build/
 .cache/
 .bun/
+.vercel

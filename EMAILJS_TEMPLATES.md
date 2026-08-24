@@ -38,6 +38,8 @@ Open EmailJS → **Email Templates** → your **Contact Us** (admin) template.
 
 **Paste to:** EmailJS → Admin template → Right panel → **To Email**
 
+Must be the team inbox variable (not `{{email}}`, which is the submitter):
+
 ```text
 {{to_email}}
 ```
@@ -167,19 +169,21 @@ Open EmailJS → **Email Templates** → **Create New Template** → select **Au
 
 **Paste to:** EmailJS → User template → Right panel → **To Email**
 
-Must be exactly one of these (Auto-Reply starter often uses `{{email}}`):
+Must be the **visitor's email** (the person who filled the form). Do not use a fixed address like `apconsultancy36@gmail.com`.
 
-```text
-{{to_email}}
-```
-
-If ack still fails, also try:
+EmailJS Auto-Reply starters usually expect:
 
 ```text
 {{email}}
 ```
 
-The site now sends **both** `to_email` and `email` to cover either setting.
+If ack still fails, also try:
+
+```text
+{{to_email}}
+```
+
+The site sends `email`, `to_email`, and `user_email` — all set to the submitter's address.
 
 ### User → From Name
 
@@ -278,10 +282,10 @@ Shows **AP Consultancy** to the visitor (the site sends `from_name` as "AP Consu
 
 Also copy these from EmailJS dashboard:
 
-| Copy from (EmailJS) | Paste to (`.env.local`) |
+| Copy from (EmailJS) | Paste to (`.env.local` / Vercel) |
 |---|---|
-| Admin template → **Template ID** | `VITE_EMAILJS_ADMIN_TEMPLATE_ID=` |
-| User template → **Template ID** | `VITE_EMAILJS_USER_TEMPLATE_ID=` |
+| Contact Us template → **Template ID** | `VITE_EMAILJS_CONTACT_US_TEMPLATE_ID=` (`template_23mob3w`) |
+| Auto-Reply template → **Template ID** | `VITE_EMAILJS_AUTO_REPLY_TEMPLATE_ID=` (`template_rejbajf`) |
 | Account → **Public Key** | `VITE_EMAILJS_PUBLIC_KEY=` |
 
 ### `.env.local` block
@@ -291,12 +295,14 @@ Also copy these from EmailJS dashboard:
 ```env
 VITE_CONTACT_RECEIVER_EMAIL=apconsultancy36@gmail.com
 VITE_EMAILJS_SERVICE_ID=service_5yl29cg
-VITE_EMAILJS_ADMIN_TEMPLATE_ID=template_xxxxx
-VITE_EMAILJS_USER_TEMPLATE_ID=template_xxxxx
+VITE_EMAILJS_CONTACT_US_TEMPLATE_ID=template_23mob3w
+VITE_EMAILJS_AUTO_REPLY_TEMPLATE_ID=template_rejbajf
 VITE_EMAILJS_PUBLIC_KEY=your_public_key
 ```
 
-Replace `template_xxxxx` and `your_public_key` with your real values.
+Also set these same variables in **Vercel → Project → Settings → Environment Variables** and redeploy. The live site previously used outdated values (`service_6kbylsm`, `Info@apconsultancy.in`, old template IDs).
+
+Legacy env names `VITE_EMAILJS_ADMIN_TEMPLATE_ID` / `VITE_EMAILJS_USER_TEMPLATE_ID` still work.
 
 Use `apconsultancy36@gmail.com` for `VITE_CONTACT_RECEIVER_EMAIL` (form lead delivery inbox).
 

@@ -26,18 +26,20 @@ The contact form supports two outgoing emails:
 
 ```env
 VITE_CONTACT_ENDPOINT=https://formspree.io/f/YOUR_FORM_ID
-VITE_EMAILJS_SERVICE_ID=your_service_id
-VITE_EMAILJS_ADMIN_TEMPLATE_ID=your_admin_template_id
-VITE_EMAILJS_USER_TEMPLATE_ID=your_user_template_id
+VITE_CONTACT_RECEIVER_EMAIL=apconsultancy36@gmail.com
+VITE_EMAILJS_SERVICE_ID=service_5yl29cg
+VITE_EMAILJS_CONTACT_US_TEMPLATE_ID=template_23mob3w
+VITE_EMAILJS_AUTO_REPLY_TEMPLATE_ID=template_rejbajf
 VITE_EMAILJS_PUBLIC_KEY=your_public_key
-VITE_CONTACT_RECEIVER_EMAIL=Info@apconsultancy.in
 ```
 
 If all EmailJS variables above are set, EmailJS is used. If not, the app falls back to `VITE_CONTACT_ENDPOINT`.
 
-### 2) Admin Template Format (EmailJS)
+**Production:** add the same `VITE_*` values in Vercel environment variables and redeploy.
 
-Use this for `VITE_EMAILJS_ADMIN_TEMPLATE_ID`:
+### 2) Admin Template Format (EmailJS — Contact Us)
+
+Use this for `VITE_EMAILJS_CONTACT_US_TEMPLATE_ID` (`template_23mob3w`):
 
 **Subject**
 
@@ -70,9 +72,9 @@ Expected variables:
 - `company_type`
 - `message`
 
-### 3) User Acknowledgement Template Format (EmailJS)
+### 3) User Acknowledgement Template Format (EmailJS — Auto-Reply)
 
-Use this for `VITE_EMAILJS_USER_TEMPLATE_ID`:
+Use this for `VITE_EMAILJS_AUTO_REPLY_TEMPLATE_ID` (`template_rejbajf`):
 
 **Subject**
 
