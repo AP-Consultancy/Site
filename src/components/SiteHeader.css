@@ -1,8 +1,8 @@
 .top-nav {
   width: 100%;
   margin: 0;
-  padding: 14px clamp(20px, 4vw, 48px);
-  min-height: var(--site-header-height, 80px);
+  padding: 0 clamp(20px, 4vw, 48px);
+  min-height: var(--site-header-height, 72px);
   position: fixed;
   top: 0;
   left: 0;
@@ -10,19 +10,27 @@
   z-index: 1000;
   display: flex;
   align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(229, 235, 244, 0.8);
+  box-shadow: none;
+  transition: box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.top-nav-inner {
+  width: min(1240px, 100%);
+  min-height: var(--site-header-height, 72px);
+  display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 24px;
-  background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid #eef0f4;
-  box-shadow: 0 1px 0 rgba(15, 23, 42, 0.02);
-  transition: box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .top-nav.is-scrolled {
   background: rgba(255, 255, 255, 0.98);
-  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.06);
 }
 
 .brand {
@@ -35,9 +43,9 @@
 
 .brand-logo {
   display: block;
-  height: clamp(44px, 5vw, 56px);
+  height: clamp(22px, 2.8vw, 26px);
   width: auto;
-  max-width: min(72px, 18vw);
+  max-width: min(193px, 42vw);
   object-fit: contain;
   object-position: left center;
 }
@@ -46,16 +54,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(18px, 2.4vw, 36px);
+  gap: clamp(22px, 2.8vw, 34px);
   flex: 1;
 }
 
 .menu a {
-  color: #334155;
+  color: #34405a;
   text-decoration: none;
-  font-size: 0.9375rem;
-  font-weight: 500;
-  letter-spacing: -0.01em;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0;
   transition: color 0.18s ease;
 }
 
@@ -80,11 +88,11 @@
   padding: 0;
   border: none;
   background: transparent;
-  color: #334155;
+  color: #34405a;
   font: inherit;
-  font-size: 0.9375rem;
-  font-weight: 500;
-  letter-spacing: -0.01em;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0;
   cursor: pointer;
   transition: color 0.18s ease;
 }
@@ -165,13 +173,13 @@
 }
 
 .nav-cta {
-  border-radius: 999px;
-  padding: 11px 20px;
+  border-radius: 8px;
+  padding: 16px 22px;
   flex-shrink: 0;
-  font-size: 0.875rem;
-  font-weight: 600;
-  background: linear-gradient(135deg, #4d88ff 0%, var(--accent) 50%, var(--accent-2) 100%);
-  box-shadow: 0 10px 24px rgba(46, 114, 255, 0.32);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  background: #1768ff;
+  box-shadow: 0 10px 12px rgba(23, 104, 255, 0.24);
 }
 
 .menu-toggle,
@@ -182,6 +190,11 @@
 @media (max-width: 920px) {
   .top-nav {
     padding: 12px 16px;
+    justify-content: space-between;
+  }
+
+  .top-nav-inner {
+    width: 100%;
     min-height: 64px;
   }
 

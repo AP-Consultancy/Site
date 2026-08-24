@@ -13,7 +13,7 @@
 
 /* ── Hero ── */
 .wk-hero {
-  padding: clamp(52px, 6vw, 76px) 0 clamp(44px, 5vw, 60px);
+  padding: clamp(40px, 5vw, 64px) 0 clamp(28px, 4vw, 40px);
   background:
     radial-gradient(ellipse 42% 52% at 94% 38%, rgba(37, 99, 235, 0.09), transparent 62%),
     #ffffff;
@@ -21,8 +21,8 @@
 
 .wk-hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
-  gap: clamp(28px, 4vw, 52px);
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: clamp(24px, 4vw, 40px);
   align-items: center;
 }
 
@@ -59,23 +59,26 @@
 
 .wk-hero-collage {
   position: relative;
-  min-height: 380px;
+  width: 100%;
+  max-width: 540px;
+  min-height: clamp(340px, 36vw, 420px);
+  margin-left: auto;
 }
 
 .wk-hero-collage-glow {
   position: absolute;
-  inset: 10% 5% 10% 15%;
+  inset: 8% 0 8% 10%;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.14), transparent 68%);
-  filter: blur(18px);
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.16), transparent 68%);
+  filter: blur(20px);
   pointer-events: none;
 }
 
 .wk-collage-card {
   position: absolute;
-  border-radius: 22px;
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 22px 48px rgba(15, 23, 42, 0.14);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.14);
   background: #fff;
 }
 
@@ -87,105 +90,54 @@
 }
 
 .wk-collage-card--salesforce {
-  top: 10%;
-  left: 2%;
-  width: 48%;
-  aspect-ratio: 1.08;
+  top: 8%;
+  left: 0;
+  width: 46%;
+  aspect-ratio: 1;
   z-index: 2;
 }
 
 .wk-collage-card--uplevyl {
   top: 0;
-  right: 4%;
-  width: 44%;
-  aspect-ratio: 1.05;
+  right: 2%;
+  width: 42%;
+  aspect-ratio: 1;
   z-index: 4;
-  transform: rotate(2deg);
+  transform: rotate(3deg);
 }
 
 .wk-collage-card--agility {
-  bottom: 6%;
-  left: 0;
+  bottom: 4%;
+  left: 4%;
   width: 40%;
-  aspect-ratio: 1.05;
+  aspect-ratio: 1;
   z-index: 1;
-  transform: rotate(-3deg);
+  transform: rotate(-4deg);
 }
 
 .wk-collage-card--astra {
   bottom: 0;
   right: 0;
-  width: 46%;
-  aspect-ratio: 1.12;
+  width: 44%;
+  aspect-ratio: 1;
   z-index: 3;
 }
 
 /* ── Trusted brands ── */
 .wk-trusted {
-  padding: 0 0 clamp(52px, 6vw, 76px);
+  padding: 0 0 clamp(32px, 4vw, 48px);
 }
 
-.wk-trusted-card {
-  padding: clamp(32px, 4.5vw, 48px) clamp(28px, 4vw, 44px);
-  border-radius: 22px;
-  border: 1px solid #dbeafe;
-  background:
-    radial-gradient(ellipse 75% 85% at 0% 0%, rgba(219, 234, 254, 0.65), transparent 58%),
-    linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%);
-  box-shadow: 0 10px 36px rgba(37, 99, 235, 0.06);
-}
-
-.wk-trusted-badge {
-  display: inline-flex;
-  margin: 0 0 18px;
-  padding: 7px 14px;
-  border-radius: 999px;
-  background: #dbeafe;
-  color: #1d4ed8;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  text-transform: none;
-}
-
-.wk-trusted-card h2 {
-  margin: 0 0 32px;
-  max-width: 20ch;
-  font-size: clamp(1.625rem, 3vw, 2.125rem);
-  font-weight: 800;
-  line-height: 1.18;
-  letter-spacing: -0.025em;
-  color: #0f172a;
-}
-
-.wk-brand-row {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  align-items: center;
-  gap: 0;
-}
-
-.wk-brand-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 56px;
-  padding: 0 clamp(8px, 2vw, 20px);
-}
-
-.wk-brand-divider {
-  width: 1px;
-  height: 46px;
-  background: #cbd5e1;
-  margin-right: clamp(10px, 2.5vw, 24px);
-  flex-shrink: 0;
-}
-
-.wk-brand-item img {
-  max-height: 46px;
-  max-width: min(170px, 100%);
-  width: auto;
+.wk-trusted-banner {
+  display: block;
+  width: 100%;
+  max-width: 920px;
+  max-height: 240px;
+  margin: 0 auto;
+  height: auto;
   object-fit: contain;
+  object-position: center top;
+  border-radius: 18px;
 }
 
 /* ── Case studies ── */
@@ -196,17 +148,19 @@
 
 .wk-cases-stack {
   display: grid;
-  gap: 0;
+  gap: clamp(32px, 4vw, 48px);
 }
 
 .wk-case {
   display: grid;
-  grid-template-columns: minmax(0, 1.06fr) minmax(0, 0.94fr);
-  gap: clamp(32px, 5vw, 64px);
-  align-items: center;
-  padding: clamp(48px, 6vw, 72px) clamp(28px, 4vw, 44px);
-  border-radius: 0;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: clamp(28px, 4vw, 44px);
+  align-items: start;
+  padding: clamp(36px, 4.5vw, 52px);
+  border-radius: 18px;
+  border: 1px solid #e8eef5;
   background: #ffffff;
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.04);
 }
 
 .wk-cases-stack .wk-case:nth-child(even) {
@@ -217,31 +171,50 @@
   order: -1;
 }
 
+.wk-case-copy {
+  min-width: 0;
+}
+
+.wk-case-visual {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+
+.wk-case--reverse .wk-case-visual {
+  justify-content: flex-start;
+}
+
 .wk-case-image-wrap {
   position: relative;
-  padding-bottom: 28px;
-  padding-right: 12px;
+  width: min(100%, 380px);
+  padding-bottom: 24px;
 }
 
 .wk-case-image {
   display: block;
   width: 100%;
-  aspect-ratio: 1.22;
+  height: auto;
+  max-height: 300px;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
+  object-position: center;
   border-radius: 14px;
-  box-shadow: 0 18px 44px rgba(15, 23, 42, 0.12);
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.1);
 }
 
 .wk-outcome-card {
   position: absolute;
-  right: 0;
+  right: 8px;
   bottom: 0;
-  width: min(252px, 78%);
-  padding: 18px 20px;
+  width: min(210px, calc(100% - 16px));
+  padding: 14px 16px;
   border-radius: 12px;
   background: #fff;
   border: 1px solid #e5e7eb;
-  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.1);
   text-align: left;
 }
 
@@ -272,8 +245,8 @@
 
 .wk-case-copy h2 {
   margin: 0 0 14px;
-  max-width: 18ch;
-  font-size: clamp(1.625rem, 2.6vw, 2.125rem);
+  max-width: 22ch;
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
   font-weight: 800;
   line-height: 1.14;
   letter-spacing: -0.025em;
@@ -417,18 +390,22 @@
 
 /* ── Responsive ── */
 @media (max-width: 1024px) {
-  .wk-brand-row {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px 16px;
-  }
-
-  .wk-brand-divider {
-    display: none;
+  .wk-trusted-banner {
+    max-width: 100%;
+    max-height: 210px;
   }
 
   .wk-case {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 32px;
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 0.82fr);
+    gap: 28px;
+  }
+
+  .wk-case-image-wrap {
+    width: min(100%, 320px);
+  }
+
+  .wk-case-image {
+    max-height: 260px;
   }
 }
 
@@ -439,18 +416,32 @@
 
   .wk-hero-collage {
     min-height: 300px;
-    max-width: 440px;
+    max-width: 480px;
     margin: 0 auto;
+  }
+
+  .wk-trusted-banner {
+    max-height: 190px;
   }
 
   .wk-case,
   .wk-case--reverse {
     grid-template-columns: 1fr;
-    padding: 32px 24px;
+    padding: 28px 22px;
+  }
+
+  .wk-case-visual {
+    justify-content: center;
+    order: -1;
   }
 
   .wk-case--reverse .wk-case-visual {
-    order: 0;
+    order: -1;
+  }
+
+  .wk-case-image-wrap {
+    width: min(100%, 360px);
+    margin: 0 auto;
   }
 
   .wk-case-copy h2 {
@@ -475,12 +466,9 @@
     width: min(1180px, calc(100% - 32px));
   }
 
-  .wk-trusted-card {
-    padding: 28px 22px;
-  }
-
-  .wk-brand-row {
-    grid-template-columns: 1fr;
+  .wk-trusted-banner {
+    max-height: 170px;
+    border-radius: 14px;
   }
 
   .wk-tech-grid {

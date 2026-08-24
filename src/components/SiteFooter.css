@@ -1,17 +1,17 @@
 .site-footer {
   width: 100%;
   margin: 0;
-  padding: 64px clamp(20px, 4vw, 48px) 28px;
-  border-top: 1px solid #e8ebf0;
+  padding: 59px clamp(20px, 4vw, 48px) 24px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
   background: #ffffff;
-  color: #0f172a;
+  color: #101d3a;
 }
 
 .footer-inner {
-  width: min(1200px, 100%);
+  width: min(1240px, 100%);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.4fr repeat(4, 0.85fr) 1.35fr;
+  grid-template-columns: 1.6fr repeat(4, 1fr) 1.4fr;
   gap: clamp(20px, 3vw, 36px);
   align-items: start;
 }
@@ -25,42 +25,42 @@
 
 .footer-logo {
   width: auto;
-  height: clamp(96px, 14vw, 128px);
-  max-width: min(300px, 88vw);
+  height: clamp(28px, 4vw, 32px);
+  max-width: min(240px, 88vw);
   display: block;
   object-fit: contain;
   object-position: left top;
 }
 
 .footer-tagline {
-  margin: 14px 0 0;
+  margin: 18px 0 0;
   max-width: 28ch;
-  font-size: 0.88rem;
-  line-height: 1.55;
-  color: #94a3b8;
+  font-size: 0.75rem;
+  line-height: 1.75;
+  color: #65718b;
   text-align: left;
 }
 
 .footer-links-block > p,
 .footer-newsletter-title {
-  margin: 0 0 14px;
-  font-size: 0.95rem;
+  margin: 0 0 10px;
+  font-size: 0.75rem;
   font-weight: 700;
-  color: #0f172a;
+  color: #101d3a;
   text-align: left;
 }
 
 .footer-links {
   display: grid;
-  gap: 10px;
+  gap: 6px;
   justify-items: start;
 }
 
 .footer-links a {
-  color: #64748b;
+  color: #68758d;
   text-decoration: none;
-  font-size: 0.88rem;
-  font-weight: 500;
+  font-size: 0.6875rem;
+  font-weight: 400;
   transition: color 0.18s ease;
 }
 
@@ -115,10 +115,10 @@
 }
 
 .footer-bottom {
-  width: min(1200px, 100%);
-  margin: 40px auto 0;
-  padding-top: 22px;
-  border-top: 1px solid #e8ebf0;
+  width: min(1240px, 100%);
+  margin: 45px auto 0;
+  padding-top: 21px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -128,8 +128,8 @@
 
 .footer-bottom p {
   margin: 0;
-  font-size: 0.8rem;
-  color: #94a3b8;
+  font-size: 0.625rem;
+  color: #8993a6;
 }
 
 .footer-legal {
@@ -139,8 +139,8 @@
 }
 
 .footer-legal a {
-  font-size: 0.8rem;
-  color: #94a3b8;
+  font-size: 0.625rem;
+  color: #8993a6;
   text-decoration: none;
 }
 

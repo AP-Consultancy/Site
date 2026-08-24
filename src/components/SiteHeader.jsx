@@ -48,6 +48,7 @@ export default function SiteHeader() {
 
   return (
     <header className={`top-nav${menuOpen ? " mobile-open" : ""}${scrolled ? " is-scrolled" : ""}`}>
+      <div className="top-nav-inner">
       <Link to="/" className="brand" aria-label="AP Consultancy home">
         <img src={brandLogos.header} alt="AP Consultancy" className="brand-logo" />
       </Link>
@@ -108,6 +109,7 @@ export default function SiteHeader() {
       <Link className="button button-small nav-cta" to={contactPath("hire")}>
         Hire a Developer <span aria-hidden="true">→</span>
       </Link>
+      </div>
 
       <nav id="mobile-nav" className={`mobile-menu${menuOpen ? " open" : ""}`} aria-label="Mobile navigation">
         {navLinks.map((link) => (

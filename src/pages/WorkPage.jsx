@@ -1,4 +1,4 @@
-import { caseStudies, heroCollage, techStackItems, trustedBrands } from "../data/workPageData";
+import { caseStudies, heroCollage, techStackItems } from "../data/workPageData";
 import usePageMeta from "../hooks/usePageMeta";
 import "./WorkPage.css";
 
@@ -29,7 +29,7 @@ function CaseStudy({ study, reverse }) {
         </div>
 
         <div className="wk-detail-block" style={{ borderColor: study.accent }}>
-          <h3>Contribution</h3>
+          <h3>Solution</h3>
           <p>{study.contribution}</p>
         </div>
       </div>
@@ -78,20 +78,14 @@ export default function WorkPage() {
         </div>
       </section>
 
-      <section className="wk-trusted">
+      <section className="wk-trusted" aria-label="Trusted delivery">
         <div className="wk-container">
-          <div className="wk-trusted-card">
-            <span className="wk-trusted-badge">Trusted delivery</span>
-            <h2>A view of some of the best brands we have worked with.</h2>
-            <div className="wk-brand-row">
-              {trustedBrands.map((brand, index) => (
-                <div key={brand.alt} className="wk-brand-item">
-                  {index > 0 ? <span className="wk-brand-divider" aria-hidden="true" /> : null}
-                  <img src={brand.src} alt={brand.alt} loading="lazy" />
-                </div>
-              ))}
-            </div>
-          </div>
+          <img
+            src="/images/figma/trusted-brands-section.png"
+            alt="Trusted delivery — A view of some of the best brands we have worked with."
+            className="wk-trusted-banner"
+            loading="lazy"
+          />
         </div>
       </section>
 

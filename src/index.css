@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=JetBrains+Mono:wght@400;500;600&display=swap");
 :root{
-  --accent: #2563eb;
-  --accent-dark: #1d4ed8;
-  --muted: #64748b;
+  --accent: #1768ff;
+  --accent-dark: #1256d4;
+  --accent-2: #4d88ff;
+  --muted: #5b6172;
   --bg: #ffffff;
 }
 

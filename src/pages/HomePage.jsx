@@ -1,8 +1,26 @@
 import { Link } from "react-router-dom";
-import heroBackgroundShadow from "../portfolio/assets/Background+Shadow.png";
+import RevealOnScroll from "../components/RevealOnScroll";
+import { caseStudies } from "../data/workPageData";
 import { contactPath } from "../data/siteContact";
 import usePageMeta from "../hooks/usePageMeta";
 import "./HomePage.css";
+
+const figmaAssets = {
+  heroIllustration: "/images/figma/hero-illustration.png",
+  heroGradient: "/images/figma/hero-gradient-mask.svg",
+  aboutTeam: "/images/figma/about-team.png",
+  caseStudyVisual: "/images/figma/case-study-acuity.png",
+};
+
+const featuredCaseStudy = caseStudies[0];
+
+const featuredCaseTechStyles = [
+  { bg: "#fff3f3", border: "#ffd4d4", color: "#de0000" },
+  { bg: "#eeffe2", border: "#baff85", color: "#44b000" },
+  { bg: "#f6fbff", border: "#cbdeff", color: "#0048ff" },
+  { bg: "#fff2e2", border: "#ffe1d0", color: "#da5b00" },
+  { bg: "#f0efff", border: "#ddd6fe", color: "#6d28d9" },
+];
 
 const serviceSpecializations = [
   {
@@ -213,51 +231,62 @@ export default function HomePage() {
     <div className="home-page">
       {/* Hero */}
       <section className="hp-hero" id="home">
-        <img
-          className="hp-hero-bg"
-          src={heroBackgroundShadow}
-          alt=""
-          aria-hidden="true"
-          loading="eager"
-          decoding="async"
-        />
-        <div className="hp-hero-inner">
-          <div className="hp-hero-copy">
-            <div className="hp-hero-badge">
-              Ready to scale your team? <span aria-hidden="true">→</span>
+        <div className="hp-container hp-hero-shell">
+          <div className="hp-hero-card">
+            <img
+              className="hp-hero-gradient"
+              src={figmaAssets.heroGradient}
+              alt=""
+              aria-hidden="true"
+            />
+            <div className="hp-hero-inner">
+              <div className="hp-hero-copy">
+                <div className="hp-hero-badge">
+                  Ready to scale your team? <span aria-hidden="true">→</span>
+                </div>
+                <h1>
+                  Hire Pre-Vetted Remote Developers.{" "}
+                  <span className="hp-accent hp-accent--glow">Across Every Stack You Need.</span>
+                </h1>
+                <p className="hp-hero-lead">
+                  AP Consultancy is an IT staff augmentation partner that helps you scale your engineering team
+                  fast — with rigorously screened developers across eCommerce, DevOps &amp; Cloud, AI/ML, QA, and
+                  Mobile &amp; Web, ready to start in days, for projects of any length.
+                </p>
+                <div className="hp-hero-actions">
+                  <Link to={contactPath("hire")} className="hp-btn hp-btn--primary">
+                    Hire a Developer <span aria-hidden="true">→</span>
+                  </Link>
+                  <Link to="/devresources" className="hp-btn hp-btn--ghost">
+                    See Available Developer <span aria-hidden="true">→</span>
+                  </Link>
+                </div>
+                <p className="hp-trust-strip">
+                  Pre-vetted talent · 24-hour shortlist · ISO-certified processes · Short-term &amp; long-term
+                  engagements · Direct developer sourcing, no pass-down markups
+                </p>
+              </div>
+              <div className="hp-hero-visual" aria-hidden="true">
+                <img
+                  src={figmaAssets.heroIllustration}
+                  alt=""
+                  loading="eager"
+                  decoding="async"
+                />
+              </div>
             </div>
-            <h1>
-              Hire Pre-Vetted Remote Developers.{" "}
-              <span className="hp-accent hp-accent--glow">Across Every Stack You Need.</span>
-            </h1>
-            <p className="hp-hero-lead">
-              AP Consultancy is an IT staff augmentation partner that helps you scale your engineering team
-              fast — with rigorously screened developers across eCommerce, DevOps &amp; Cloud, AI/ML, QA, and
-              Mobile &amp; Web, ready to start in days, for projects of any length.
-            </p>
-            <div className="hp-hero-actions">
-              <Link to={contactPath("hire")} className="hp-btn hp-btn--primary">
-                Hire a Developer <span aria-hidden="true">→</span>
-              </Link>
-              <Link to="/devresources" className="hp-btn hp-btn--ghost">
-                See Available Developer <span aria-hidden="true">→</span>
-              </Link>
-            </div>
-            <p className="hp-trust-strip">
-              Pre-vetted talent · 24-hour shortlist · ISO-certified processes · Short-term &amp; long-term
-              engagements · Direct developer sourcing, no pass-down markups
-            </p>
           </div>
         </div>
       </section>
 
       {/* About */}
-      <section className="hp-section hp-about" id="about">
+      <RevealOnScroll>
+      <section className="hp-section hp-section--about hp-about" id="about">
         <div className="hp-container">
           <div className="hp-about-card">
             <div className="hp-about-media" aria-hidden="true">
               <img
-                src="/images/it consulting.jpeg"
+                src={figmaAssets.aboutTeam}
                 alt=""
                 loading="lazy"
               />
@@ -277,18 +306,20 @@ export default function HomePage() {
                 developer for six weeks or a full dedicated team for a year-long build, we structure the
                 engagement around your project, not the other way around.
               </p>
-              <Link to="/about" className="hp-btn hp-btn--primary hp-about-cta">
-                Learn More <span aria-hidden="true">→</span>
-              </Link>
             </div>
+            <Link to="/about" className="hp-btn hp-btn--primary hp-about-cta">
+              Learn More <span aria-hidden="true">→</span>
+            </Link>
           </div>
         </div>
       </section>
+      </RevealOnScroll>
 
       {/* Commitment */}
-      <section className="hp-section hp-commitment">
-        <div className="hp-container">
-          <p className="hp-label-line">ABOUT · OUR COMMITMENT</p>
+      <RevealOnScroll>
+      <section className="hp-section hp-section--commitment hp-commitment">
+        <div className="hp-container hp-container--narrow">
+          <p className="hp-figma-label">ABOUT · OUR COMMITMENT</p>
           <div className="hp-commitment-head">
             <h2>
               Our commitment to clients
@@ -317,12 +348,14 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      </RevealOnScroll>
 
       {/* Hiring process */}
-      <section className="hp-section hp-process">
-        <div className="hp-container hp-process-grid">
+      <RevealOnScroll>
+      <section className="hp-section hp-section--process hp-process">
+        <div className="hp-container hp-container--narrow hp-process-grid">
           <div className="hp-process-intro">
-            <p className="hp-label-line">OUR HIRING PROCESS</p>
+            <p className="hp-figma-label">OUR HIRING PROCESS</p>
             <h2>From Requirement to Onboarded Developer — Fast</h2>
             <p className="hp-body">
               No black-box matching, no six-week pipelines. A five-step process engineered to put a
@@ -362,13 +395,15 @@ export default function HomePage() {
           </ol>
         </div>
       </section>
+      </RevealOnScroll>
 
       {/* Why choose */}
-      <section className="hp-section hp-why">
-        <div className="hp-container">
+      <RevealOnScroll>
+      <section className="hp-section hp-section--why hp-why">
+        <div className="hp-container hp-container--narrow">
           <div className="hp-why-head">
             <div>
-              <p className="hp-label-line hp-label-line--accent">WHAT MAKES US STAND OUT</p>
+              <p className="hp-figma-label">WHAT MAKES US STAND OUT</p>
               <h2>Why Companies Choose AP Consultancy</h2>
             </div>
             <p className="hp-body">
@@ -459,10 +494,12 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      </RevealOnScroll>
 
       {/* Trusted + Testimonial */}
-      <section className="hp-section hp-social-proof">
-        <div className="hp-container">
+      <RevealOnScroll>
+      <section className="hp-section hp-section--social hp-social-proof">
+        <div className="hp-container hp-container--narrow">
           <p className="hp-trusted-label">TRUSTED BY PRODUCT & ENGINEERING TEAMS</p>
           <div className="hp-trusted-logos">
             {trustedLogos.map((logo) => (
@@ -493,6 +530,7 @@ export default function HomePage() {
           </blockquote>
         </div>
       </section>
+      </RevealOnScroll>
 
       {/* Services strip */}
       <section className="hp-section hp-solutions" id="services">
@@ -523,7 +561,94 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Case Studies */}
+      <RevealOnScroll>
+      <section className="hp-section hp-cases" id="case-studies">
+        <div className="hp-container">
+          <div className="hp-section-intro hp-section-intro--center hp-cases-intro">
+            <p className="hp-eyebrow hp-eyebrow--dot">CASE STUDIES</p>
+            <h2>Real Teams. Real Timelines. Real Results.</h2>
+            <p className="hp-body">
+              A look at how companies used AP Consultancy to scale their engineering capacity — without
+              the hiring bottleneck.
+            </p>
+          </div>
+
+          <article className="hp-case-card">
+            <div className="hp-case-copy">
+              <p className="hp-eyebrow hp-eyebrow--dot">
+                {featuredCaseStudy.id} / {featuredCaseStudy.client}
+              </p>
+              <h3>{featuredCaseStudy.title}</h3>
+              <p className="hp-body hp-case-summary">{featuredCaseStudy.summary}</p>
+
+              <div className="hp-case-meta">
+                <div>
+                  <span>Client</span>
+                  <strong>{featuredCaseStudy.client}</strong>
+                </div>
+                <div>
+                  <span>Focus</span>
+                  <strong>{featuredCaseStudy.technologies.slice(0, 2).join(", ")}</strong>
+                </div>
+              </div>
+
+              <div className="hp-case-grid">
+                <div>
+                  <strong>Challenge</strong>
+                  <p>{featuredCaseStudy.challenge}</p>
+                </div>
+                <div>
+                  <strong>Outcome</strong>
+                  <p>{featuredCaseStudy.outcome}</p>
+                </div>
+                <div className="hp-case-grid-span">
+                  <strong>Solution</strong>
+                  <p>{featuredCaseStudy.contribution}</p>
+                </div>
+              </div>
+
+              <div className="hp-case-tech">
+                <strong>Technologies Used</strong>
+                <div>
+                  {featuredCaseStudy.technologies.map((tech, index) => {
+                    const style = featuredCaseTechStyles[index % featuredCaseTechStyles.length];
+                    return (
+                      <span
+                        key={tech}
+                        className="hp-tech-pill"
+                        style={{
+                          background: style.bg,
+                          borderColor: style.border,
+                          color: style.color,
+                        }}
+                      >
+                        {tech}
+                      </span>
+                    );
+                  })}
+                </div>
+              </div>
+
+              <Link to="/portfolio" className="hp-btn hp-btn--primary">
+                Read Full Case Studies <span aria-hidden="true">→</span>
+              </Link>
+            </div>
+
+            <div className="hp-case-visual" aria-hidden="true">
+              <img src={figmaAssets.caseStudyVisual} alt="" loading="lazy" />
+              <div className="hp-case-float">
+                <img src={featuredCaseStudy.image} alt="" loading="lazy" />
+                <span>{featuredCaseStudy.client}</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      </RevealOnScroll>
+
       {/* Tech stack strip */}
+      <RevealOnScroll>
       <section className="hp-section hp-tech-strip">
         <div className="hp-container">
           <div className="hp-section-intro hp-section-intro--center">
@@ -537,14 +662,18 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      </RevealOnScroll>
 
       {/* Final CTA */}
-      <section className="hp-section hp-final-cta">
+      <RevealOnScroll>
+      <section className="hp-section hp-section--final hp-final-cta">
         <div className="hp-container">
           <div className="hp-banner hp-banner--start">
             <div className="hp-banner-copy">
               <h2>Ready to Scale Your Team Without the Hiring Headache?</h2>
               <p>Get a shortlist of pre-vetted developers within 24 hours.</p>
+            </div>
+            <div className="hp-banner-actions">
               <div className="hp-hero-actions">
                 <Link to={contactPath("hire")} className="hp-btn hp-btn--white">
                   Hire a Developer <span aria-hidden="true">→</span>
@@ -557,6 +686,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      </RevealOnScroll>
     </div>
   );
 }

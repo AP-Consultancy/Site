@@ -1,8 +1,8 @@
 export const heroCollage = [
-  { src: "/salesforce.png", alt: "Salesforce", className: "wk-collage-card--salesforce" },
-  { src: "/UplevylyCard.png", alt: "Uplevyl", className: "wk-collage-card--uplevyl" },
-  { src: "/Card/agilty insights.png", alt: "Agility Insights", className: "wk-collage-card--agility" },
-  { src: "/astrazeneca.png", alt: "AstraZeneca", className: "wk-collage-card--astra" },
+  { src: "/images/figma/hero-collage-salesforce.png", alt: "Salesforce", className: "wk-collage-card--salesforce" },
+  { src: "/images/figma/hero-collage-uplevyl.png", alt: "Uplevyl", className: "wk-collage-card--uplevyl" },
+  { src: "/images/figma/hero-collage-agility.png", alt: "Agility Insights", className: "wk-collage-card--agility" },
+  { src: "/images/figma/hero-collage-astrazeneca.png", alt: "AstraZeneca", className: "wk-collage-card--astra" },
 ];
 
 export const trustedBrands = [
@@ -18,13 +18,13 @@ export const caseStudies = [
     client: "Acuity Analytics",
     title: "Real-Time Financial Analytics Platform",
     summary:
-      "Consolidated financial data into a secure analytics layer for near real-time business visibility.",
-    technologies: ["Python", "AWS", "Snowflake", "Power BI", "Apache Airflow"],
+      "Built scalable analytics pipelines with automated reporting and real-time dashboards.",
+    technologies: ["Python", "AWS", "Snowflake", "Power BI", "Airflow"],
     challenge:
-      "The client needed to consolidate financial data from multiple systems while reducing reporting delays and improving data accuracy.",
+      "Fragmented financial datasets and delayed insights impacting decision-making speed.",
     contribution:
-      "Built a centralized analytics layer with automated ingestion pipelines, curated financial datasets, and stakeholder-ready Power BI dashboards.",
-    outcome: "Centralized reporting with faster financial decisions.",
+      "Built scalable analytics pipelines with automated reporting, real-time KPI dashboards, and high-performance ETL reducing reporting latency.",
+    outcome: "Centralized reporting with faster financial decisions and predictive revenue insights.",
     image: "/Card/Acuity.png",
     accent: "#7c3aed",
     tagBg: "#f0efff",
@@ -35,12 +35,12 @@ export const caseStudies = [
     client: "Agility Insights",
     title: "Centralized Business Intelligence Platform",
     summary:
-      "A unified reporting solution to eliminate fragmented data sources and improve decision-making.",
+      "Implemented centralized BI dashboards with real-time data syncing across enterprise sources.",
     technologies: ["Tableau", "SQL", "Python", "AWS Redshift"],
     challenge:
-      "Business intelligence was slowed by disconnected reports and inconsistent source data.",
+      "Lack of unified analytics causing slow business intelligence reporting.",
     contribution:
-      "Designed the warehouse architecture, implemented SQL transformations, automated ingestion with Python, and connected Tableau to Redshift.",
+      "Implemented centralized BI dashboards with real-time data syncing, interactive drill-down reporting, and data governance controls.",
     outcome: "Consistent real-time insights with less manual reporting.",
     image: "/Card/agilty insights.png",
     accent: "#14b8a6",
@@ -52,13 +52,13 @@ export const caseStudies = [
     client: "AstraZeneca",
     title: "Secure Data & Analytics Platform",
     summary:
-      "Secure research data access and analytics across distributed cloud environments.",
+      "Developed secure data platforms with advanced analytics capabilities across research systems.",
     technologies: ["Python", "AWS", "Azure", "SQL"],
     challenge:
-      "Research data lived across multiple systems with strict security and compliance requirements.",
+      "Data silos affecting research and operational efficiency.",
     contribution:
-      "Integrated secure data sources, developed Python services, optimized SQL queries, and supported AWS and Azure deployment.",
-    outcome: "Improved secure research access for analytics teams.",
+      "Developed secure data platforms integrating clinical and research data with workflow automation and scalable analytics infrastructure.",
+    outcome: "Improved secure research access with advanced analytics dashboards.",
     image: "/Card/astrazeneca.png",
     accent: "#7c3aed",
     tagBg: "#f0efff",
@@ -69,13 +69,13 @@ export const caseStudies = [
     client: "Bath Fitter",
     title: "Workflow & Scheduling Automation",
     summary:
-      "Responsive scheduling and order management systems for operational efficiency.",
+      "Digitized operations with automated workflows and a customer management system.",
     technologies: ["React", "Node.js", "AWS", "PostgreSQL"],
     challenge:
-      "Manual scheduling and order management were slowing the field and customer experience.",
+      "Manual scheduling and order tracking slowed customer service operations.",
     contribution:
-      "Developed workflow automation in Node.js, built responsive React scheduling interfaces, integrated APIs, and optimized PostgreSQL operations.",
-    outcome: "Streamlined workflows and clearer operational visibility.",
+      "Digitized operations with automated appointment scheduling, end-to-end order tracking, and CRM-integrated customer lifecycle management.",
+    outcome: "Streamlined workflows with real-time status updates for field teams.",
     image: "/Card/bathfitter.png",
     accent: "#ec4899",
     tagBg: "#fdf2f8",
@@ -84,15 +84,15 @@ export const caseStudies = [
   {
     id: "05",
     client: "HDFC Bank",
-    title: "High-Performance Banking Systems",
+    title: "Digital Auto Loan Workflows",
     summary:
-      "Secure backend systems built for large transaction volumes and high reliability.",
-    technologies: ["Java", "Spring Boot", "Oracle Database", "AWS"],
+      "AEM Forms–based digital workflows to streamline auto loan applications, validation, and approvals.",
+    technologies: ["Adobe AEM", "Java", "Spring Boot", "AWS"],
     challenge:
-      "The banking platform needed scalable services capable of supporting large transaction loads.",
+      "Manual and fragmented auto loan application processes led to slower approvals, poor user experience, and high drop-off rates.",
     contribution:
-      "Built Spring Boot microservices, optimized Oracle queries, implemented secure REST APIs, and supported AWS deployment.",
-    outcome: "Faster transaction processing with high system reliability.",
+      "Implemented Adobe Experience Manager Forms workflows with dynamic applications, backend loan processing integration, and real-time application tracking.",
+    outcome: "End-to-end digital onboarding with reduced manual intervention.",
     image: "/Card/hdfc.png",
     accent: "#14b8a6",
     tagBg: "#ecfdf5",
@@ -103,13 +103,13 @@ export const caseStudies = [
     client: "Propic",
     title: "AI Lead Scoring & Automation",
     summary:
-      "Intelligent lead prioritization and automated engagement for scalable SaaS growth.",
+      "Developed AI-driven lead scoring and an automated engagement platform.",
     technologies: ["React", "Node.js", "TensorFlow", "AWS", "MongoDB"],
     challenge:
-      "The client needed to prioritize leads and automate customer engagement at scale.",
+      "Low conversion rates due to inefficient lead qualification in real estate workflows.",
     contribution:
-      "Developed backend lead processing services, integrated TensorFlow scoring models, built React dashboards, and managed MongoDB data.",
-    outcome: "Improved qualification accuracy and smoother engagement workflows.",
+      "Developed AI-driven lead scoring, smart property recommendations, and automated follow-up sequences synced with CRM in real time.",
+    outcome: "Improved qualification accuracy and conversion funnel optimization.",
     image: "/Card/propic.png",
     accent: "#2563eb",
     tagBg: "#eff6ff",
@@ -120,13 +120,13 @@ export const caseStudies = [
     client: "Rocket Learning",
     title: "Scalable EdTech Platform",
     summary:
-      "Mobile-first learning experiences with multilingual support and analytics.",
+      "Built a scalable learning platform with analytics-driven insights for diverse learners.",
     technologies: ["React Native", "Node.js", "Firebase", "AWS"],
     challenge:
-      "The platform required scalability, accessibility, and analytics for a growing user base.",
+      "Scaling early education delivery across a large, diverse user base.",
     contribution:
-      "Built React Native app features, developed Node.js APIs, integrated Firebase, and supported AWS infrastructure.",
-    outcome: "Improved accessibility and stronger learner engagement.",
+      "Built scalable mobile-first content delivery with engagement tracking, multilingual support, and analytics for learning outcomes.",
+    outcome: "Improved accessibility and stronger learner engagement at scale.",
     image: "/Card/rocket learning.png",
     accent: "#2563eb",
     tagBg: "#eef2ff",
@@ -136,13 +136,14 @@ export const caseStudies = [
     id: "08",
     client: "Salesforce",
     title: "CRM Automation & Customization",
-    summary: "Custom CRM workflows and integrations for enterprise operations.",
-    technologies: ["Apex", "Lightning Web Components", "Salesforce Flows", "REST APIs"],
+    summary:
+      "Custom CRM workflows, LWC components, and integrations for enterprise operations.",
+    technologies: ["Salesforce", "Apex", "LWC", "Flows", "REST APIs"],
     challenge:
-      "Enterprise CRM processes required automation, customization, and third-party integrations.",
+      "Complex CRM workflows and lack of automation in enterprise processes.",
     contribution:
-      "Developed Apex classes, built Lightning Web Components, implemented Salesforce Flows, and connected REST APIs.",
-    outcome: "More efficient CRM processes with automated workflows.",
+      "Optimized CRM data models across core objects, built scalable LWC components, implemented Flows and validations, and integrated external systems via REST APIs.",
+    outcome: "More efficient CRM processes with automated workflows and accurate reporting.",
     image: "/Card/salesforce.png",
     accent: "#06b6d4",
     tagBg: "#ecfeff",
@@ -153,12 +154,12 @@ export const caseStudies = [
     client: "Tailored Brands",
     title: "Omnichannel Retail & Personalization",
     summary:
-      "Inventory synchronization and personalized shopping services at retail scale.",
+      "Built a scalable e-commerce backend with personalized recommendation engines.",
     technologies: ["Java", "Spring Boot", "AWS", "Elasticsearch"],
     challenge:
-      "The retailer required backend services supporting inventory sync and personalized shopping experiences.",
+      "Inefficient inventory and personalization across omnichannel retail systems.",
     contribution:
-      "Implemented Spring Boot services, optimized Elasticsearch search, integrated AWS, and built inventory sync processes.",
+      "Built scalable e-commerce services with real-time inventory sync, AI-based recommendations, and performance optimization for high-traffic events.",
     outcome: "Faster product discovery and improved inventory consistency.",
     image: "/Card/Tailoredbrands.png",
     accent: "#dc2626",
@@ -170,12 +171,12 @@ export const caseStudies = [
     client: "Telus",
     title: "Scalable Fintech Infrastructure",
     summary:
-      "Event-driven backend services for high-throughput financial transactions.",
-    technologies: ["Node.js", "Apache Kafka", "AWS", "PostgreSQL"],
+      "Built resilient backend systems with optimized data processing pipelines.",
+    technologies: ["Node.js", "Kafka", "AWS", "PostgreSQL"],
     challenge:
-      "The fintech platform needed reliable event-driven architecture for high transaction throughput.",
+      "Scaling fintech infrastructure for faster and reliable transactions.",
     contribution:
-      "Developed Node.js microservices, implemented Kafka event streaming, optimized PostgreSQL, and supported AWS infrastructure.",
+      "Built resilient backend systems with distributed transaction processing, event-driven architecture, and low-latency data pipelines.",
     outcome: "Resilient real-time financial transaction processing.",
     image: "/Card/telus.png",
     accent: "#8b5cf6",
@@ -187,12 +188,12 @@ export const caseStudies = [
     client: "Uplevyl",
     title: "AI-Driven Coaching Experience",
     summary:
-      "Personalized coaching journeys with analytics-backed product decisions.",
+      "Enhanced the platform with AI-driven user journeys and analytics tracking.",
     technologies: ["React", "Firebase", "Node.js", "AWS"],
     challenge:
-      "The platform aimed to improve engagement through personalized coaching and analytics.",
+      "Low engagement in the digital coaching platform due to lack of personalization.",
     contribution:
-      "Built React components, developed Node.js APIs, integrated Firebase, and implemented analytics tracking within AWS infrastructure.",
+      "Enhanced the platform with personalized coaching journeys, engagement analytics, and scalable backend systems for a growing user base.",
     outcome: "Higher engagement and real-time visibility into user behavior.",
     image: "/Card/uplevyl.png",
     accent: "#f97316",
@@ -204,17 +205,18 @@ export const caseStudies = [
 export const techStackItems = [
   { label: "Python", icon: "/icons/Python-logo-notext.svg.png" },
   { label: "AWS", icon: "/icons/AWS.png" },
+  { label: "Salesforce", icon: "/icons/AWS.png" },
   { label: "Snowflake", icon: "/icons/snowflake-color.png" },
   { label: "Power BI", icon: "/icons/Power_BI_(4).png" },
   { label: "Adobe AEM", icon: "/icons/adobe-experience-manager-aem-icon.png" },
-  { label: ".Net", icon: "/icons/NET-Framework-Logo.jpg" },
-  { label: "SQL", icon: "/icons/SQL.png" },
-  { label: "Java", icon: "/icons/javascript.png" },
-  { label: "Azure", icon: "/icons/Azure devops.png" },
+  { label: "Tableau", icon: "/icons/SQL.png" },
   { label: "React", icon: "/icons/react-js-icon.png" },
   { label: "Node.js", icon: "/icons/Node.js.png" },
-  { label: "TypeScript", icon: "/icons/javascript.png" },
-  { label: "Heroku", icon: "/icons/toppng.com-heroku-logo-328x512.png" },
-  { label: "LangChain", icon: "/icons/langchain-color.png" },
+  { label: "Java", icon: "/icons/javascript.png" },
+  { label: "Kafka", icon: "/icons/Node.js.png" },
+  { label: "TensorFlow", icon: "/icons/physics.png" },
+  { label: "PostgreSQL", icon: "/icons/SQL.png" },
+  { label: "MongoDB", icon: "/icons/SQL.png" },
+  { label: "Azure", icon: "/icons/Azure devops.png" },
   { label: "AI/ML", icon: "/icons/physics.png" },
 ];
