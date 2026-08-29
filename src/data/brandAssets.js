@@ -7,7 +7,9 @@ export const brandLogos = {
   /** AP mark on dark backgrounds — portfolio / client work */
   portfolio: "/logo/ap-icon.png",
   /** Favicon, app icon, browser tab */
-  icon: "/logo/ap-icon.png",
+  icon: "/favicon.png",
+  /** iOS / bookmark profile icon */
+  appleTouchIcon: "/apple-touch-icon.png",
   /** Alias for dark UI surfaces */
   iconNavy: "/logo/ap-icon.png",
   /** Legacy alias */
