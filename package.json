@@ -11,7 +11,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "audit:site": "node scripts/site-audit.mjs"
+    "audit:site": "node scripts/site-audit.mjs",
+    "icons:generate": "node scripts/generate-profile-icons.mjs"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -31,6 +32,8 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.5.0",
+    "png-to-ico": "^3.0.2",
+    "sharp": "^0.35.4",
     "vite": "^8.0.9"
   }
 }
