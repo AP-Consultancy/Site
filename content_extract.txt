@@ -1,0 +1,487 @@
+AP CONSULTANCY
+Website Content — Full Copy Deck (v2)
+Home · Dev Resource · Services (6 pages) · About Us · Case Studies · Partners & Compliance · Careers · Contact
+Document prepared: August 2026 — for figma build handoff
+Table of Contents
+1. Home Page
+2. Dev Resource Page
+3. Services — Hub Page
+3.1 eCommerce
+3.2 DevOps, Cloud & Security
+3.3 Agentic AI Software
+3.4 QA & Testing
+3.5 Mobile App & Web
+3.6 AI, ML & Automation
+4. About Us
+5. Case Studies
+6. Partners & Compliance
+7. Careers
+8. Contact Us
+9. Global Nav, Footer & SEO Reference Sheet
+1. Home Page
+Meta Title: IT Staff Augmentation Company | Hire Pre-Vetted Remote Developers — AP Consultancy
+Meta Description: Hire pre-vetted remote developers across eCommerce, DevOps, AI/ML, QA, Mobile and Web. AP Consultancy delivers a shortlist in 24 hours — flexible, ISO-certified, fully supported.
+URL: /
+Hero Section
+Hire Pre-Vetted Remote Developers. Across Every Stack You Need.
+AP Consultancy is an IT staff augmentation partner that helps you scale your engineering team fast — with rigorously screened developers across eCommerce, DevOps & Cloud, AI/ML, QA, and Mobile & Web, ready to start in days, for projects of any length.
+Ready to scale your team?
+[ Hire a Developer → ]   [ See Available Developer ]
+Trust strip (small text under hero): Pre-vetted talent · 24-hour shortlist · ISO-certified processes · Short-term & long-term engagements · Direct developer sourcing, no pass-down markups
+About / Commitment Section
+Built to Make Hiring Developers Simple
+AP Consultancy exists to remove the friction from technical hiring. We're an IT staff augmentation company that gives businesses direct access to experienced, pre-screened developers — without the long recruitment cycles, the guesswork, or the overhead of full-time hiring.
+Every developer we place has been technically vetted, interview-tested, and matched against your actual project needs — not just a keyword match on a resume. Whether you need one developer for six weeks or a full dedicated team for a year-long build, we structure the engagement around your project, not the other way around.
+Our commitment to clients:
+Speed without shortcuts — fast shortlists, but every candidate is fully vetted first.
+Transparency — clear rates, clear availability, no hidden layers.
+Continuity — a dedicated account manager stays with you for the life of the engagement.
+Flexibility — scale up, scale down, or convert to long-term hires as your project evolves.
+Our Hiring Process Section
+From Requirement to Onboarded Developer — Fast
+Step
+What Happens
+1. Share Your Requirement
+Tell us the role, tech stack, and project scope. Takes less than 5 minutes.
+2. Get a Shortlist in 24 Hours
+We match your requirement against our pre-vetted developer bench and send a shortlist within 24 hours.
+3. Interview & Select
+Speak directly with shortlisted developers. No black-box matching — you make the final call.
+4. Fast Onboarding
+Once selected, we handle onboarding logistics so the developer starts contributing within days.
+5. Ongoing Support
+A dedicated account manager monitors the engagement and is your single point of contact throughout.
+Start Your Hiring Request
+[ Start Your Hiring Request → ]
+What Makes Us Stand Out
+Why Companies Choose AP Consultancy
+Differentiator
+Why It Matters
+24-Hour Shortlists
+Most staffing partners take weeks. We turn around qualified candidates in a day.
+Pre-Vetted, Not Just Screened
+Every developer goes through technical assessment and interview rounds before reaching your shortlist.
+Short-Term or Long-Term, Your Choice
+Hire for a 4-week sprint or a multi-year build — the engagement flexes to your project.
+Full Support, Not Just a Handoff
+A dedicated account manager stays involved — replacements, scope changes, and check-ins included.
+ISO-Certified Processes
+Our hiring, data handling, and delivery processes follow ISO-certified standards.
+Broad, Specialized Coverage
+eCommerce, DevOps/Cloud/Security, Agentic AI, QA, Mobile & Web, AI/ML/Automation — one partner instead of many vendors.
+Services Strip
+What We Staff
+Explore our six specialization areas — each backed by a dedicated bench of pre-vetted developers.
+eCommerce — Shopify, Magento, headless commerce, custom storefronts
+DevOps, Cloud & Security — AWS/Azure/GCP, CI/CD, SRE, cloud security
+Agentic AI Software — LLM app development, agent orchestration, RAG pipelines
+QA & Testing — manual, automation, performance, and security testing
+Mobile App & Web — iOS, Android, Flutter/React Native, full-stack web
+AI, ML & Automation — data science, MLOps, workflow automation
+[ Explore All Services → ]
+Tech Stack Strip
+Developers Across Every Major Stack
+React · Node.js · Angular · Vue · Python · Django · Java · Spring Boot · .NET · PHP/Laravel · iOS & Android · Flutter/React Native · DevOps/AWS/Azure/GCP · QA & Automation Testing · Data Engineering · LLM/Agentic AI Frameworks
+Social Proof Section (teaser)
+Client logos row (placeholder for logo strip)
+1–2 line testimonial pull-quote, linking to: "Read more client stories →"
+Ready to Scale Your Team Without the Hiring Headache?
+Get a shortlist of pre-vetted developers within 24 hours.
+[ Hire a Developer → ]   [ Join Our Talent Pool → ]
+2. Dev Resource Page
+Meta Title: Hire Developers | Browse Pre-Vetted Remote Dev Profiles — AP Consultancy
+Meta Description: Browse pre-vetted remote developers available for short-term and long-term projects. Filter by skill, experience, and availability — hire in days, not weeks.
+URL: /developers
+Page Header
+Meet Our Pre-Vetted Developer Bench
+Every profile below has cleared our technical screening and interview process. Filter by skill and availability to find your match — or send us your requirement and we'll shortlist for you.
+Filter Bar
+Filter by: Skill/Stack (incl. eCommerce, DevOps, Agentic AI, QA, Mobile, AI/ML) | Experience Level (Junior / Mid / Senior / Lead) | Availability (Immediate / Within 2 weeks) | Engagement Type (Short-term / Long-term)
+Developer Card — Template
+Repeat this card structure for each profile. Use anonymized identifiers (e.g. "DEV-1042") rather than full names/photos, so competitors or other agencies can't poach your bench directly from the public site.
+Developer ID: DEV-1042
+Role: Senior Full Stack Developer
+Experience: 6+ Years
+Core Skills: React · Node.js · AWS · MongoDB
+Availability: Immediate
+Engagement: Short-term or Long-term
+Buttons: [ View Full Profile ] [ Request This Developer ]
+Microcopy: ✅ Technically vetted | 🕒 Avg. onboarding: 3–5 days
+Bottom Section
+Looking for a Specific Skill Set?
+Our full bench is larger than what's shown here — many developers are matched directly to requirements rather than listed publicly. Tell us what you need and get a shortlist within 24 hours.
+Submit Your Requirement
+[ Submit Your Requirement → ]
+3. Services — Hub Page
+Meta Title: IT Staff Augmentation Services | eCommerce, DevOps, AI/ML, QA & More — AP Consultancy
+Meta Description: Explore AP Consultancy's six developer specialization areas — eCommerce, DevOps & Cloud, Agentic AI, QA & Testing, Mobile & Web, and AI/ML & Automation.
+URL: /services
+Page Header
+Specialized Developers for Every Part of Your Stack
+Staff augmentation only works if the talent actually fits the project. Our bench is organized by specialization, not just job title — so the developer you get has already worked in your problem space.
+Service Category Cards
+eCommerce
+Shopify, Magento, WooCommerce, headless commerce, and custom storefront builds — developers who understand checkout flows, catalog architecture, and peak-load traffic.
+[ Learn More → ] (/services/ecommerce)
+DevOps, Cloud & Security
+CI/CD pipelines, infrastructure-as-code, cloud migration, and security hardening across AWS, Azure, and GCP.
+[ Learn More → ] (/services/devops-cloud-security)
+Agentic AI Software
+LLM-powered application development, agent orchestration, and RAG pipeline engineering for teams building AI-native products.
+[ Learn More → ] (/services/agentic-ai-software)
+QA & Testing
+Manual, automation, performance, and security testing — developers who catch what slips through before it reaches production.
+[ Learn More → ] (/services/qa-testing)
+Mobile App & Web
+iOS, Android, Flutter, React Native, and full-stack web development for consumer and enterprise applications.
+[ Learn More → ] (/services/mobile-app-web)
+AI, ML & Automation
+Data science, MLOps, model deployment, and workflow automation to help your team ship AI features faster.
+[ Learn More → ] (/services/ai-ml-automation)
+Not Sure Which Category Fits Your Project?
+Tell us what you're building and we'll route you to the right specialization.
+[ Talk to Us → ]
+3.1 eCommerce
+Meta Title: Hire eCommerce Developers | Shopify, Magento & Headless Commerce — AP Consultancy
+Meta Description: Hire pre-vetted eCommerce developers for Shopify, Magento, WooCommerce, and headless commerce builds. Shortlist within 24 hours.
+URL: /services/ecommerce
+Page Header
+eCommerce Developers Who Understand Revenue, Not Just Code
+From storefront builds to checkout optimization to peak-season scaling, our eCommerce developers have shipped on live, revenue-generating stores — not just tutorials.
+What We Staff
+Shopify & Shopify Plus · Magento/Adobe Commerce · WooCommerce · Headless commerce (Next.js + Shopify/Commercetools) · Payment gateway integration · Custom storefront development
+Common Use Cases
+Migrating a legacy storefront to headless commerce
+Building custom checkout or subscription flows
+Scaling infrastructure ahead of a sale or seasonal peak
+Integrating ERP, inventory, or fulfillment systems
+Why AP Consultancy for This
+Developers pre-vetted specifically on commerce platforms, not generalist full-stack profiles
+Familiarity with catalog architecture and conversion-sensitive UX
+Fast onboarding so you don't lose a sales window waiting to hire
+Need a eCommerce Developer?
+Get a shortlist within 24 hours.
+[ Submit Your Requirement → ]   [ View Available Developers → ]
+3.2 DevOps, Cloud & Security
+Meta Title: Hire DevOps & Cloud Security Engineers | AWS, Azure, GCP — AP Consultancy
+Meta Description: Hire pre-vetted DevOps, cloud, and security engineers for CI/CD, infrastructure-as-code, and cloud security. Shortlist within 24 hours.
+URL: /services/devops-cloud-security
+Page Header
+DevOps & Cloud Engineers Who Ship Reliable Infrastructure
+Integrate DevOps engineers who streamline your CI/CD pipelines, automate infrastructure, and boost deployment efficiency — ensuring faster time to market without compromising security.
+What We Staff
+AWS · Azure · GCP · Kubernetes & Docker · Terraform/IaC · CI/CD (GitHub Actions, Jenkins, GitLab CI) · Cloud security & compliance hardening · SRE & observability
+Common Use Cases
+Migrating infrastructure to the cloud or between cloud providers
+Building or hardening CI/CD pipelines for faster releases
+Standing up monitoring, observability, and incident response
+Closing security gaps ahead of an audit or certification
+Why AP Consultancy for This
+Engineers vetted on production infrastructure work, not just certifications
+Security-conscious by default — relevant for regulated and enterprise clients
+Available for short embedded sprints or long-term platform ownership
+Need a DevOps, Cloud & Security Developer?
+Get a shortlist within 24 hours.
+[ Submit Your Requirement → ]   [ View Available Developers → ]
+3.3 Agentic AI Software
+Meta Title: Hire Agentic AI Developers | LLM App & Agent Development — AP Consultancy
+Meta Description: Hire pre-vetted developers for agentic AI software — LLM application development, agent orchestration, and RAG pipelines. Shortlist within 24 hours.
+URL: /services/agentic-ai-software
+Page Header
+Agentic AI Developers for Teams Building AI-Native Products
+As AI moves from chatbots to autonomous agents that take real actions, you need developers who've actually shipped agentic systems — not just called an API. Our bench covers the full agentic stack.
+What We Staff
+LLM application development (OpenAI, Anthropic, open-source models) · Agent orchestration frameworks · RAG pipeline design · Prompt engineering & evaluation · Vector databases & retrieval systems · Tool-use and function-calling integrations
+Common Use Cases
+Building an AI agent that takes actions across your internal tools
+Adding retrieval-augmented generation to an existing product
+Prototyping and evaluating LLM-based features before a full build
+Standing up evaluation and monitoring for AI system reliability
+Why AP Consultancy for This
+Developers matched on real agentic-system experience, not general ML background
+Fast to onboard for a fast-moving category where in-house hiring often lags
+Flexible engagement — bring in a specialist for a proof-of-concept sprint or a dedicated build team
+Need an Agentic AI Software Developer?
+Get a shortlist within 24 hours.
+[ Submit Your Requirement → ]   [ View Available Developers → ]
+3.4 QA & Testing
+Meta Title: Hire QA & Automation Testers | Manual & Automated Testing — AP Consultancy
+Meta Description: Hire pre-vetted QA engineers for manual, automation, performance, and security testing. Shortlist within 24 hours.
+URL: /services/qa-testing
+Page Header
+QA Engineers Who Catch What Slips Through
+Shipping fast shouldn't mean shipping broken. Our QA and testing developers slot into your release process — manual, automated, or both — so quality doesn't get sacrificed for speed.
+What We Staff
+Manual & exploratory testing · Test automation (Selenium, Playwright, Cypress) · Performance & load testing · Security/penetration testing basics · API testing · Mobile app QA
+Common Use Cases
+Building an automated regression suite for a fast-release product
+Adding QA coverage before a major launch or migration
+Load-testing infrastructure ahead of a traffic spike
+Embedding QA into an existing agile sprint cadence
+Why AP Consultancy for This
+QA engineers vetted on both process and tooling, not just test-case writing
+Can integrate into your existing CI/CD and bug-tracking workflow from day one
+Scale QA capacity up for a launch, down after — without a full-time hire
+Need a QA & Testing Developer?
+Get a shortlist within 24 hours.
+[ Submit Your Requirement → ]   [ View Available Developers → ]
+3.5 Mobile App & Web
+Meta Title: Hire Mobile & Web Developers | iOS, Android, Flutter & Full-Stack — AP Consultancy
+Meta Description: Hire pre-vetted mobile app developers for iOS, Android, or cross-platform apps, plus full-stack web developers. Shortlist within 24 hours.
+URL: /services/mobile-app-web
+Page Header
+Mobile & Web Developers Who Ship Production Apps
+Hire experienced mobile app developers for iOS, Android, or cross-platform apps, and full-stack web developers for consumer and enterprise products — with the flexibility to scale up or down as your roadmap shifts.
+What We Staff
+iOS (Swift) · Android (Kotlin) · Flutter · React Native · React/Next.js · Angular · Vue · Node.js/Django/Spring Boot backends
+Common Use Cases
+Building a new consumer or enterprise mobile app from scratch
+Adding a mobile app to an existing web product
+Scaling a web platform's frontend or backend for growth
+Maintaining and iterating on an app already in production
+Why AP Consultancy for This
+Developers vetted on shipped, published apps — not just coursework projects
+Coverage across both platforms and full-stack web, so you're not managing multiple vendors
+Flexible scaling as the project moves from build to maintenance
+Need a Mobile App & Web Developer?
+Get a shortlist within 24 hours.
+[ Submit Your Requirement → ]   [ View Available Developers → ]
+3.6 AI, ML & Automation
+Meta Title: Hire AI, ML & Automation Developers | Data Science & MLOps — AP Consultancy
+Meta Description: Hire pre-vetted AI, ML, and automation developers for data science, MLOps, and workflow automation projects. Shortlist within 24 hours.
+URL: /services/ai-ml-automation
+Page Header
+AI, ML & Automation Developers to Help You Ship Faster
+From predictive models to workflow automation that removes manual work entirely, our AI/ML developers bring practical, production-focused experience — not just research background.
+What We Staff
+Data science & predictive modeling · MLOps & model deployment · Workflow & RPA automation · Data pipeline engineering · Python/PyTorch/TensorFlow
+Common Use Cases
+Deploying a model that's been stuck in a notebook into production
+Automating a manual, repetitive internal process
+Building data pipelines to feed AI/ML features
+Standing up MLOps practices for a growing model portfolio
+Why AP Consultancy for This
+Developers vetted on production ML delivery, not just model accuracy on a dataset
+Practical automation focus — measurable time and cost savings, not just novelty
+Available as a specialist add-on to an existing data team or as a dedicated build resource
+Need an AI, ML & Automation Developer?
+Get a shortlist within 24 hours.
+[ Submit Your Requirement → ]   [ View Available Developers → ]
+4. About Us Page
+Meta Title: About AP Consultancy | ISO-Certified IT Staff Augmentation Company
+Meta Description: Learn about AP Consultancy — an ISO-certified IT staff augmentation company helping businesses hire pre-vetted remote developers with speed and reliability.
+URL: /about-us
+Page Header
+We Believe Hiring Great Developers Shouldn't Be Hard
+AP Consultancy is an IT staff augmentation company built on one idea: businesses should be able to access great technical talent quickly, transparently, and without unnecessary layers.
+Our Story Section
+Why We Exist
+Technical hiring is broken in two directions — it's either too slow (traditional recruitment cycles that take months) or too risky (unvetted freelancers with no accountability). AP Consultancy was built to solve both problems at once: a pre-vetted bench of developers, ready to deploy fast, backed by a team that stays accountable for the engagement from day one to delivery.
+We started by sourcing developer requirements through other staffing vendors. As our bench and delivery track record grew, so did our ambition — today we work directly with hiring companies and are building direct relationships with the large vendor and MSP networks that manage enterprise contingent workforce programs.
+What We Believe
+Our Beliefs
+Speed and quality aren't a trade-off. A 24-hour shortlist only means something if every candidate on it is genuinely qualified.
+Relationships outlast placements. We measure success by how long clients stay with us, not just how fast we fill a role.
+Transparency builds trust. Clear rates, clear vetting standards, clear communication — no black boxes.
+Developers are partners, not resources. We invest in our talent bench because a well-supported developer does better work for you.
+ISO Certification Section
+ISO-Certified Processes You Can Rely On
+AP Consultancy's hiring, data handling, and delivery processes are ISO-certified, giving you confidence that you're working with a partner that follows recognized standards for information security and process quality — not just a vendor promising "trusted and reliable" without proof.
+[ISO certificate badge/image placeholder] [ Download Certificate → ] [ See Full Compliance Details → ]
+Client Reviews Section
+What Our Clients Say
+★★★★★
+"[1–3 sentence client quote about speed, developer quality, or support experience]"
+— [Client Name], [Title], [Company]
+CTA below reviews: [ Read Full Case Studies → ]
+Stats Band
+AP Consultancy in Numbers (fill with real figures)
+Metric
+Placeholder
+Developers Placed
+100+
+Client Retention Rate
+98%
+Average Shortlist Turnaround
+24 hrs
+Tech Stacks Covered
+20+
+Specialization Areas
+6
+Let's Build Your Team Together
+[ Hire a Developer → ]   [ Join Our Team → ]
+5. Case Studies Page
+Meta Title: Case Studies | Real Results From AP Consultancy's Staff Augmentation Clients
+Meta Description: See how businesses scaled their engineering teams with AP Consultancy's pre-vetted remote developers — real projects, real outcomes.
+URL: /case-studies
+Page Header
+Real Teams. Real Timelines. Real Results.
+A look at how companies used AP Consultancy to scale their engineering capacity — without the hiring bottleneck.
+Case Study Card — Template
+Repeat this structure for each case study; use a grid or list layout on the page.
+Industry tag: e.g. FinTech / HealthTech / E-commerce
+Title: How [Client/Industry] Scaled Their Dev Team in [X] Days
+Challenge: e.g. "Needed to add 3 senior backend developers within a tight product deadline, with no bandwidth for a multi-month hiring process."
+Solution: e.g. "Delivered a shortlist of pre-vetted Node.js developers within 24 hours; two were onboarded and contributing code within a week."
+Result: e.g. "Reduced time-to-hire by 70%, project shipped on original deadline."
+Tech Stack: e.g. Node.js, React, PostgreSQL, AWS
+Engagement Length: e.g. 8 months, ongoing
+Button: [ Read Full Case Study → ]
+Suggested Case Study Categories (for filtering)
+Filter Type
+Categories
+By Industry
+FinTech · HealthTech · E-commerce/Retail · EdTech · SaaS
+By Service
+eCommerce · DevOps/Cloud/Security · Agentic AI · QA & Testing · Mobile & Web · AI/ML & Automation
+By Engagement
+Short-term project · Long-term dedicated team · Single specialist hire
+Want Results Like These?
+Tell us your project and we'll show you how fast we can move.
+[ Start Your Hiring Request → ]
+6. Careers Page
+Meta Title: Careers at AP Consultancy | Join Our Remote Developer Network
+Meta Description: Join AP Consultancy's talent pool and get matched with remote contract and long-term development projects — flexible, fast, and fully supported.
+URL: /careers
+Page Header
+Build Your Career on Great Projects, Not Just Job Boards
+AP Consultancy connects skilled developers with vetted, well-scoped remote opportunities — short-term and long-term — backed by a team that supports you through every engagement.
+Join Our Talent Pool
+[ Join Our Talent Pool → ]
+Why Developers Choose AP Consultancy
+Why Join Us
+Real, vetted opportunities — we only bring you projects that match your skills and availability.
+Flexibility — pick up short-term contracts or settle into long-term dedicated engagements, on your terms.
+Full support during the engagement — a dedicated point of contact, not radio silence after placement.
+Fair, transparent terms — clear rates and expectations before you commit to anything.
+Variety — work across eCommerce, DevOps, AI, QA, Mobile and more instead of staying siloed in one domain.
+How It Works for Developers
+Step
+What Happens
+1. Apply / Submit Your Profile
+Share your skills, experience, and availability.
+2. Technical Screening
+A short technical assessment and interview to understand your strengths.
+3. Get Matched
+We match you to live client requirements that fit your profile — not generic postings.
+4. Start Working, Fully Supported
+Your dedicated account manager stays available throughout the engagement.
+Open Engagement Types
+Short-term contract projects (weeks to a few months)
+Long-term dedicated team roles (6+ months)
+Specialist/consulting engagements
+Optional: a live open-roles list can plug in here if you want dynamic job postings.
+Ready for Better Project Opportunities?
+[ Apply / Join Our Talent Pool → ]
+8. Contact Us Page
+Meta Title: Contact AP Consultancy | Hire Developers or Join Our Talent Pool
+Meta Description: Get in touch with AP Consultancy — submit a hiring requirement or apply to join our developer network. We respond within 24 hours.
+URL: /contact
+Page Header
+Let's Talk
+Whether you're looking to hire, evaluating us as a vendor partner, or looking to join our developer network, we typically respond within 24 hours.
+Triple-Path CTA Section
+Three clear paths side by side — this page now serves three audiences.
+Path 1: Hiring Companies
+Path 2: Vendor/MSP Partners
+Path 3: Developers
+"Need developers for your project?"
+[ Submit a Hiring Requirement → ]
+"Managing a vendor panel or VMS?"
+[ Request Compliance Pack → ]
+"Looking for your next project?"
+[ Join Our Talent Pool → ]
+Contact Form (Hiring Requirement — default view)
+Fields:
+Name
+Company
+Email
+Phone (optional)
+Role/Skill Needed (dropdown incl. all 6 service categories)
+Engagement Type (Short-term / Long-term / Not sure yet)
+Project Details (short text area)
+[ Submit Requirement ] button
+Microcopy under form: "We'll get back to you within 24 hours with next steps or an initial shortlist."
+Company Info Block
+AP Consultancy
+[Address] · [Phone] · [Email] · [LinkedIn Company Page link]
+Optional: embedded Google Map if there's a physical office.
+No Long Forms. No Sales Pressure. Just a Fast Response.
+Submit your requirement and hear back within 24 hours — that's the standard we hold ourselves to.
+9. Global Navigation, Footer & SEO Reference Sheet
+Primary Navigation
+Home · Dev Resource · Services (dropdown: eCommerce | DevOps, Cloud & Security | Agentic AI Software | QA & Testing | Mobile App & Web | AI, ML & Automation) · About Us · Case Studies · Careers · Contact Us
+Persistent header CTA: [ Hire a Developer → ]
+Footer Structure
+Column 1 — Company
+About Us
+Case Studies
+Partners & Compliance
+Careers
+Column 2 — Services
+eCommerce
+DevOps, Cloud & Security
+Agentic AI Software
+QA & Testing
+Mobile App & Web
+AI, ML & Automation
+Column 3 — Get Started
+Submit a Hiring Requirement
+Join Our Talent Pool
+Request Compliance Pack (for vendors/MSPs)
+Column 4 — Contact & Social
+Email / Phone / Address
+LinkedIn Company Page
+Bottom bar: © AP Consultancy. Privacy Policy · Terms of Service
+SEO & Keyword Reference Sheet
+Page
+Primary Keyword Targets
+URL Slug
+Home
+IT staff augmentation company, hire remote developers, pre-vetted developers
+/
+Dev Resource
+hire dedicated developers, remote developer profiles, hire React/Node/DevOps developer
+/developers
+Services (hub)
+IT staff augmentation services, hire specialized developers
+/services
+eCommerce
+hire ecommerce developer, Shopify developer for hire, Magento developer staffing
+/services/ecommerce
+DevOps, Cloud & Security
+hire DevOps engineer, cloud security staffing, AWS engineer for hire
+/services/devops-cloud-security
+Agentic AI Software
+hire agentic AI developer, LLM developer staffing, RAG pipeline developer
+/services/agentic-ai-software
+QA & Testing
+hire QA engineer, test automation staffing, remote QA tester
+/services/qa-testing
+Mobile App & Web
+hire mobile app developer, hire React Native developer, remote iOS/Android developer
+/services/mobile-app-web
+AI, ML & Automation
+hire ML engineer, AI automation developer, MLOps staffing
+/services/ai-ml-automation
+About Us
+ISO certified staffing company, IT staff augmentation India, staff augmentation reviews
+/about-us
+Case Studies
+staff augmentation case studies, remote team scaling examples
+/case-studies
+Partners & Compliance
+vendor panel registration IT staffing, VMS supplier IT staffing, MSA staff augmentation
+/partners
+Careers
+remote developer jobs, join developer talent pool, remote contract developer jobs
+/careers
+Contact Us
+hire developers contact, IT staffing company contact
+/contact
+General On-Page SEO Notes
+Use one H1 per page matching the primary keyword intent (already reflected in the headlines above).
+Alt text on every developer card avatar/icon, service icon, and ISO badge image should include the relevant keyword (e.g. "pre-vetted remote eCommerce developer icon").
+Internal links: every page should link to /developers, /services, and /contact to keep conversion paths short.
+Add FAQ schema on the Home, Services hub, or Contact page (e.g. "How fast can I hire a developer?", "What's the minimum engagement length?", "Do you support vendor panel onboarding?") — good for featured snippets and reinforces the 24-hour/flexibility positioning.
+Each of the 6 service sub-pages should internally link to the Services hub and to Case Studies filtered by that category, once case studies exist for it.
