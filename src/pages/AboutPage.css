@@ -170,6 +170,7 @@
 .au-hero-visual {
   position: relative;
   min-height: 400px;
+  width: 100%;
 }
 
 .au-glass {
@@ -774,6 +775,7 @@
 
   .au-hero-visual {
     min-height: 340px;
+    width: 100%;
     max-width: 420px;
     margin: 0 auto;
   }
