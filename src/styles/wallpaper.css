@@ -1,7 +1,0 @@
-/* Light theme: no dark starfield wallpaper */
-.site-shell::before,
-.site-shell::after,
-main::before {
-  content: none;
-  display: none;
-}

@@ -2,10 +2,12 @@ import { useEffect, useRef, useState } from "react";
 
 export default function RevealOnScroll({ children, delay = 0, className = "", ...rest }) {
   const ref = useRef(null);
-  const [visible, setVisible] = useState(false);
+  const prefersReducedMotion =
+    typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const [visible, setVisible] = useState(prefersReducedMotion);
 
   useEffect(() => {
-    if (!ref.current) return undefined;
+    if (prefersReducedMotion || !ref.current) return undefined;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -22,7 +24,7 @@ export default function RevealOnScroll({ children, delay = 0, className = "", ..
 
     observer.observe(ref.current);
     return () => observer.disconnect();
-  }, []);
+  }, [prefersReducedMotion]);
 
   return (
     <div

@@ -1,5 +1,6 @@
 /* Work page full-bleed inside main site layout */
-main:has(.work-page) {
+main:has(.work-page),
+main:has(.portfolio-route) {
   width: 100%;
   max-width: none;
   margin: 0;

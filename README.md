@@ -35,7 +35,7 @@ VITE_EMAILJS_PUBLIC_KEY=your_public_key
 
 If all EmailJS variables above are set, EmailJS is used. If not, the app falls back to `VITE_CONTACT_ENDPOINT`.
 
-**Production:** add the same `VITE_*` values in Vercel environment variables and redeploy.
+**Production:** EmailJS values are in `.env.production` (baked in at build time). On **Render**, no extra env vars are required if that file is committed. You can override with Dashboard env vars if needed. For **Vercel**, add the same `VITE_*` values in Project Settings → Environment Variables.
 
 ### 2) Admin Template Format (EmailJS — Contact Us)
 
@@ -100,3 +100,28 @@ Expected variables:
 - `from_name`
 - `subject`
 - `acknowledgement`
+
+## Deploy on Render (static site)
+
+This project is a Vite React SPA. Render serves the built `dist/` folder with SPA rewrites.
+
+1. Push `render.yaml` to GitHub (`AP-Consultancy/Site`, branch `main`).
+2. Open the Blueprint: [Create Blueprint from repo](https://dashboard.render.com/blueprint/new?repo=https://github.com/AP-Consultancy/Site)
+3. Click **Apply** — build command: `npm ci && npm run build`, publish path: `dist`.
+4. Optional custom domain: Render Dashboard → your static site → **Settings → Custom Domains** → add `www.apconsultancy.in` and update DNS (CNAME to your `*.onrender.com` URL).
+
+EmailJS production config lives in `.env.production` and is inlined at build time.
+
+### Verify deployment
+
+With the dev server running locally:
+
+```bash
+npm run audit:site
+```
+
+Against production:
+
+```bash
+$env:SITE_URL="https://www.apconsultancy.in"; npm run audit:site
+```

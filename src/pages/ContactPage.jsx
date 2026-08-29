@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { contactInfo, engagementOptions, intentOptions, roleOptions } from "../data/contactPageData";
 import { sendContactEmails } from "../lib/contactEmail";
@@ -119,9 +119,7 @@ export default function ContactPage() {
   const developerRef = searchParams.get("developer");
   const roleParam = searchParams.get("role");
 
-  const [intent, setIntent] = useState(() =>
-    VALID_INTENTS.has(intentFromUrl) ? intentFromUrl : "hire"
-  );
+  const intent = VALID_INTENTS.has(intentFromUrl) ? intentFromUrl : "hire";
   const [status, setStatus] = useState("idle");
   const [error, setError] = useState("");
 
@@ -140,14 +138,7 @@ export default function ContactPage() {
       "Get in touch with AP Consultancy — submit a hiring requirement or apply to join our developer network. We respond within 24 hours.",
   });
 
-  useEffect(() => {
-    if (VALID_INTENTS.has(intentFromUrl) && intentFromUrl !== intent) {
-      setIntent(intentFromUrl);
-    }
-  }, [intentFromUrl, intent]);
-
   function selectIntent(nextIntent) {
-    setIntent(nextIntent);
     setStatus("idle");
     setError("");
     const nextParams = new URLSearchParams(searchParams);

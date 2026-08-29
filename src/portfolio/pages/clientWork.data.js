@@ -8,26 +8,9 @@ function toTitleCaseFromFilename(filename) {
     .replace(/^./, (c) => c.toUpperCase());
 }
 
-function fileFromPath(p) {
-  const parts = String(p).split(/[\\/]/);
-  return parts[parts.length - 1] ?? p;
+function cardImageUrl(filename) {
+  return `/Card/${encodeURIComponent(filename)}`;
 }
-
-// Auto-import every image from /public/Card at build time.
-// If you add new images in `public/Card/`, they will show up automatically.
-const imageModules = import.meta.glob("../../../public/Card/*.{png,jpg,jpeg,webp,svg}", {
-  eager: true,
-  query: "?url",
-  import: "default",
-});
-
-const discoveredImages = Object.entries(imageModules)
-  .map(([path, url]) => ({
-    path,
-    url,
-    filename: fileFromPath(path),
-  }))
-  .sort((a, b) => a.filename.localeCompare(b.filename, undefined, { numeric: true }));
 
 /**
  * Edit content here (captions, chips, etc.)
@@ -129,19 +112,20 @@ export const clientWorkPageCopy = {
     "A curated set of projects—built for performance, scale, and clean user experience.",
 };
 
-export const clientWorkCards = discoveredImages.map((img) => {
-  const override = clientWorkOverrides[img.filename];
-  const inferredName = toTitleCaseFromFilename(img.filename);
-  return {
-    key: img.filename,
-    imageUrl: img.url,
-    imageFilename: img.filename,
-    client: override?.client ?? inferredName,
-    title: override?.title ?? inferredName,
-    description:
-      override?.description ??
-      "Add a short caption in `src/pages/clientWork.data.js` to describe what you shipped.",
-    chips: override?.chips ?? [],
-  };
-});
-
+export const clientWorkCards = Object.keys(clientWorkOverrides)
+  .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
+  .map((filename) => {
+    const override = clientWorkOverrides[filename];
+    const inferredName = toTitleCaseFromFilename(filename);
+    return {
+      key: filename,
+      imageUrl: cardImageUrl(filename),
+      imageFilename: filename,
+      client: override?.client ?? inferredName,
+      title: override?.title ?? inferredName,
+      description:
+        override?.description ??
+        "Add a short caption in `src/portfolio/pages/clientWork.data.js` to describe what you shipped.",
+      chips: override?.chips ?? [],
+    };
+  });

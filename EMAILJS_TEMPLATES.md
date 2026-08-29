@@ -300,7 +300,7 @@ VITE_EMAILJS_AUTO_REPLY_TEMPLATE_ID=template_rejbajf
 VITE_EMAILJS_PUBLIC_KEY=your_public_key
 ```
 
-Also set these same variables in **Vercel → Project → Settings → Environment Variables** and redeploy. The live site previously used outdated values (`service_6kbylsm`, `Info@apconsultancy.in`, old template IDs).
+Also set these same variables in **Vercel → Project → Settings → Environment Variables** (if deploying there) or rely on committed `.env.production` on **Render**. Redeploy after any change.
 
 Legacy env names `VITE_EMAILJS_ADMIN_TEMPLATE_ID` / `VITE_EMAILJS_USER_TEMPLATE_ID` still work.
 

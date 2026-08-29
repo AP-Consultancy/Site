@@ -19,11 +19,24 @@ import {
   PageTitle,
 } from "../style";
 import { clientWorkCards, clientWorkPageCopy } from "./clientWork.data";
-import projectsData from "../data/data";
 import ProjectModal from "../components/ProjectModal";
 import { assetUrl } from "../utils/assetUrl";
 
 const ease = [0.22, 1, 0.36, 1];
+
+function buildModalProject(card) {
+  if (!card) return null;
+  return {
+    title: card.client || card.title,
+    subhead: card.title,
+    pills: card.chips?.slice(0, 3) ?? [],
+    stats: [],
+    challenge: card.description,
+    solution: card.description,
+    keyHighlights: card.chips ?? [],
+    technologies: card.chips ?? [],
+  };
+}
 
 export default function ClientWorkPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -34,23 +47,7 @@ export default function ClientWorkPage() {
     return clientWorkCards?.find((c) => c.key === selectedKey) ?? null;
   }, [selectedKey]);
 
-  const modalProject = useMemo(() => {
-    if (!Array.isArray(projectsData) || projectsData.length === 0) return null;
-    const base = projectsData[0];
-    const label =
-      selectedCard?.client || selectedCard?.title || base?.title || "Project";
-
-    const key = selectedCard?.imageFilename || selectedCard?.key || null;
-    const needle = String(label).trim().toLowerCase();
-    const match =
-      (key ? projectsData.find((p) => p?.key === key) : null) ??
-      projectsData.find(
-        (p) => String(p?.title ?? "").trim().toLowerCase() === needle
-      ) ??
-      base;
-
-    return { ...match, title: label };
-  }, [selectedCard]);
+  const modalProject = useMemo(() => buildModalProject(selectedCard), [selectedCard]);
 
   return (
     <PageShell>
