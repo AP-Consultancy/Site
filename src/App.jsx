@@ -5,11 +5,9 @@ import "./App.css";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
 const AboutPage = lazy(() => import("./pages/AboutPage"));
-const DevResourcesPage = lazy(() => import("./pages/DevResourcesPage"));
+const BlogPage = lazy(() => import("./pages/BlogPage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
-const CareersPage = lazy(() => import("./pages/CareersPage"));
 const ServicesPage = lazy(() => import("./pages/ServicesPage"));
-const ServiceDetailPage = lazy(() => import("./pages/ServiceDetailPage"));
 const PortfolioPage = lazy(() => import("./pages/PortfolioPage"));
 const PortfolioClientWorkPage = lazy(() => import("./pages/PortfolioClientWorkPage"));
 
@@ -23,18 +21,18 @@ export default function App() {
       <Routes>
         <Route element={<RootLayout />}>
           <Route path="/" element={<HomePage />} />
-          <Route path="/devresources" element={<DevResourcesPage />} />
-          <Route path="/developers" element={<DevResourcesPage />} />
           <Route path="/services" element={<ServicesPage />} />
-          <Route path="/services/:slug" element={<ServiceDetailPage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/about-us" element={<AboutPage />} />
-          <Route path="/blog" element={<Navigate to="/portfolio" replace />} />
+          <Route path="/blog" element={<BlogPage />} />
           <Route path="/portfolio" element={<PortfolioPage />} />
-          <Route path="/case-studies" element={<PortfolioPage />} />
           <Route path="/portfolio/client-work" element={<PortfolioClientWorkPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/careers" element={<CareersPage />} />
+          <Route path="/devresources" element={<Navigate to="/" replace />} />
+          <Route path="/developers" element={<Navigate to="/" replace />} />
+          <Route path="/careers" element={<Navigate to="/about" replace />} />
+          <Route path="/about-us" element={<Navigate to="/about" replace />} />
+          <Route path="/case-studies" element={<Navigate to="/portfolio" replace />} />
+          <Route path="/services/:slug" element={<Navigate to="/services" replace />} />
         </Route>
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
