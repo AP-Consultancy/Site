@@ -98,7 +98,7 @@ export default function SiteFooter() {
                 <IconLinkedInBrand />
               </a>
               <a
-                href={siteContact.instagramUrl}
+                href={siteContact.instagram}
                 className="footer-social-tile footer-social-tile--brand"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -107,7 +107,7 @@ export default function SiteFooter() {
                 <IconInstagramBrand gradId={igGradId} />
               </a>
               <a
-                href={siteContact.xUrl}
+                href={siteContact.x}
                 className="footer-social-tile footer-social-tile--brand"
                 target="_blank"
                 rel="noopener noreferrer"
