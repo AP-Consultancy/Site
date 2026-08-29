@@ -270,7 +270,7 @@
 /* ───────── Hero ───────── */
 .hp-hero {
   position: relative;
-  margin-top: var(--site-header-height, 72px);
+  margin-top: var(--site-header-height, 80px);
   padding: 0 0 clamp(48px, 6vw, 72px);
   background: #01041d;
   overflow: hidden;
