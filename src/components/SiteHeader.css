@@ -43,9 +43,9 @@
 
 .brand-logo {
   display: block;
-  height: clamp(22px, 2.8vw, 26px);
+  height: clamp(34px, 4vw, 42px);
   width: auto;
-  max-width: min(193px, 42vw);
+  max-width: min(220px, 58vw);
   object-fit: contain;
   object-position: left center;
 }

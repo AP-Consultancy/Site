@@ -1,17 +1,17 @@
-/** AP Consultancy brand logo paths (public/) */
+/** AP Consultancy brand logo paths (public/logo/) */
 export const brandLogos = {
-  /** Full stacked wordmark — footer and large brand moments */
-  full: "/logo/ap-full.png",
-  /** Compact AP mark — header nav (reads clearly at small sizes) */
-  header: "/logo/ap-icon.png",
-  /** Mark on dark — portfolio / client pages */
-  portfolio: "/logo/ap-icon-navy.png",
-  /** Favicon & app icon */
+  /** Full stacked wordmark — header, footer, social previews */
+  full: "/logo/ap-logo-full.png",
+  /** Primary nav logo (same wordmark on light header) */
+  header: "/logo/ap-logo-full.png",
+  /** AP mark on dark backgrounds — portfolio / client work */
+  portfolio: "/logo/ap-icon.png",
+  /** Favicon, app icon, browser tab */
   icon: "/logo/ap-icon.png",
-  /** Mark on navy — social previews */
-  iconNavy: "/logo/ap-icon-navy.png",
+  /** Alias for dark UI surfaces */
+  iconNavy: "/logo/ap-icon.png",
   /** Legacy alias */
-  default: "/logo/ap.png",
+  default: "/logo/ap-logo-full.png",
 };
 
 export const brandColors = {

@@ -20,6 +20,7 @@ import {
 } from "../style";
 import { clientWorkCards, clientWorkPageCopy } from "./clientWork.data";
 import ProjectModal from "../components/ProjectModal";
+import { brandLogos } from "../../data/brandAssets";
 import { assetUrl } from "../utils/assetUrl";
 
 const ease = [0.22, 1, 0.36, 1];
@@ -52,7 +53,7 @@ export default function ClientWorkPage() {
   return (
     <PageShell>
       <ClientBrandSlot>
-        <img src={assetUrl("/logo/ap-icon-navy.png")} alt="Company Logo" />
+        <img src={assetUrl(brandLogos.portfolio)} alt="AP Consultancy" />
       </ClientBrandSlot>
       <ClientPageHeader>
       <div
